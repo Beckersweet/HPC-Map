@@ -1,4 +1,5 @@
 This project is not open-source. 
 Commercial License.
+You are not allowed to distribute the code. 
 Code owner: Beckersweet Technology Inc. 
 Copyrigth (c) 2012 Beckersweet. All right reserved. 
