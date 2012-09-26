@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TOP500</key>
+	<dict>
+        <key>URL</key>
+		<array>
+            <string>http://i.top500.org/system/176544</string>
+			<string>http://i.top500.org/system/176819</string>
+            <string>http://i.top500.org/system/177170</string>
+			<string>http://i.top500.org/system/177259</string>
+			<string>http://i.top500.org/system/176952</string>
+			<string>http://i.top500.org/system/176928</string>
+			<string>http://i.top500.org/system/176027</string>
+            <string>http://i.top500.org/system/177157</string>
+            <string>http://i.top500.org/system/177473</string>
+            <string>http://i.top500.org/system/176321</string>
+            <string>http://i.top500.org/system/177421</string>
+            <string>http://i.top500.org/system/177231</string>
+            <string>http://i.top500.org/system/177637</string>
+            <string>http://i.top500.org/system/175171</string>
+            <string>http://i.top500.org/system/176322</string>
+            <string>http://i.top500.org/system/176924</string>
+            <string>http://i.top500.org/system/176183</string>
+            <string>http://i.top500.org/system/176324</string>
+            <string>http://i.top500.org/system/176955</string>
+            <string>http://i.top500.org/system/176957</string>
+            <string>http://i.top500.org/system/176956</string>
+            <string>http://i.top500.org/system/176725</string>
+            <string>http://i.top500.org/system/176953</string>
+            <string>http://i.top500.org/system/176488</string>
+            <string>http://i.top500.org/system/176727</string>
+            <string>http://i.top500.org/system/176150</string>
+            <string>http://i.top500.org/system/177155</string>
+            <string>http://i.top500.org/system/177415</string>
+            <string>http://i.top500.org/system/177476</string>
+            <string>http://i.top500.org/system/176897</string>
+            <string>http://i.top500.org/system/177456</string>
+            <string>http://i.top500.org/system/177156</string>
+            <string>http://i.top500.org/system/176962</string>
+            <string>http://i.top500.org/system/176710</string>
+        </array>
+		<key>Name</key>
+		<array>
+            <string>#3 - Jaguar - GREEN149 </string>
+			<string>#4 - Nebulae - GREEN56</string>
+			<string>#6 - Cielo - GREEN135</string>
+			<string>#7 - Pleiades - GREEN142</string>
+			<string>#8 - Hopper - GREEN94</string>
+			<string>#9 - Tera100 - GREEN316</string>
+			<string>#10 - Roadrunner - GREEN59</string>
+            <string>#11 - Kraken - GREEN129</string>
+            <string>#12 - Hermit - GREEN61</string>
+            <string>#13 - Jugene - GREEN92</string>
+            <string>#18 - Lomonosov - GREEN153</string>
+            <string>#19 - Hector - GREEN95</string>
+            <string>#20 - Gaea C2 - GREEN53</string>
+            <string>#22 - BlueGene/L - GREEN192</string>
+            <string>#23 - INTREPID - GREEN93</string>
+            <string>#24 - Red Sky - GREEN386</string>
+            <string>#25 - Ranger - GREEN176</string>
+            <string>#26 - Dawn - GREEN91</string>
+            <string>#30 - Raptor - GREEN333</string>
+            <string>#31 - Haedam - GREEN239</string>
+            <string>#32 - Haeon - GREEN240</string>
+            <string>#34 - Monte Rosa - GREEN126</string>
+            <string>#35 - Cray XE6 - GREEN306</string>
+            <string>#36 - JUROPA - GREEN275</string>
+            <string>#37 - Tachyonll - GREEN178</string>
+            <string>#38 - Franklin - GREEN161</string>
+            <string>#39 - Lonestar 4 - GREEN326</string>
+            <string>#40 - HP POD - GREEN346</string>
+            <string>#41 - Rackable - GREEN63</string>
+            <string>#43 - Jade - GREEN169</string>
+            <string>#46 - Mustang - GREEN99</string>
+            <string>#47 - RCC - GREEN325</string>
+            <string>#49 - Tup - GREEN334</string>
+            <string>#50 - Red Storm - GREEN413</string>
+		</array>
+        <key>Longitude</key>
+		<array>
+            <string>-84.3096</string>
+			<string>114.0578</string>
+            <string>-106.2508</string>
+            <string>-122.0637</string>
+		    <string>-122.2555</string>
+			<string>2.134078</string>
+		 	<string>-106.25086</string>
+            <string>-83.933834</string>
+            <string>9.1807</string>
+            <string>6.40000</string>
+            <string>37.6176</string>
+            <string>-3.1760</string>
+            <string>-84.31078</string>
+            <string>-121.7100</string>
+            <string>-87.9609</string>
+            <string>-106.534165</string>
+            <string>-97.733523</string>
+            <string>-121.7098</string>
+            <string>-84.0494</string>
+            <string>126.9789</string>
+            <string>126.9779</string>
+            <string>8.9199</string>
+            <string>-106.2508</string>
+            <string>6.4081</string>
+            <string>126.986054</string>
+            <string>-122.2545</string>
+            <string>-97.7335</string>
+            <string>1.372536</string>
+            <string>-71.8837</string>
+            <string>2.30144</string>
+            <string>-106.2508</string>
+            <string>6.0781</string>
+            <string>-44.9972</string>
+            <string>-106.53500</string>
+   		</array>
+		<key>Organization</key>
+		<array>
+            <string>DOE/SC/Oak Ridge National Laboratory</string>
+			<string>National Supercomputing Centre in Shenzhen (NSCS)</string>
+            <string>DOE/NNSA/LANL/SNL</string>
+			<string>NASA/Ames Research Center/NAS</string>
+			<string>DOE/SC/LBNL/NERSC</string>
+			<string>Commissariat à l'Energie Atomique (CEA)</string>
+			<string>DOE/NNSA/LANL</string>
+            <string>NICS/University of Tennessee</string>
+            <string>HWW/Universitaet Stuttgart</string>
+            <string>Forschungszentrum Juelich (FZJ)</string>
+            <string>Moscow State University - Research Computing Center</string>
+            <string>University of Edinburgh</string>
+            <string>NOAA/Oak Ridge National Laboratory</string>
+            <string>DOE/NNSA/LLNL</string>
+            <string>DOE/SC/Argonne National Laboratory</string>
+            <string>SNL/National Renewable Energy Laboratory</string>
+            <string>Texas Advanced Computing Center/Univ. of Texas</string>
+            <string>DOE/NNSA/LLNL</string>
+            <string>Air Force Research Laboratory - ARFL DSRC</string>
+            <string>Korea Meteorological Administration</string>
+            <string>Korea Meteorological Administration</string>
+            <string>Swiss Scientific Computing Center (CSCS)</string>
+            <string>Government</string>
+            <string>Forschungszentrum Juelich (FZJ)</string>
+            <string>KISTI Supercomputing Center</string>
+            <string>DOE/SC/LBNL/NERSC</string>
+            <string>Texas Advanced Computing Center/Univ. of Texas</string>
+            <string>Airbus</string>
+            <string>Calcul Canada/Calcul Québec/Université de Sherbrooke</string>
+            <string>GENCI / CINES</string>
+            <string>Los Alamos National Laboratory</string>
+            <string>Universitaet Aachen/RWTH</string>
+            <string>INPE (National Institute for Space Research)</string>
+            <string>Sandia National Laboratories</string>
+         </array>
+    <key>Latitude</key>
+		<array>
+            <string>35.945678</string>
+			<string>22.5430</string>
+            <string>35.8335</string>
+			<string>37.4198</string>
+            <string>37.8755</string>
+			<string>48.7018</string>
+			<string>35.833359</string>
+            <string>35.9539</string>
+            <string>48.7771</string>
+            <string>50.907033</string>
+            <string>55.7557</string>
+            <string>55.9215</string>
+            <string>35.931702</string>
+            <string>37.6896</string>
+            <string>41.7106</string>
+            <string>35.055293</string>
+            <string>30.2850</string>
+            <string>37.6890</string>
+            <string>39.8230</string>
+            <string>37.5659</string>
+            <string>37.5665</string>
+            <string>46.0291</string>
+            <string>35.8333</string>
+            <string>50.9075</string>
+            <string>37.573733</string>
+            <string>37.8755</string>
+            <string>30.2850</string>
+            <string>43.6088</string>
+            <string>45.4004</string>
+            <string>48.836312</string>
+            <string>35.8333</string>
+            <string>50.7777</string>
+            <string>-22.6737</string>
+            <string>35.0844</string>
+   		</array>
+	</dict>
+	<key>GREEN500</key>
+	<dict>
+		<key>URL</key>
+		<array>
+            <string>http://i.top500.org/system/177558</string>  
+            <string>http://i.top500.org/system/177443</string>  
+            <string>http://i.top500.org/system/177557</string>  
+            <string>http://i.top500.org/system/177556</string>  
+            <string>http://i.top500.org/system/177416</string>  
+            <string>http://i.top500.org/system/177430</string>  
+            <string>http://i.top500.org/system/177465</string>  
+            <string>http://i.top500.org/system/177464</string>  
+            <string>http://i.top500.org/system/176899</string> 
+            <string>http://i.top500.org/system/176927</string>  
+            <string>http://i.top500.org/system/177463</string>  
+            <string>http://i.top500.org/site/47935</string>
+            <string>http://i.top500.org/system/177417</string>
+            <string>http://i.top500.org/system/177621</string> 
+            <string>http://i.top500.org/system/177459</string> 
+            <string>http://i.top500.org/system/177455</string>  
+            <string>http://i.top500.org/system/177454</string>  
+            <string>http://i.top500.org/system/177232</string>  
+            <string>http://i.top500.org/system/177453</string>  
+            <string>http://i.top500.org/system/177449</string>  
+            <string>http://i.top500.org/system/176903</string>  
+            <string>http://i.top500.org/system/177475</string>  
+            <string>http://i.top500.org/system/177468</string>  
+            <string>http://i.top500.org/system/177478</string>  
+            <string>http://i.top500.org/system/177447</string>  
+            <string>http://i.top500.org/system/177431</string>  
+            <string>http://i.top500.org/system/177154</string>  
+            <string>http://i.top500.org/system/177001</string>  
+            <string>http://i.top500.org/system/177448</string>  
+            <string>http://i.top500.org/system/177409</string> 
+            <string>http://i.top500.org/system/177457</string>  
+            <string>http://i.top500.org/system/177163</string> 
+            <string>http://i.top500.org/system/176929</string>  
+            <string>http://i.top500.org/system/177148</string> 
+            <string>http://i.top500.org/system/176908</string> 
+            <string>http://i.top500.org/system/177469</string> 
+        </array>
+		<key>Organization</key>
+		<array>
+			<string>IBM - Rochester</string>
+			<string>IBM Thomas J. Watson Research Center</string>
+			<string>IBM - Rochester</string>
+			<string>DOE/NNSA/LLNL</string>
+			<string>IBM Thomas J. Watson Research Center</string>
+			<string>Nagasaki University</string>
+			<string>Barcelona Supercomputing Center</string>
+			<string>TGCC (CEA) / GENCI</string>
+			<string>Institute of Process Engineering, Chinese Academy of Sciences</string>
+			<string>GSIC Center, Tokyo Institute of Technology</string>
+            <string>Virginia Tech</string>
+            <string>Georgia Institute of Technology</string>
+            <string>CINECA / SCS - SuperComputing Solution</string>
+            <string>Forschungszentrum Juelich (FZJ)</string>
+            <string>Sandia National Laboratories</string>
+            <string>UCSD/San Diego Supercomputer Center</string>
+            <string>Los Alamos National Laboratory</string>
+            <string>RIKEN Advanced Institute for Computational Science (AICS)</string>
+            <string>Bull</string>
+            <string>International Fusion Energy Research Centre (IFERC), EU(F4E) - Japan Broader Approach collaboration</string>
+            <string>TGCC (CEA) / GENCI</string>
+            <string>Poznan Supercomputing and Networking Center, Institute of Bioorganic Chemistry</string>
+            <string>National Center for High Performance Computing</string>
+            <string>Purdue University</string>
+            <string>National Supercomputing Center in Jinan</string>
+            <string>University of California, Los Angeles</string>
+            <string>Universitaet Frankfurt</string>
+            <string>CSIRO</string>
+            <string>National Supercomputing Center in Changsha</string>
+            <string>KTH - Royal Institute of Technology</string>
+            <string>Amazon Web Services</string>
+            <string>National Institute for Environmental Studies</string>
+            <string>National Supercomputing Center in Tianjin</string>
+            <string>Lawrence Livermore National Laboratory</string>
+            <string>Intel</string>
+            <string>Lawrence Livermore National Laboratory</string>
+ 		</array>
+		<key>Name</key>
+		<array>
+			<string>#64 - BlueGene/Q - GREEN1</string>
+			<string>#65 - BlueGene/Q - GREEN2</string>
+			<string>#29 - BlueGene/Q - GREEN3</string>
+			<string>#17 - BlueGene/Q - GREEN4</string>
+			<string>#284 - NNSA/SC BG - GREEN5</string>
+			<string>#328 - DEGIMA - GREEN6</string>
+			<string>#114 - Bullx B505 - GREEN7</string>
+			<string>#102 - Bullx B505 - GREEN8</string>
+			<string>#21 - Mole-8.5 - GREEN9</string>
+			<string>#5 - TSUBAME 2.0 - GREEN10</string>
+            <string>#96 - HokieSpeed - GREEN11</string>
+            <string>#111 - Keeneland - GREEN12</string>
+            <string>#82 - iDataPlex - GREEN13</string>
+            <string>#256 - iDataPlex - GREEN14</string>
+            <string>#61 - Chama - GREEN15</string>
+            <string>#48 - Gordon - GREEN30</string>
+            <string>#45 - Luna - GREEN31 </string>
+            <string>#1 - K Computer - GREEN32</string>
+            <string>#27 - Bull B. SC II - GREEN33</string>
+            <string>#28 - Helios - GREEN34</string>
+            <string>#106 - Titane - GREEN35</string>
+            <string>#298 - Rackable - GREEN36</string>
+            <string>#234 - Formosa 4 - GREEN37</string>
+            <string>#54 - Carter - GREEN38</string>
+            <string>#14 - Sunway BL - GREEN39</string>
+            <string>#235 - Dawson2 - GREEN40</string>
+            <string>#33 - LOEWE-CSC - GREEN41</string>
+            <string>#212 - GPU Cluster - GREEN42</string>
+            <string>#16 - Tianhe-1A Hunan - GR43</string>
+            <string>#44 - Lindgren - GREEN44</string>
+            <string>#42- Amazon EC2 - GREEN45</string>
+            <string>#205 - GOSAT - GREEN46</string>
+            <string>#2 - Tianhe-1A - GREEN47</string>
+            <string>#120 - Edge - GREEN48</string>
+            <string>#104 - Endeavor - GREEN49</string>
+            <string>#15 - Zin - GREEN50</string>
+ 		</array>
+        <key>Latitude</key>
+		<array>
+			<string>44.061673</string>
+			<string>41.1497</string>
+			<string>44.06100</string>
+			<string>37.6896</string>
+			<string>41.1480</string>
+			<string>32.7857</string>
+			<string>41.3879</string>
+			<string>48.593388</string>
+            <string>39.8711</string>
+            <string>35.6894</string>
+            <string>37.2243</string>
+            <string>33.7791</string>
+            <string>44.4941</string>
+            <string>50.908044</string>
+            <string>35.0810</string>
+            <string>32.8842</string>
+            <string>35.8329</string> 
+            <string>35.7803</string>
+            <string>47.472893</string>
+            <string>40.9673</string>
+            <string>48.594444</string>
+            <string>52.4063</string>
+            <string>24.781646</string>
+            <string>40.4143</string>
+            <string>36.6652</string>
+            <string>34.0687</string> 
+            <string>50.1183</string>
+            <string>-35.21868</string>
+            <string>28.2282</string>
+            <string>59.3519</string>
+            <string>47.592551</string>
+            <string>35.683513</string>
+            <string>39.0841</string>
+            <string>37.6899</string>
+            <string>47.111554</string>
+            <string>37.6888</string>
+		</array>
+		<key>Longitude</key>
+		<array>
+			<string>-92.499292</string>
+			<string>-73.9846</string>
+			<string>-92.49800</string>
+			<string>-121.7098</string>
+			<string>-73.9846</string>
+			<string>129.8664</string>
+			<string>2.1699</string>
+			<string>2.192499</string>
+		 	<string>116.4775</string>
+		 	<string>139.6917</string>
+            <string>-80.4270</string>
+            <string>-84.3996</string>
+            <string>11.3465</string>
+            <string>6.4081</string>
+            <string>-106.535133</string>
+            <string>-117.2399</string>
+            <string>-106.2512</string>
+            <string>139.6125</string>
+            <string>-0.607129</string>
+            <string>141.3745</string>
+            <string>2.191111</string>
+            <string>16.9251</string>
+            <string>121.005915</string>
+            <string>-86.9352</string>
+            <string>116.9949</string>
+            <string>-118.4449</string>
+            <string>8.6523</string>
+            <string>149.123862</string>
+            <string>112.9388</string>
+            <string>18.069</string>
+            <string>-122.315978</string>
+            <string>139.559584</string>
+            <string>117.2009</string>
+            <string>-121.7111</string>
+            <string>-122.6336</string>
+            <string>-121.7104</string>
+        </array>
+	</dict>
+</dict>
+</plist>
