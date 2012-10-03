@@ -13,7 +13,6 @@
 		21359FE91481E38800FBE5B9 /* HPCMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21359FDF1481E38800FBE5B9 /* HPCMapAppDelegate.m */; };
 		21359FEA1481E38800FBE5B9 /* HPCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21359FE11481E38800FBE5B9 /* HPCMapViewController.m */; };
 		21359FEB1481E38800FBE5B9 /* itunesartwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 21359FE21481E38800FBE5B9 /* itunesartwork.png */; };
-		21359FEC1481E38800FBE5B9 /* launchimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21359FE31481E38800FBE5B9 /* launchimage@2x.png */; };
 		21359FED1481E38800FBE5B9 /* mapicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 21359FE41481E38800FBE5B9 /* mapicon.png */; };
 		21359FEE1481E38800FBE5B9 /* mapicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21359FE51481E38800FBE5B9 /* mapicon@2x.png */; };
 		21359FEF1481E38800FBE5B9 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21359FE61481E38800FBE5B9 /* Property List.plist */; };
@@ -81,7 +80,6 @@
 		21A238DA14B5A9A80064D356 /* supergpue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21A238D814B5A9A80064D356 /* supergpue.xib */; };
 		21A238DF14B5ABD80064D356 /* superppw.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A238DD14B5ABD70064D356 /* superppw.m */; };
 		21A238E014B5ABD80064D356 /* superppw.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21A238DE14B5ABD70064D356 /* superppw.xib */; };
-		21C0F8C2160AABCC004ACB2D /* launchimage@2x-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C0F8C1160AABCC004ACB2D /* launchimage@2x-568h@2x.png */; };
 		21C6B24714C2B418009D476C /* modalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C6B24514C2B415009D476C /* modalView.m */; };
 		21C6B24814C2B418009D476C /* modalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21C6B24614C2B417009D476C /* modalView.xib */; };
 		21D4352F15811426001CBE3B /* DetailViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D4352D15811426001CBE3B /* DetailViewController2.m */; };
@@ -97,6 +95,10 @@
 		21FB4CB514B5AFCB008BE8FF /* superenergysavings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21FB4CB314B5AFCB008BE8FF /* superenergysavings.xib */; };
 		21FB4CB914B5B026008BE8FF /* superimpact.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FB4CB714B5B025008BE8FF /* superimpact.m */; };
 		21FB4CBA14B5B026008BE8FF /* superimpact.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21FB4CB814B5B026008BE8FF /* superimpact.xib */; };
+		A963C353161C127C004D3471 /* launchimage@2x-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A963C352161C127C004D3471 /* launchimage@2x-568h@2x.png */; };
+		A963C355161C128C004D3471 /* launchimage@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A963C354161C128C004D3471 /* launchimage@2x@2x.png */; };
+		A963C357161C12C4004D3471 /* launchimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A963C356161C12C4004D3471 /* launchimage@2x.png */; };
+		A966CFBB1618C17500722BB2 /* VersionInfo.txt in Resources */ = {isa = PBXBuildFile; fileRef = A966CFBA1618C17500722BB2 /* VersionInfo.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,7 +121,6 @@
 		21359FE01481E38800FBE5B9 /* HPCMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPCMapViewController.h; sourceTree = "<group>"; };
 		21359FE11481E38800FBE5B9 /* HPCMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPCMapViewController.m; sourceTree = "<group>"; };
 		21359FE21481E38800FBE5B9 /* itunesartwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itunesartwork.png; sourceTree = "<group>"; };
-		21359FE31481E38800FBE5B9 /* launchimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x.png"; sourceTree = "<group>"; };
 		21359FE41481E38800FBE5B9 /* mapicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapicon.png; sourceTree = "<group>"; };
 		21359FE51481E38800FBE5B9 /* mapicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapicon@2x.png"; sourceTree = "<group>"; };
 		21359FE61481E38800FBE5B9 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
@@ -214,7 +215,6 @@
 		21A238DC14B5ABD70064D356 /* superppw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = superppw.h; sourceTree = "<group>"; };
 		21A238DD14B5ABD70064D356 /* superppw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = superppw.m; sourceTree = "<group>"; };
 		21A238DE14B5ABD70064D356 /* superppw.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = superppw.xib; sourceTree = "<group>"; };
-		21C0F8C1160AABCC004ACB2D /* launchimage@2x-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x-568h@2x.png"; sourceTree = "<group>"; };
 		21C6B24414C2B413009D476C /* modalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modalView.h; sourceTree = "<group>"; };
 		21C6B24514C2B415009D476C /* modalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = modalView.m; sourceTree = "<group>"; };
 		21C6B24614C2B417009D476C /* modalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = modalView.xib; sourceTree = "<group>"; };
@@ -233,6 +233,10 @@
 		21FB4CB614B5B025008BE8FF /* superimpact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = superimpact.h; sourceTree = "<group>"; };
 		21FB4CB714B5B025008BE8FF /* superimpact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = superimpact.m; sourceTree = "<group>"; };
 		21FB4CB814B5B026008BE8FF /* superimpact.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = superimpact.xib; sourceTree = "<group>"; };
+		A963C352161C127C004D3471 /* launchimage@2x-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x-568h@2x.png"; sourceTree = "<group>"; };
+		A963C354161C128C004D3471 /* launchimage@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x@2x.png"; sourceTree = "<group>"; };
+		A963C356161C12C4004D3471 /* launchimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x.png"; sourceTree = "<group>"; };
+		A966CFBA1618C17500722BB2 /* VersionInfo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VersionInfo.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,7 +271,9 @@
 		218EBAF71474E80700EDC3D6 = {
 			isa = PBXGroup;
 			children = (
-				21C0F8C1160AABCC004ACB2D /* launchimage@2x-568h@2x.png */,
+				A963C356161C12C4004D3471 /* launchimage@2x.png */,
+				A963C354161C128C004D3471 /* launchimage@2x@2x.png */,
+				A963C352161C127C004D3471 /* launchimage@2x-568h@2x.png */,
 				218EBB0C1474E80700EDC3D6 /* HPCmap */,
 				218EBB2A1474E80700EDC3D6 /* HPCmapTests */,
 				218EBB051474E80700EDC3D6 /* Frameworks */,
@@ -401,7 +407,6 @@
 				21359FE11481E38800FBE5B9 /* HPCMapViewController.m */,
 				21359FE21481E38800FBE5B9 /* itunesartwork.png */,
 				216C734315165676000CFF69 /* itunesartwork.png */,
-				21359FE31481E38800FBE5B9 /* launchimage@2x.png */,
 				21359FE41481E38800FBE5B9 /* mapicon.png */,
 				21359FE51481E38800FBE5B9 /* mapicon@2x.png */,
 				21359FE61481E38800FBE5B9 /* Property List.plist */,
@@ -418,6 +423,7 @@
 				218EBB0F1474E80700EDC3D6 /* InfoPlist.strings */,
 				218EBB121474E80700EDC3D6 /* main.m */,
 				218EBB141474E80700EDC3D6 /* HPCmap-Prefix.pch */,
+				A966CFBA1618C17500722BB2 /* VersionInfo.txt */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -514,7 +520,6 @@
 				218EBB111474E80700EDC3D6 /* InfoPlist.strings in Resources */,
 				21359FE81481E38800FBE5B9 /* DetailViewController.xib in Resources */,
 				21359FEB1481E38800FBE5B9 /* itunesartwork.png in Resources */,
-				21359FEC1481E38800FBE5B9 /* launchimage@2x.png in Resources */,
 				21359FED1481E38800FBE5B9 /* mapicon.png in Resources */,
 				21359FEE1481E38800FBE5B9 /* mapicon@2x.png in Resources */,
 				21359FEF1481E38800FBE5B9 /* Property List.plist in Resources */,
@@ -555,7 +560,10 @@
 				21D5E17815A7C55C006A396E /* default.png in Resources */,
 				2178A20F160937710007E7A4 /* FBNewsViewController.xib in Resources */,
 				2178A211160938F60007E7A4 /* 09-chat-2.png in Resources */,
-				21C0F8C2160AABCC004ACB2D /* launchimage@2x-568h@2x.png in Resources */,
+				A966CFBB1618C17500722BB2 /* VersionInfo.txt in Resources */,
+				A963C353161C127C004D3471 /* launchimage@2x-568h@2x.png in Resources */,
+				A963C355161C128C004D3471 /* launchimage@2x@2x.png in Resources */,
+				A963C357161C12C4004D3471 /* launchimage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,7 +729,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Barbara C Collignon (H99SPGEACY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;

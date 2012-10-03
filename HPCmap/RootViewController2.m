@@ -55,10 +55,13 @@ NSString *const groupid2 = @"72157627879677415";
     receiveData=nil;
     [connection release];
     connection=nil;
+	
+	// ANT: The thread must now exit
+	CFRunLoopStop(CFRunLoopGetCurrent());
+
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
     
   //  HPCMapViewController *map = [[HPCMapViewController alloc] init];
   //  [map.activityView stopAnimating];
@@ -170,9 +173,13 @@ NSString *const groupid2 = @"72157627879677415";
   //  [connection release];
   //  connection=nil;
 
+	// ANT: Moved the next line here as this whole method takes very long to finish
+	// Ideally, we would turn off the network indicator at the top and have a different wait signal to the user on this view
+	[UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
+
+    // ANT: The thread can now exit
+	CFRunLoopStop(CFRunLoopGetCurrent());
     
-    
-      
    
     
 }
@@ -234,6 +241,10 @@ NSString *const groupid2 = @"72157627879677415";
     
     [connection release];
    // [request release];
+	
+	// ANT: Now that this method is in a thread, keep it from exiting
+	CFRunLoopRun(); // Avoid thread exiting
+
     
 }
 -(void)searchFlickrPhotos2:(NSString *)text
@@ -328,9 +339,11 @@ NSString *const groupid2 = @"72157627879677415";
         ownerNames = [[NSMutableArray alloc] init];
 		photoSmallImageData = [[NSMutableArray alloc] init];
 		photoURLsLargeImage = [[NSMutableArray alloc] init];
-                 
-        [self searchFlickrPhotos:@"cray"];
-        
+
+		// ANT: Changed the call for FlickrPhotos to run in the background to avoid hanging while it is done
+//        [self searchFlickrPhotos:@"cray"];
+		[self performSelectorInBackground:@selector(searchFlickrPhotos:) withObject:@"cray"];
+
     }
     
     if([UIApplication sharedApplication].networkActivityIndicatorVisible == NO) {

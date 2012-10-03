@@ -1,0 +1,10 @@
+** Version 1.9.00 changes
+
++ FIX:
+- fix warning by resizing old style launch image
+- make Retina 4 startup image not blank
+- remove Autolayout from FBNewsViewController to stop crashes on < iOS6
+
++ IMPROVE:
+
++ ADD:

@@ -805,8 +805,8 @@ if (NOV11 == TRUE) {
     
   //  [self.activityView startAnimating];
     
-    [activity startAnimating];
-            
+//    [activity startAnimating];
+    
    top500Bool=NO;
     
     NOV11 = TRUE;
@@ -977,7 +977,7 @@ if (NOV11 == TRUE) {
     [segmentedControl release];
     
     
-     timer = [NSTimer scheduledTimerWithTimeInterval:(0.5) target:self selector:@selector(loading) userInfo:nil repeats:YES];
+//     timer = [NSTimer scheduledTimerWithTimeInterval:(0.5) target:self selector:@selector(loading) userInfo:nil repeats:YES];
     
     [super viewDidLoad];  
            
