@@ -6,4 +6,5 @@ dependencies: \
   /Robomagic/Development/GitHub/HPC-Map/HPCmap/RootViewController.h \
   /Robomagic/Development/GitHub/HPC-Map/HPCmap/RootViewController2.h \
   /Robomagic/Development/GitHub/HPC-Map/HPCmap/QuizzViewController.h \
-  /Robomagic/Development/GitHub/HPC-Map/HPCmap/FBNewsViewController.h
+  /Robomagic/Development/GitHub/HPC-Map/HPCmap/FBNewsViewController.h \
+  /Robomagic/Development/GitHub/HPC-Map/HPCmap/CommonDefines.h
