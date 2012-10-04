@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    NSString *urlAddress = @"http://www.facebook.com/pages/HPC-Map-iPhone-App/321586984527863";
+    NSString *urlAddress = HPCFacebookURL;
     
     //Create a URL object.
     NSURL *url = [NSURL URLWithString:urlAddress];

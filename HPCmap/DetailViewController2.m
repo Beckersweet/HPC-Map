@@ -89,6 +89,50 @@
     return testImg;
 }
 
+#pragma mark - Share pictures
+
+// ANT: Generic Send button handler for email, FB, etc.
+-(void)sendPicture:(id)sender
+{
+	// Typical iPhone solution is to show an action sheet
+	UIActionSheet *sendSheet= [[UIActionSheet alloc] initWithTitle:@""
+														  delegate:self
+												 cancelButtonTitle:@"Cancel"
+											destructiveButtonTitle:nil
+												 otherButtonTitles:@"Email A Friend", @"Post to facebook", nil];
+	
+	[sendSheet showFromTabBar:self.tabBarController.tabBar];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	switch (buttonIndex)
+	{
+		case 0:
+			DebugLog(@"Emailing picture");
+			[self sendEmail:nil];
+			break;
+		case 1:
+			DebugLog(@"Posting picture to facebook");
+			[self postToFacebook];
+		default:
+			break;
+	}
+}
+
+- (void)postToFacebook
+{
+	FBHandler *fbHandler= [[FBHandler alloc] init];
+	if (fbHandler)
+	{
+		fbHandler.attachedViewController= (id)self;
+		[fbHandler postImage:myimage
+				 withMessage:[NSString stringWithFormat:@"%@ from %@\n (Flickr Group Supercomputers)",self.caption,self.author]];
+	}
+	[fbHandler release];
+}
+
+
 -(void) sendEmail:(id)sender {
     
     MFMailComposeViewController *mailComposer;
@@ -98,7 +142,7 @@
     mailComposer=[[MFMailComposeViewController alloc] init];
     mailComposer.mailComposeDelegate=self;
     //  mailComposer.title=@"HPC News";
-    [mailComposer setMessageBody:[NSString stringWithFormat:@"%@ from %@\n (Flickr Group Supercomputers)",self.caption,self.author] isHTML:NO];
+    [mailComposer setMessageBody:[NSString stringWithFormat:@"%@ from %@\n (Flickr Group Supercomputers)\n",self.caption,self.author] isHTML:NO];
     [mailComposer setSubject:@"Picture from HPC Map"];
     [mailComposer addAttachmentData:imageData mimeType:@"image/jpeg" fileName:@"attachment.jpg"];
     // [mailComposer setToRecipients:emailAddresses];
@@ -146,8 +190,13 @@
     self.bannerIsVisible = YES;
             
     }
-     
-    UIBarButtonItem *emailbutton = [[UIBarButtonItem alloc] initWithTitle:@"Email A Friend" style:UIBarButtonItemStylePlain target:self action:@selector(sendEmail:)];
+    
+	// ANT: Change to email button to "Send" if FB is an option
+    UIBarButtonItem *emailbutton= [UIBarButtonItem alloc];
+	if ([FBHandler isSocialFrameworkAvailable])
+		[emailbutton initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(sendPicture:)];
+	else
+		[emailbutton initWithTitle:@"Email A Friend" style:UIBarButtonItemStylePlain target:self action:@selector(sendEmail:)];
     
     //  self.navigationItem.rightBarButtonItem=favbutton;
     NSArray *rightButtonsArray = [[NSArray alloc] initWithObjects:emailbutton, nil];

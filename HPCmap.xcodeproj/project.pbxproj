@@ -98,6 +98,8 @@
 		A963C353161C127C004D3471 /* launchimage@2x-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A963C352161C127C004D3471 /* launchimage@2x-568h@2x.png */; };
 		A963C355161C128C004D3471 /* launchimage@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A963C354161C128C004D3471 /* launchimage@2x@2x.png */; };
 		A963C357161C12C4004D3471 /* launchimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A963C356161C12C4004D3471 /* launchimage@2x.png */; };
+		A963C35D161C9572004D3471 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A963C35C161C9572004D3471 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A963C360161C967F004D3471 /* FBHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A963C35F161C967F004D3471 /* FBHandler.m */; settings = {COMPILER_FLAGS = " -fobjc-arc"; }; };
 		A966CFBB1618C17500722BB2 /* VersionInfo.txt in Resources */ = {isa = PBXBuildFile; fileRef = A966CFBA1618C17500722BB2 /* VersionInfo.txt */; };
 /* End PBXBuildFile section */
 
@@ -236,6 +238,10 @@
 		A963C352161C127C004D3471 /* launchimage@2x-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x-568h@2x.png"; sourceTree = "<group>"; };
 		A963C354161C128C004D3471 /* launchimage@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x@2x.png"; sourceTree = "<group>"; };
 		A963C356161C12C4004D3471 /* launchimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x.png"; sourceTree = "<group>"; };
+		A963C35B161C8DCD004D3471 /* CommonDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefines.h; sourceTree = "<group>"; };
+		A963C35C161C9572004D3471 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A963C35E161C967F004D3471 /* FBHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBHandler.h; sourceTree = "<group>"; };
+		A963C35F161C967F004D3471 /* FBHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBHandler.m; sourceTree = "<group>"; };
 		A966CFBA1618C17500722BB2 /* VersionInfo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VersionInfo.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -244,6 +250,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A963C35D161C9572004D3471 /* Social.framework in Frameworks */,
 				2111AF2C15F837B2006FD566 /* MessageUI.framework in Frameworks */,
 				21F6BF141594DFFC00B04EA6 /* QuartzCore.framework in Frameworks */,
 				21D4353315811A61001CBE3B /* iAd.framework in Frameworks */,
@@ -293,6 +300,7 @@
 		218EBB051474E80700EDC3D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A963C35C161C9572004D3471 /* Social.framework */,
 				2111AF2B15F837B2006FD566 /* MessageUI.framework */,
 				21F6BF131594DFFC00B04EA6 /* QuartzCore.framework */,
 				21D4353215811A5E001CBE3B /* iAd.framework */,
@@ -309,6 +317,9 @@
 		218EBB0C1474E80700EDC3D6 /* HPCmap */ = {
 			isa = PBXGroup;
 			children = (
+				A963C361161C9873004D3471 /* Assets */,
+				A963C35B161C8DCD004D3471 /* CommonDefines.h */,
+				A963C359161C8AD7004D3471 /* FB */,
 				218F330A14C5261C00B453A2 /* IMG_0046.JPG */,
 				2178A20B160937710007E7A4 /* FBNewsViewController.h */,
 				2178A20C160937710007E7A4 /* FBNewsViewController.m */,
@@ -445,6 +456,22 @@
 				218EBB2D1474E80700EDC3D6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A963C359161C8AD7004D3471 /* FB */ = {
+			isa = PBXGroup;
+			children = (
+				A963C35E161C967F004D3471 /* FBHandler.h */,
+				A963C35F161C967F004D3471 /* FBHandler.m */,
+			);
+			name = FB;
+			sourceTree = "<group>";
+		};
+		A963C361161C9873004D3471 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -629,6 +656,7 @@
 				21875DB114C0F6930016EF86 /* QuizzViewController.m in Sources */,
 				21C6B24714C2B418009D476C /* modalView.m in Sources */,
 				2178A20E160937710007E7A4 /* FBNewsViewController.m in Sources */,
+				A963C360161C967F004D3471 /* FBHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,7 +727,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HPCmap/HPCmap-Prefix.pch";
 				INFOPLIST_FILE = "HPCmap/HPCmap-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "HPC Map";
 				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -777,7 +805,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HPCmap/HPCmap-Prefix.pch";
 				INFOPLIST_FILE = "HPCmap/HPCmap-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "HPC Map";
 				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -790,7 +818,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HPCmap/HPCmap-Prefix.pch";
 				INFOPLIST_FILE = "HPCmap/HPCmap-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "HPC Map";
 				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

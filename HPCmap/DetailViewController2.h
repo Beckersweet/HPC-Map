@@ -10,10 +10,11 @@
 #import <iAd/iAd.h>
 #import <QuartzCore/QuartzCore.h>
 #import <MessageUI/MessageUI.h>
+#import "FBHandler.h"
 
 //@class Favorites;
  
-@interface DetailViewController2 : UIViewController <ADBannerViewDelegate,MFMailComposeViewControllerDelegate> {
+@interface DetailViewController2 : UIViewController <ADBannerViewDelegate,MFMailComposeViewControllerDelegate, UIActionSheetDelegate> {
  
  // Favorites *myfavorites;
     UIImage *myimage;
@@ -29,5 +30,11 @@
 @property (nonatomic,retain) NSString *author;
 @property (nonatomic,retain) NSString *caption;
 @property (nonatomic,retain) NSData *imageData ;
+
+// ANT: Declare methods to use directly
+-(void)sendPicture:(id)sender;
+- (void)postToFacebook;
+-(void) sendEmail:(id)sender;
+
 
 @end
