@@ -21,8 +21,12 @@
 {
 	if (self = [super init])
 	{
-		if(![SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
-			return nil;
+//		if(![SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+//		{
+// // Solve the problem at class init if we want to fail silently or solve the issue ourselves.
+// // It is unclear whether trying to open Settings from an app explicitly causes rejections post 5.0
+//			return nil;
+//		}
 	}
 	
 	return self;
@@ -31,11 +35,11 @@
 
 - (void)postImage:(UIImage *)image withMessage:(NSString *)message
 {
-	if(![SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
-	{
-		DebugLog(@"No facebook");
-		return;
-	}
+//	if(![SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+//	{
+//		DebugLog(@"No facebook. Something went wrong. We shouldn't be here!");
+//		return;
+//	}
 
 	SLComposeViewController *controller= [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
 	[controller setInitialText:message];
@@ -47,11 +51,11 @@
 		switch (result)
 		{
 			case SLComposeViewControllerResultCancelled:
-				DebugLog(@"Cancelled");
+				DebugLog(@"facebook post cancelled");
 				break;
 			case SLComposeViewControllerResultDone:
 			{
-				DebugLog(@"Sent");
+				DebugLog(@"facebook post sent");
 				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Facebook" message:@"Image posted" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
 				[alert show];
 			}
