@@ -111,13 +111,13 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "HPCmap/FBHandler.m"
-         timestampString = "371045170.68366"
+         filePath = "HPCmap/DetailViewController2.m"
+         timestampString = "371052174.692636"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "34"
-         endingLineNumber = "34"
-         landmarkName = "-postImage:withMessage:"
+         startingLineNumber = "126"
+         endingLineNumber = "126"
+         landmarkName = "-postToFacebook"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
