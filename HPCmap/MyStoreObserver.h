@@ -12,7 +12,7 @@
 
 @protocol AppleServerConnectionDelegate;
 
-@interface MyStoreObserver : NSObject< SKPaymentTransactionObserver > 
+@interface MyStoreObserver : NSObject <SKPaymentTransactionObserver> 
 {
     id <AppleServerConnectionDelegate> delegate ;
      NSMutableData   *receiveData;

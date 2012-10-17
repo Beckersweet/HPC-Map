@@ -6,6 +6,8 @@
 //
 //
 
+// **NOTE** This module is using ARC
+
 #import "FBHandler.h"
 
 @implementation FBHandler
@@ -33,6 +35,38 @@
 
 }
 
+- (void)postMessage:(NSString *)message
+{
+	SLComposeViewController *controller= [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+	[controller setInitialText:message];
+//	[controller addURL:[NSURL URLWithString:HPCFacebookURL]];
+	
+	SLComposeViewControllerCompletionHandler myBlock = ^(SLComposeViewControllerResult result)
+	{
+		switch (result)
+		{
+			case SLComposeViewControllerResultCancelled:
+				DebugLog(@"facebook post cancelled");
+				break;
+			case SLComposeViewControllerResultDone:
+			{
+				DebugLog(@"facebook post sent");
+				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Facebook" message:@"Question posted" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+				[alert show];
+			}
+				break;
+			default:
+				DebugLog(@"Mystery button");
+				break;
+		}
+		[controller dismissViewControllerAnimated:YES completion:Nil];
+	};
+	controller.completionHandler =myBlock;
+	
+	[attachedViewController presentViewController:controller animated:YES completion:nil];
+
+}
+
 - (void)postImage:(UIImage *)image withMessage:(NSString *)message
 {
 //	if(![SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
@@ -43,7 +77,7 @@
 
 	SLComposeViewController *controller= [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
 	[controller setInitialText:message];
-	[controller addURL:[NSURL URLWithString:HPCFacebookURL]];
+//	[controller addURL:[NSURL URLWithString:HPCFacebookURL]];
 	[controller addImage:image];
 	
 	SLComposeViewControllerCompletionHandler myBlock = ^(SLComposeViewControllerResult result)

@@ -10,23 +10,34 @@
 #import <StoreKit/StoreKit.h>
 #import <StoreKit/SKPaymentTransaction.h>
 #import <UIKit/UIKit.h>
+#import "CommonDefines.h"
 
 // add a couple notifications sent out when the transaction completes
 #define kInAppPurchaseManagerTransactionFailedNotification @"kInAppPurchaseManagerTransactionFailedNotification"
 #define kInAppPurchaseManagerTransactionSucceededNotification @"kInAppPurchaseManagerTransactionSucceededNotification"
 
 
-@interface InAppPurManager : NSObject <SKProductsRequestDelegate,SKProductsRequestDelegate>
+@interface InAppPurManager : NSObject <SKProductsRequestDelegate>
 {
     
-    MyStoreObserver *observer ;
+    MyStoreObserver *observer;
 //
+	SKProduct *productNoAds;
+	SKProduct *productGamesLevel2;
+	SKProduct *productGamesLevel3;
+    SKProductsRequest *productsRequest;
     
 }
+
+@property (nonatomic, retain) SKProduct *productNoAds;
+@property (nonatomic, retain) SKProduct *productGamesLevel2;
+@property (nonatomic, retain) SKProduct *productGamesLevel3;
+@property (nonatomic, retain) MyStoreObserver *observer;
 
 // public methods
 
 - (BOOL)canMakePurchases;
+- (void)requestProductData;
 + (InAppPurManager *) sharedInstance ;
 + (InAppPurManager *) RemoveAdsPurchased ; 
 

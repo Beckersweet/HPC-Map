@@ -6,6 +6,8 @@
 //
 //
 
+// **NOTE** This module is using ARC
+
 #import <Foundation/Foundation.h>
 #import <Social/Social.h>
 #import "CommonDefines.h"
@@ -20,5 +22,6 @@
 
 +(BOOL)isSocialFrameworkAvailable;
 - (void)postImage:(UIImage *)image withMessage:(NSString *)message;
+- (void)postMessage:(NSString *)message;
 
 @end

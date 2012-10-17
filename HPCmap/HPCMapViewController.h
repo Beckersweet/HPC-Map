@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "MapAnnotation.h"
 #import <iAd/iAd.h>
+#import "InAppPurManager.h"
 
 @interface HPCMapViewController : UIViewController <MKMapViewDelegate,
 UIScrollViewDelegate,ADBannerViewDelegate> {

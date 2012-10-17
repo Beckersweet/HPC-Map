@@ -1,4 +1,4 @@
-** Version 1.9.00 changes
+** Version 1.9.0 changes
 
 + FIX:
 - fix warning by resizing old style launch image
@@ -8,3 +8,14 @@
 + IMPROVE:
 
 + ADD:
+
+** Version 1.9.1 changes
+
++ FIX:
+- handle backgrounding properly
+- change the quiz code to use a plist
+
++ ADD:
+? in app purchasing
+- post photos to fb
+- post questions to fb

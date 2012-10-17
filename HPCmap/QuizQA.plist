@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Question</key>
+		<string>What was the name of the first supercomputer ?</string>
+		<key>Answers</key>
+		<array>
+			<string>CDC 6600</string>
+			<string>Bull</string>
+			<string>Univac</string>
+			<string>DataPlex</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>When was the first supercomputer released ?</string>
+		<key>Answers</key>
+		<array>
+			<string>1956</string>
+			<string>1964</string>
+			<string>1976</string>
+			<string>1981</string>
+		</array>
+		<key>Correct</key>
+		<string>B</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Where was the first supercomputer built ?</string>
+		<key>Answers</key>
+		<array>
+			<string>France</string>
+			<string>Spain</string>
+			<string>USA</string>
+			<string>Japan</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Who designed the first supercomputer ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Seymour IBM</string>
+			<string>Seymour Cray</string>
+			<string>Seymour Bull</string>
+			<string>Seymour Intel</string>
+		</array>
+		<key>Correct</key>
+		<string>B</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Serial vs parallel calculations: How much power per operation may a CPU consume compared to a GPU (latest technologies) ?</string>
+		<key>Answers</key>
+		<array>
+			<string>7 times more</string>
+			<string>7 times less</string>
+			<string>70 times more</string>
+			<string>70 times less</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which company marketed &quot;the world&apos;s first GPU&quot; in 1999 ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Intel</string>
+			<string>IBM</string>
+			<string>NVIDIA</string>
+			<string>AMD</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>The name of the new Intel chip built to leverage parallel computing is:</string>
+		<key>Answers</key>
+		<array>
+			<string>Intel CPU</string>
+			<string>Intel GPU</string>
+			<string>Intel GIT</string>
+			<string>Intel MIC</string>
+		</array>
+		<key>Correct</key>
+		<string>D</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which one of the following supercomputers uses GPUs ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Jaguar, USA</string>
+			<string>K Computer, Japan</string>
+			<string>Tianhe-1A, China</string>
+			<string>Kraken, USA</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>What kind of chips does the second most powerful supercomputer in the world (K computer) contain ?</string>
+		<key>Answers</key>
+		<array>
+			<string>CPUs+GPUs</string>
+			<string>CPUs+MICs</string>
+			<string>CPUs only</string>
+			<string>GPUs only</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>By 2012-2013, which supercomputer is going to be upgraded with GPUs ?</string>
+		<key>Answers</key>
+		<array>
+			<string>K Computer, Japan</string>
+			<string>Jaguar, USA</string>
+			<string>Kraken, USA</string>
+			<string>Tianhe-1A, China</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>In Spain, the Barcelona supercomputing center recently developped a hybrid architecture: GPU + ..</string>
+		<key>Answers</key>
+		<array>
+			<string>Smartphone chip</string>
+			<string>CPU</string>
+			<string>MIC</string>
+			<string>GPU</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Researchers have recently built computer chips that use .. instead of electricity (electrons) to transmit the information.</string>
+		<key>Answers</key>
+		<array>
+			<string>Light</string>
+			<string>Photons</string>
+			<string>Water</string>
+			<string>Air</string>
+		</array>
+		<key>Correct</key>
+		<string>AB</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which country recently developed its first own computer chip ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Japan</string>
+			<string>Australia</string>
+			<string>China</string>
+			<string>Brazil</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which language(s) can be used to develop on GPUs ?</string>
+		<key>Answers</key>
+		<array>
+			<string>CUDA</string>
+			<string>OpenACC</string>
+			<string>C/C++</string>
+			<string>Fortran</string>
+		</array>
+		<key>Correct</key>
+		<string>AB</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>In which journal appeared this quote : &quot;The processor is going through a bit of a schizophrenic mid-life crisis&quot; ?</string>
+		<key>Answers</key>
+		<array>
+			<string>EE times</string>
+			<string>NY times</string>
+			<string>LA times</string>
+			<string>Vancouver Sun</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>In what year the world&apos;s first hacker ruined a public demonstration of a wireless telegraph by sending Morse code insults via wire ?</string>
+		<key>Answers</key>
+		<array>
+			<string>1789</string>
+			<string>1804</string>
+			<string>1903</string>
+			<string>1945</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>The telegraph hacker was known as a ..</string>
+		<key>Answers</key>
+		<array>
+			<string>civil engineer</string>
+			<string>cook</string>
+			<string>school teacher</string>
+			<string>magician</string>
+		</array>
+		<key>Correct</key>
+		<string>D</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>The Koomey’s Law says that the amount of power needed to perform a computing task falls by half every ..</string>
+		<key>Answers</key>
+		<array>
+			<string>1.5 months</string>
+			<string>1.5 years</string>
+			<string>2.5 months</string>
+			<string>2.5 years</string>
+		</array>
+		<key>Correct</key>
+		<string>B</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>By 2023, supercomputers are expected to be able to simulate a complete ..</string>
+		<key>Answers</key>
+		<array>
+			<string>rat brain</string>
+			<string>dog brain</string>
+			<string>human brain</string>
+			<string>ET brain</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>The power that a supercomputer needs is similar to the power needed by a ..</string>
+		<key>Answers</key>
+		<array>
+			<string>high-speed train</string>
+			<string>plane</string>
+			<string>ship</string>
+			<string>car</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>How much power does that (roughly) correspond to ?</string>
+		<key>Answers</key>
+		<array>
+			<string>7 MW</string>
+			<string>14 MW</string>
+			<string>21 MW</string>
+			<string>28 MW</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which one of the following locations is ideal to build green computing centers and save cooling energy ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Tennessee</string>
+			<string>Iceland</string>
+			<string>France</string>
+			<string>Brazil</string>
+		</array>
+		<key>Correct</key>
+		<string>B</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which is the #1 most greenest supercomputer in the world?</string>
+		<key>Answers</key>
+		<array>
+			<string>Tianhe-1A, China</string>
+			<string>K Computer, Japan</string>
+			<string>rzuseq, BG/Q, USA</string>
+			<string>Jaguar, USA</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which is the #1 most powerful supercomputer in the world?</string>
+		<key>Answers</key>
+		<array>
+			<string>Jaguar, USA</string>
+			<string>K Computer, Japan</string>
+			<string>Tsanhe-1A, China</string>
+			<string>Sequoia, BG/Q, USA</string>
+		</array>
+		<key>Correct</key>
+		<string>B</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which is the #2 most powerful supercomputer in the world?</string>
+		<key>Answers</key>
+		<array>
+			<string>Tianhe-1A, China</string>
+			<string>K Computer, Japan</string>
+			<string>Jaguar, USA</string>
+			<string>IBM BlueGene/Q, USA</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which is the #3 most powerful supercomputer in the world?</string>
+		<key>Answers</key>
+		<array>
+			<string>Tianhe-1A, China</string>
+			<string>K Computer, Japan</string>
+			<string>Mira, BG/Q, USA</string>
+			<string>Jaguar, USA</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which &quot;measures&quot; can be used to assess how green is a computing center ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Perf. Per Watt</string>
+			<string>GPUE</string>
+			<string>Hardware cost</string>
+			<string>Energy cost</string>
+		</array>
+		<key>Correct</key>
+		<string>ABCD</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which of the following energy sources could be used to power the battery of your cell phones ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Solar panels</string>
+			<string>Human movements</string>
+			<string>Hydrogen cells</string>
+			<string>Biogas cells</string>
+		</array>
+		<key>Correct</key>
+		<string>ABCD</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which projects use distributed computers that communicate through the network to resolve scientific questions ?</string>
+		<key>Answers</key>
+		<array>
+			<string>SETI@HOME</string>
+			<string>Folding@HOME</string>
+			<string>Docking@HOME</string>
+			<string>Africa@HOME</string>
+		</array>
+		<key>Correct</key>
+		<string>ABCD</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which platform is known as the social supecomputing platform for providing ready-to-use programs that would answer a single question ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Opani</string>
+			<string>CharityEngine</string>
+			<string>Amazing EC2</string>
+			<string>Jaguar</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Supercomputing simulations can be used to predict the impact of a marine power generation installation on the environment.</string>
+		<key>Answers</key>
+		<array>
+			<string>YES</string>
+			<string>NO</string>
+			<string></string>
+			<string></string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>In 2012, how many IBM data centers have been honored by  the European Commission for their energy efficiency ?</string>
+		<key>Answers</key>
+		<array>
+			<string>21</string>
+			<string>27</string>
+			<string>35</string>
+			<string>42</string>
+		</array>
+		<key>Correct</key>
+		<string>B</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Individuals can pay for using computing resources from .. platforms in order to launch their own computer simulations.</string>
+		<key>Answers</key>
+		<array>
+			<string>Amazon EC2 Cluster</string>
+			<string>Opani</string>
+			<string>CharityEngine</string>
+			<string>Jaguar</string>
+		</array>
+		<key>Correct</key>
+		<string>ABC</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>In 2012, which country might become the world&apos;s #1 cloud computing market ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Japan</string>
+			<string>China</string>
+			<string>USA</string>
+			<string>France</string>
+		</array>
+		<key>Correct</key>
+		<string>B</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>By 2020, U.S. organizations could save $12.3 billion in energy cost by moving to the Cloud: this corresponds to .. million barrels of oil</string>
+		<key>Answers</key>
+		<array>
+			<string>200</string>
+			<string>150</string>
+			<string>100</string>
+			<string>50</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which of the following techniques are used to reduce energy costs and hardware failures ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Umbrella cooling</string>
+			<string>Water cooling</string>
+			<string>Air cooling</string>
+			<string>Quantum cooling</string>
+		</array>
+		<key>Correct</key>
+		<string>BC</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>The K Computer, second most powerful supercomputer in the world uses ..</string>
+		<key>Answers</key>
+		<array>
+			<string>Water cooling</string>
+			<string>Air cooling</string>
+			<string>Water &amp; air cooling</string>
+			<string>Nitrogen cooling</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Recent findings says that biogas-powered cells would allow to pump up to .. into a system of distributed computational resources.</string>
+		<key>Answers</key>
+		<array>
+			<string>5 MW</string>
+			<string>10 MW</string>
+			<string>50 MW</string>
+			<string>150 MW</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>What happened at the annual International Consumer Electronics Show (CES 2012) ?</string>
+		<key>Answers</key>
+		<array>
+			<string>50 Cent was there</string>
+			<string>Eminem was there</string>
+			<string>iPhone5 unveiled</string>
+			<string>Obama was there</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Whos this quote is attributed to: &quot;Try not to become a man of success but a man of value.&quot;</string>
+		<key>Answers</key>
+		<array>
+			<string>Albert Einstein</string>
+			<string>Barack Obama</string>
+			<string>Nicolas Sarkozy</string>
+			<string>Angela Merkel</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>By 2020, we are going to reach the era of supercomputing at the ..</string>
+		<key>Answers</key>
+		<array>
+			<string>Exascale</string>
+			<string>Petascale</string>
+			<string>Terascale</string>
+			<string>Bugscale</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>In Spain, the e-learning platform for virtual classrooms in the supercomputing center of Galicia has .. users.</string>
+		<key>Answers</key>
+		<array>
+			<string>10,000</string>
+			<string>20,000</string>
+			<string>30,000</string>
+			<string>50,000</string>
+		</array>
+		<key>Correct</key>
+		<string>B</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>The official list that ranks the world&apos;s most powerful supercomputers according to their performance (flop) is named:</string>
+		<key>Answers</key>
+		<array>
+			<string>T0P10</string>
+			<string>TOP100</string>
+			<string>TOP500</string>
+			<string>TOP1000</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>The official list that ranks the world&apos;s most powerful supercomputers according to their energy consumption per flop is named:</string>
+		<key>Answers</key>
+		<array>
+			<string>GREEN1000</string>
+			<string>GREEN500</string>
+			<string>GREEN100</string>
+			<string>GREEN50</string>
+		</array>
+		<key>Correct</key>
+		<string>B</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>The name of logarithmic scale that combines Green500+Top500 to look at &quot;performance vs energy efficiency&quot; through a single scalar:</string>
+		<key>Answers</key>
+		<array>
+			<string>Exascalar</string>
+			<string>Petascalar</string>
+			<string>Terascalar</string>
+			<string>Bugscalar</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>The name of the NVIDIA exascale supercomputer that should be released by 2018 is ..</string>
+		<key>Answers</key>
+		<array>
+			<string>Achille</string>
+			<string>Echelle</string>
+			<string>Echelon</string>
+			<string>Achete</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Intel’s 2018 Exascale Goal is: delivering one Exaflops in a power envelope of ..</string>
+		<key>Answers</key>
+		<array>
+			<string>1 MW</string>
+			<string>5 MW</string>
+			<string>10 MW</string>
+			<string>20 MW</string>
+		</array>
+		<key>Correct</key>
+		<string>D</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>In January 2012, which company announced the creation of the world&apos;s smallest storage device (12-atom size) ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Cray</string>
+			<string>IBM</string>
+			<string>Intel</string>
+			<string>Nvidia</string>
+		</array>
+		<key>Correct</key>
+		<string>B</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which countries are leading the supercomputing race ?</string>
+		<key>Answers</key>
+		<array>
+			<string>China &amp; USA</string>
+			<string>Japan &amp; USA</string>
+			<string>China &amp; Japan</string>
+			<string>France &amp; Germany</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which country is leading the green supercomputing race ?</string>
+		<key>Answers</key>
+		<array>
+			<string>USA</string>
+			<string>China</string>
+			<string>Japan</string>
+			<string>France</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which company is leading the green supercomputing race ?</string>
+		<key>Answers</key>
+		<array>
+			<string>IBM</string>
+			<string>Cray</string>
+			<string>Intel</string>
+			<string>Bull</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+</array>
+</plist>

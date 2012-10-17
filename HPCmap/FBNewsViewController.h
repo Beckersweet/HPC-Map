@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InAppPurManager.h"
 #import "CommonDefines.h"
 
 @interface FBNewsViewController : UIViewController {

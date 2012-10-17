@@ -12,6 +12,7 @@
 #import "RootViewController2.h"
 #import "QuizzViewController.h"
 #import "FBNewsViewController.h"
+#import	"InAppPurManager.h"
 
 @implementation HPCMapAppDelegate
 
@@ -22,6 +23,8 @@
     
    // sleep(10) ;
     
+	[InAppPurManager sharedInstance];
+	
     HPCMapViewController *mymap = [[HPCMapViewController alloc]init];
     RootViewController *myroot = [[RootViewController alloc] init];
     RootViewController2 *myroot2 = [[RootViewController2 alloc] init]; 
@@ -90,6 +93,31 @@
     [tabBarController release];
     [window release];
     [super dealloc];
+}
+
+#pragma mark - App backgrounding
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    /*
+     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+     If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
+     */
+	DebugLog(@"Entered background");
+	
+	UIApplication  *app = [UIApplication sharedApplication];
+	UIBackgroundTaskIdentifier bgTask;
+	
+	bgTask = [app beginBackgroundTaskWithExpirationHandler:^{
+        [app endBackgroundTask:bgTask];
+	}];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    /*
+     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+     */
+	DebugLog(@"Entered active state");
 }
 
 

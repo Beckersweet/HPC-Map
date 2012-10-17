@@ -46,7 +46,8 @@ NSString *const groupid2 = @"72157627879677415";
     [receiveData setLength:0];
 }
 
-//-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
+//-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+//{
 //    [receiveData appendData:data];
 //}
 
@@ -61,7 +62,9 @@ NSString *const groupid2 = @"72157627879677415";
 
 }
 
--(void)connectionDidFinishLoading:(NSURLConnection *)connection{
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+	DebugLog(@"Flickr download finished");
     
   //  HPCMapViewController *map = [[HPCMapViewController alloc] init];
   //  [map.activityView stopAnimating];
@@ -123,7 +126,7 @@ NSString *const groupid2 = @"72157627879677415";
                 
             //    NSLog(@"OULALALALLALAL");
                 
-            } else {  
+            } else {
                 
                 
                [photoTitles addObject:(title.length > 0 ? title : @"Untitled")];      
@@ -149,7 +152,8 @@ NSString *const groupid2 = @"72157627879677415";
             }
                 
             }
-            //  debug(@"photoURLsLareImage: %@\n\n", photoURLString); 
+			DebugLog(@"Flickr photos processed");
+            //  debug(@"photoURLsLareImage: %@\n\n", photoURLString);
         }
         // }
         // Update the table with data
@@ -186,6 +190,8 @@ NSString *const groupid2 = @"72157627879677415";
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data 
 {
+	DebugLog(@"Received %d bytes of data from flickr connection", [data length]);
+
     // Store incoming data into a string
    
   [receiveData appendData:data];

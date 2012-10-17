@@ -10,11 +10,13 @@
 
 @implementation QuizzViewController
 
-@synthesize Question,AnswerA,AnswerB,AnswerC,AnswerD;
+@synthesize QuestionLabel,AnswerA,AnswerB,AnswerC,AnswerD;
 @synthesize buttonA,buttonB,buttonC,buttonD;
 @synthesize xofy,score,result;
 @synthesize next,startover,ask;
 @synthesize toolbar;
+
+@synthesize questions, nextQuestionIndex, quizClass, currentQuestion;
 
 - (void)didReceiveMemoryWarning
 {
@@ -29,18 +31,18 @@
     iquizz=0;
     iscore=0;
     
-    self.xofy.text= [NSString stringWithFormat:@"%d of 50",iquizz+1];
-    self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+//    self.xofy.text= [NSString stringWithFormat:@"%d of 50",iquizz+1];
+//    self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
     
     UIFont *locationFont = [UIFont fontWithName:@"CourierNewPS-BoldMT" size:18];
     //UIFont *locationFont2 = [UIFont fontWithName:@"Arial" size:8];
     
-    Question=[[UILabel alloc] initWithFrame:CGRectMake(0, 38, 320, 100)];
+    QuestionLabel=[[UILabel alloc] initWithFrame:CGRectMake(0, 38, 320, 100)];
     //tweetLabel.font=[UIFont systemFontSize:14];
-    Question.font=locationFont;
-    Question.numberOfLines=6;
-    Question.textAlignment=UITextAlignmentCenter;
-    Question.backgroundColor=[UIColor clearColor];
+    QuestionLabel.font=locationFont;
+    QuestionLabel.numberOfLines=6;
+    QuestionLabel.textAlignment=UITextAlignmentCenter;
+    QuestionLabel.backgroundColor=[UIColor clearColor];
        
     AnswerA=[[UILabel alloc] initWithFrame:CGRectMake(113, 183, 320, 21)];
     AnswerB=[[UILabel alloc] initWithFrame:CGRectMake(113, 228, 320, 21)];
@@ -56,14 +58,21 @@
     AnswerB.font=locationFont;
     AnswerC.font=locationFont;
     AnswerD.font=locationFont;
-      
-    Question.text=@"What was the name of the first supercomputer ?";
-    AnswerA.text=@"CDC 6600";
-    AnswerB.text=@"Bull";
-    AnswerC.text=@"Univac";
-    AnswerD.text=@"DataPlex";
-    
-    [self.view addSubview:Question];
+
+	// ANT: We'll read questions from a file now
+//    Question.text=@"What was the name of the first supercomputer ?";
+//    AnswerA.text=@"CDC 6600";
+//    AnswerB.text=@"Bull";
+//    AnswerC.text=@"Univac";
+//    AnswerD.text=@"DataPlex";
+	
+	self.questions= [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"QuizQA" ofType:@"plist"]];
+
+	self.nextQuestionIndex= 0;
+	self.quizClass= kQuizClass0;
+	[self fillQuestionForm] ;
+	    
+    [self.view addSubview:QuestionLabel];
     [self.view addSubview:AnswerA];
     [self.view addSubview:AnswerB];
     [self.view addSubview:AnswerC];
@@ -80,7 +89,64 @@
 
 }
 
--(IBAction) sendEmail:(id)sender {
+- (void)fillQuestionForm
+{
+	self.xofy.text= [NSString stringWithFormat:@"%d of %d",iquizz+1, [Question questionCount:self.quizClass inQuestions:self.questions]];
+    self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+	
+	self.currentQuestion= [Question getNextQuestion:self.questions index:nextQuestionIndex class:self.quizClass];
+	DebugLog(@"Asking Q%d:%@",self.nextQuestionIndex, self.currentQuestion.question);
+
+    QuestionLabel.text=self.currentQuestion.question;
+	
+    self.AnswerA.textColor=[UIColor blackColor];
+    self.AnswerB.textColor=[UIColor blackColor];
+    self.AnswerC.textColor=[UIColor blackColor];
+    self.AnswerD.textColor=[UIColor blackColor];
+	
+    AnswerA.text=self.currentQuestion.answers[0];
+    AnswerB.text=self.currentQuestion.answers[1];
+    AnswerC.text=self.currentQuestion.answers[2];
+    AnswerD.text=self.currentQuestion.answers[3];
+}
+
+#pragma mark - Ask A Friend
+- (IBAction)askAFriend:(id)sender
+{
+	if ([FBHandler isSocialFrameworkAvailable])
+	{
+		// Typical iPhone solution is to show an action sheet
+		UIActionSheet *sendSheet= [[UIActionSheet alloc] initWithTitle:@""
+															  delegate:self
+													 cancelButtonTitle:@"Cancel"
+												destructiveButtonTitle:nil
+													 otherButtonTitles:@"Ask via email", @"Ask via facebook", nil];
+		
+		[sendSheet showFromTabBar:self.tabBarController.tabBar];
+	
+	}
+	else
+		[self sendEmail:nil];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	switch (buttonIndex)
+	{
+		case 0:
+			DebugLog(@"Emailing question");
+			[self sendEmail:nil];
+			break;
+		case 1:
+			DebugLog(@"Posting question to facebook");
+			[self postToFacebook];
+		default:
+			break;
+	}
+}
+
+- (void)sendEmail:(id)sender
+{
     
     MFMailComposeViewController *mailComposer;
     // NSArray *emailAddresses;
@@ -89,7 +155,7 @@
     mailComposer=[[MFMailComposeViewController alloc] init];
     mailComposer.mailComposeDelegate=self;
     //  mailComposer.title=@"HPC News";
-    [mailComposer setMessageBody:[NSString stringWithFormat:@"%@\n\nA:%@\nB:%@\nC:%@\nD:%@\n",Question.text,AnswerA.text,AnswerB.text,AnswerC.text,AnswerD.text] isHTML:NO];
+    [mailComposer setMessageBody:[NSString stringWithFormat:@"%@\n\nA:%@\nB:%@\nC:%@\nD:%@\n",QuestionLabel.text,AnswerA.text,AnswerB.text,AnswerC.text,AnswerD.text] isHTML:NO];
     [mailComposer setSubject:@"Question from HPC Map"];
     
     // [mailComposer setToRecipients:emailAddresses];
@@ -100,13 +166,50 @@
     
 }
 
+- (void)postToFacebook
+{
+	FBHandler *fbHandler= [[FBHandler alloc] init];
+	if (fbHandler)
+	{
+		fbHandler.attachedViewController= (id)self;
+		[fbHandler postMessage:[NSString stringWithFormat:@"Question from HPC Map\n\n%@\n\nA:%@\nB:%@\nC:%@\nD:%@\n",QuestionLabel.text,AnswerA.text,AnswerB.text,AnswerC.text,AnswerD.text]];
+	}
+	[fbHandler release];
+}
+
 -(void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
     
     [self dismissModalViewControllerAnimated:YES];
 }
 
+#pragma mark - Quiz control
+-(IBAction)startover:(id)sender
+{
+	self.nextQuestionIndex= 0;
+	self.quizClass= kQuizClass0;
+    
+    iquizz=0;
+    iscore=0;
+    
+	[self fillQuestionForm];
+	
+    self.next.enabled=NO;
+	
+}
 
--(IBAction)startover:(id)sender{
+-(IBAction)newQuestion
+{
+	iquizz++;
+	self.next.enabled= NO;
+	self.nextQuestionIndex++;
+
+	[self fillQuestionForm];
+	
+}
+
+#ifdef oldway
+-(IBAction)startover:(id)sender
+{
     
     iquizz=0;
     iscore=0;
@@ -118,16 +221,16 @@
     self.AnswerB.textColor=[UIColor blackColor];
     self.AnswerC.textColor=[UIColor blackColor];
     self.AnswerD.textColor=[UIColor blackColor];
-      
-    Question.text=@"What was the name of the first supercomputer ?";
+	
+    QuestionLabel.text=@"What was the name of the first supercomputer ?";
     AnswerA.text=@"CDC 6600";
     AnswerB.text=@"Bull";
     AnswerC.text=@"Univac";
     AnswerD.text=@"DataPlex";
     
-     
+	
     self.next.enabled=NO;
-
+	
 }
 
 -(IBAction)newQuestion{
@@ -144,7 +247,7 @@
     
     if (iquizz == 1) {
         
-        Question.text=@"When was the first supercomputer released ?";
+        QuestionLabel.text=@"When was the first supercomputer released ?";
         AnswerA.text=@"1956";
         AnswerB.text=@"1964";
         AnswerC.text=@"1976";
@@ -152,7 +255,7 @@
         
     } else if (iquizz == 2) {
        
-        Question.text=@"Where was the first supercomputer built ?";
+        QuestionLabel.text=@"Where was the first supercomputer built ?";
         AnswerA.text=@"France";
         AnswerB.text=@"Spain";
         AnswerC.text=@"USA";
@@ -161,7 +264,7 @@
     } else if (iquizz == 3) {
             
         
-        Question.text=@"Who designed the first supercomputer ?";
+        QuestionLabel.text=@"Who designed the first supercomputer ?";
         AnswerA.text=@"Seymour IBM";
         AnswerB.text=@"Seymour Cray";
         AnswerC.text=@"Seymour Bull";
@@ -169,7 +272,7 @@
         
     } else if (iquizz == 4) {
         
-         Question.text=@"Serial vs parallel calculations: How much power per operation may a CPU consume compared to a GPU (latest technologies) ?";
+         QuestionLabel.text=@"Serial vs parallel calculations: How much power per operation may a CPU consume compared to a GPU (latest technologies) ?";
         AnswerA.text=@"7 times more";
         AnswerB.text=@"7 times less";
         AnswerC.text=@"70 times more";
@@ -177,7 +280,7 @@
     
     }  else if (iquizz == 5) {
         
-        Question.text=@"Which company marketed \"the world's first GPU\" in 1999 ?";
+        QuestionLabel.text=@"Which company marketed \"the world's first GPU\" in 1999 ?";
         AnswerA.text=@"Intel";
         AnswerB.text=@"IBM";
         AnswerC.text=@"MVIDIA";
@@ -186,7 +289,7 @@
         
     } else if (iquizz == 6) {
         
-        Question.text=@"The name of the new Intel chip built to leverage parallel computing is:";
+        QuestionLabel.text=@"The name of the new Intel chip built to leverage parallel computing is:";
         AnswerA.text=@"Intel CPU";
         AnswerB.text=@"Intel GPU";
         AnswerC.text=@"Intel GIT";
@@ -194,7 +297,7 @@
              
     } else if (iquizz == 7) {
         
-        Question.text=@"Which one of the following supercomputers uses GPUs ?";
+        QuestionLabel.text=@"Which one of the following supercomputers uses GPUs ?";
         AnswerA.text=@"Jaguar, USA";
         AnswerB.text=@"K Computer, Japan";
         AnswerC.text=@"Tianhe-1A, China";
@@ -202,7 +305,7 @@
              
     }  else if (iquizz == 8) {
         
-        Question.text=@"What kind of chips does the second most powerful supercomputer in the world (K computer) contain ?";
+        QuestionLabel.text=@"What kind of chips does the second most powerful supercomputer in the world (K computer) contain ?";
         AnswerA.text=@"CPUs+GPUs";
         AnswerB.text=@"CPUs+MICs";
         AnswerC.text=@"CPUs only";
@@ -210,7 +313,7 @@
             
     } else if (iquizz == 9) {
         
-        Question.text=@"By 2012-2013, which supercomputer is going to be upgraded with GPUs ?";
+        QuestionLabel.text=@"By 2012-2013, which supercomputer is going to be upgraded with GPUs ?";
         AnswerB.text=@"K Computer, Japan";
         AnswerA.text=@"Jaguar, USA";
         AnswerC.text=@"Kraken, USA";
@@ -218,7 +321,7 @@
         
     } else if (iquizz == 10) {
         
-        Question.text=@"In Spain, the Barcelona supercomputing center recently developped a hybrid architecture: GPU + ..";
+        QuestionLabel.text=@"In Spain, the Barcelona supercomputing center recently developped a hybrid architecture: GPU + ..";
         AnswerA.text=@"Smartphone chip";
         AnswerB.text=@"CPU";
         AnswerC.text=@"MIC";
@@ -234,7 +337,7 @@
          
     } else if (iquizz == 11) {
         
-        Question.text=@"Researchers have recently built computer chips that use .. instead of electricity (electrons) to transmit the information.";
+        QuestionLabel.text=@"Researchers have recently built computer chips that use .. instead of electricity (electrons) to transmit the information.";
         AnswerA.text=@"Light";
         AnswerB.text=@"Photons";
         AnswerC.text=@"Water";
@@ -252,7 +355,7 @@
     } else if (iquizz == 12) {
         
         
-        Question.text=@"Which country recently developed its first own computer chip ? ";
+        QuestionLabel.text=@"Which country recently developed its first own computer chip ? ";
         AnswerA.text=@"Japan";
         AnswerB.text=@"Australia";
         AnswerC.text=@"China";
@@ -271,7 +374,7 @@
     } else if (iquizz == 13) {
         
         
-        Question.text=@"Which language(s) can be used to develop on GPUs ? ";
+        QuestionLabel.text=@"Which language(s) can be used to develop on GPUs ? ";
         AnswerA.text=@"CUDA";
         AnswerB.text=@"OpenACC";
         AnswerC.text=@"C/C++";
@@ -287,7 +390,7 @@
         
     } else if (iquizz == 14) {
              
-        Question.text=@"In which journal appeared this quote : \"The processor is going through a bit of a schizophrenic mid-life crisis\" ?";
+        QuestionLabel.text=@"In which journal appeared this quote : \"The processor is going through a bit of a schizophrenic mid-life crisis\" ?";
         AnswerA.text=@"EE times";
         AnswerB.text=@"NY times";
         AnswerC.text=@"LA times";
@@ -303,7 +406,7 @@
             
     } else if (iquizz == 15) {
         
-        Question.text=@"In what year the world's first hacker ruined a public demonstration of a wireless telegraph by sending Morse code insults via wire ?";
+        QuestionLabel.text=@"In what year the world's first hacker ruined a public demonstration of a wireless telegraph by sending Morse code insults via wire ?";
         
         AnswerA.text=@"1789";
         AnswerB.text=@"1804";
@@ -322,7 +425,7 @@
                 
     } else if (iquizz == 16) {
         
-        Question.text=@"The telegraph hacker was known as a ..";
+        QuestionLabel.text=@"The telegraph hacker was known as a ..";
         
         AnswerA.text=@"civil engineer";
         AnswerB.text=@"cook";
@@ -331,7 +434,7 @@
         
     } else if (iquizz == 17) {
         
-        Question.text=@"The Koomey’s Law says that the amount of power needed to perform a computing task falls by half every ..";
+        QuestionLabel.text=@"The Koomey’s Law says that the amount of power needed to perform a computing task falls by half every ..";
         AnswerA.text=@"1.5 months";
         AnswerB.text=@"1.5 years";
         AnswerC.text=@"2.5 months";
@@ -339,7 +442,7 @@
         
     } else if (iquizz == 18) {
         
-        Question.text=@"By 2023, supercomputers are expected to be able to simulate a complete ..";
+        QuestionLabel.text=@"By 2023, supercomputers are expected to be able to simulate a complete ..";
         AnswerA.text=@"rat brain";
         AnswerB.text=@"dog brain";
         AnswerC.text=@"human brain";
@@ -356,7 +459,7 @@
         
     } else if (iquizz == 19) {
         
-        Question.text=@"The power that a supercomputer needs is similar to the power needed by a ..";
+        QuestionLabel.text=@"The power that a supercomputer needs is similar to the power needed by a ..";
         AnswerA.text=@"high-speed train";
         AnswerB.text=@"plane";
         AnswerC.text=@"ship";
@@ -364,7 +467,7 @@
         
     } else if (iquizz == 20) {
         
-        Question.text=@"How much power does that (roughly) correspond to ?";
+        QuestionLabel.text=@"How much power does that (roughly) correspond to ?";
         AnswerA.text=@"7 MW";
         AnswerB.text=@"14 MW";
         AnswerC.text=@"21 MW";
@@ -372,7 +475,7 @@
         
     } else if (iquizz == 21) {
         
-        Question.text=@"Which one of the following locations is ideal to build green computing centers and save cooling energy ?";
+        QuestionLabel.text=@"Which one of the following locations is ideal to build green computing centers and save cooling energy ?";
         AnswerA.text=@"Tennessee";
         AnswerB.text=@"Iceland";
         AnswerC.text=@"France";
@@ -380,7 +483,7 @@
         
     } else if (iquizz == 22) {
         
-        Question.text=@"Which is the #1 most greenest supercomputer in the world?";
+        QuestionLabel.text=@"Which is the #1 most greenest supercomputer in the world?";
         AnswerA.text=@"Tianhe-1A, China";
         AnswerB.text=@"K Computer, Japan";
         AnswerC.text=@"rzuseq, BG/Q, USA";
@@ -390,7 +493,7 @@
         
     } else if (iquizz == 23) {
         
-        Question.text=@"Which is the #1 most powerful supercomputer in the world?";
+        QuestionLabel.text=@"Which is the #1 most powerful supercomputer in the world?";
         AnswerA.text=@"Jaguar, USA";
         AnswerD.text=@"K Computer, Japan";
         AnswerC.text=@"Tsanhe-1A, China";
@@ -398,7 +501,7 @@
         
     } else if (iquizz == 24) {
         
-        Question.text=@"Which is the #2 most powerful supercomputer in the world?";
+        QuestionLabel.text=@"Which is the #2 most powerful supercomputer in the world?";
         AnswerB.text=@"Tianhe-1A, China";
         AnswerA.text=@"K Computer, Japan";
         AnswerC.text=@"Jaguar, USA";
@@ -406,7 +509,7 @@
         
     } else if (iquizz == 25) {
         
-        Question.text=@"Which is the #3 most powerful supercomputer in the world?";
+        QuestionLabel.text=@"Which is the #3 most powerful supercomputer in the world?";
         AnswerA.text=@"Tianhe-1A, China";
         AnswerB.text=@"K Computer, Japan";
         AnswerC.text=@"Mira, BG/Q, USA";
@@ -414,7 +517,7 @@
         
     } else if (iquizz == 26) {
         
-        Question.text=@"Which \"measures\" can be used to assess how green is a computing center ? ";
+        QuestionLabel.text=@"Which \"measures\" can be used to assess how green is a computing center ? ";
         
         AnswerA.text=@"Perf. Per Watt";
         AnswerB.text=@"GPUE";
@@ -424,7 +527,7 @@
     } else if (iquizz == 27) {
         
               
-        Question.text=@"Which of the following energy sources could be used to power the battery of your cell phones ?";
+        QuestionLabel.text=@"Which of the following energy sources could be used to power the battery of your cell phones ?";
         AnswerA.text=@"Solar panels";
         AnswerB.text=@"Human movements";
         AnswerC.text=@"Hydrogen cells";
@@ -432,7 +535,7 @@
         
     }  else if (iquizz == 28) {
         
-        Question.text=@"Which projects use distributed computers that communicate through the network to resolve scientific questions ?";
+        QuestionLabel.text=@"Which projects use distributed computers that communicate through the network to resolve scientific questions ?";
         AnswerA.text=@"SETI@HOME";
         AnswerB.text=@"Folding@HOME";
         AnswerC.text=@"Docking@HOME";
@@ -448,7 +551,7 @@
                
     } else if (iquizz == 29) {
         
-        Question.text=@"Which platform is known as the social supecomputing platform for providing ready-to-use programs that would answer a single question ?";
+        QuestionLabel.text=@"Which platform is known as the social supecomputing platform for providing ready-to-use programs that would answer a single question ?";
         
         AnswerA.text=@"Opani";
         AnswerB.text=@"CharityEngine";
@@ -466,7 +569,7 @@
         
     } else if (iquizz == 30) {
         
-        Question.text=@"Supercomputing simulations can be used to predict the impact of a marine power generation installation on the environment.";
+        QuestionLabel.text=@"Supercomputing simulations can be used to predict the impact of a marine power generation installation on the environment.";
         AnswerA.text=@"YES";
         AnswerB.text=@"NO";
         AnswerC.text=@"";
@@ -474,7 +577,7 @@
         
     }  else if (iquizz == 31) {
         
-        Question.text=@"In 2012, how many IBM data centers have been honored by  the European Commission for their energy efficiency ?";
+        QuestionLabel.text=@"In 2012, how many IBM data centers have been honored by  the European Commission for their energy efficiency ?";
         AnswerA.text=@"21";
         AnswerB.text=@"27";
         AnswerC.text=@"35";
@@ -482,7 +585,7 @@
         
     } else if (iquizz == 32) {
         
-        Question.text=@"Individuals can pay for using computing resources from .. platforms in order to launch their own computer simulations. ";
+        QuestionLabel.text=@"Individuals can pay for using computing resources from .. platforms in order to launch their own computer simulations. ";
         AnswerA.text=@"Amazon EC2 Cluster";
         AnswerB.text=@"Opani";
         AnswerC.text=@"CharityEngine";
@@ -490,7 +593,7 @@
         
     } else if (iquizz == 33) {
         
-        Question.text=@"In 2012, which country might become the world's #1 cloud computing market.";
+        QuestionLabel.text=@"In 2012, which country might become the world's #1 cloud computing market.";
         AnswerA.text=@"Japan";
         AnswerB.text=@"China";
         AnswerC.text=@"USA";
@@ -498,7 +601,7 @@
         
     } else if (iquizz == 34) {
         
-        Question.text=@"By 2020, U.S. organizations could save $12.3 billion in energy cost by moving to the Cloud: this corresponds to .. million barrels of oil";
+        QuestionLabel.text=@"By 2020, U.S. organizations could save $12.3 billion in energy cost by moving to the Cloud: this corresponds to .. million barrels of oil";
         AnswerA.text=@"200";
         AnswerB.text=@"150";
         AnswerC.text=@"100";
@@ -506,7 +609,7 @@
               
     } else if (iquizz == 35) {
        
-        Question.text=@"Which of the following techniques are used to reduce energy costs and hardware failures ?";
+        QuestionLabel.text=@"Which of the following techniques are used to reduce energy costs and hardware failures ?";
         AnswerA.text=@"Umbrella cooling";
         AnswerB.text=@"Water cooling";
         AnswerC.text=@"Air cooling";
@@ -514,7 +617,7 @@
               
     } else if (iquizz == 36) {
         
-        Question.text=@"The K Computer, second most powerful supercomputer in the world uses ..";
+        QuestionLabel.text=@"The K Computer, second most powerful supercomputer in the world uses ..";
         AnswerA.text=@"Water cooling";
         AnswerB.text=@"Air cooling";
         AnswerC.text=@"Water & air cooling";
@@ -522,7 +625,7 @@
         
     } else if (iquizz == 37) {
         
-        Question.text=@"Recent findings says that biogas-powered cells would allow to pump up to .. into a system of distributed computational resources.";
+        QuestionLabel.text=@"Recent findings says that biogas-powered cells would allow to pump up to .. into a system of distributed computational resources.";
         AnswerA.text=@"5 MW";
         AnswerB.text=@"10 MW";
         AnswerC.text=@"50 MW";
@@ -547,7 +650,7 @@
          */
         
     
-         Question.text=@"What happened at the annual International Consumer Electronics Show (CES 2012) ?";
+         QuestionLabel.text=@"What happened at the annual International Consumer Electronics Show (CES 2012) ?";
          AnswerC.text=@"50 Cent was there";
          AnswerB.text=@"Eminem was there";
          AnswerA.text=@"iPhone5 unveiled"; 
@@ -563,7 +666,7 @@
         
     } else if (iquizz == 39) {
         
-        Question.text=@"Whos this quote is attributed to: \"Try not to become a man of success but a man of value.\"";
+        QuestionLabel.text=@"Whos this quote is attributed to: \"Try not to become a man of success but a man of value.\"";
         AnswerA.text=@"Albert Einstein";
         AnswerB.text=@"Barack Obama";
         AnswerC.text=@"Nicolas Sarkozy";
@@ -571,7 +674,7 @@
         
     } else if (iquizz == 40) {
         
-        Question.text=@"By 2020, we are going to reach the era of supercomputing at the .. ";
+        QuestionLabel.text=@"By 2020, we are going to reach the era of supercomputing at the .. ";
          AnswerA.text=@"Exascale";
          AnswerB.text=@"Petascale";
         AnswerC.text=@"Terascale";
@@ -579,7 +682,7 @@
         
     } else if (iquizz == 41) {
         
-        Question.text=@"In Spain, the e-learning platform for virtual classrooms in the supercomputing center of Galicia has .. users.";
+        QuestionLabel.text=@"In Spain, the e-learning platform for virtual classrooms in the supercomputing center of Galicia has .. users.";
         AnswerA.text=@"10,000";
         AnswerB.text=@"20,000";
         AnswerC.text=@"30,000";
@@ -587,7 +690,7 @@
         
     } else if (iquizz == 42) {
         
-        Question.text=@"The official list that ranks the world's most powerful supercomputers according to their performance (flop) is named:";
+        QuestionLabel.text=@"The official list that ranks the world's most powerful supercomputers according to their performance (flop) is named:";
         AnswerA.text=@"T0P10";
         AnswerB.text=@"TOP100";
         AnswerC.text=@"TOP500";
@@ -595,7 +698,7 @@
         
     } else if (iquizz == 43) {
         
-        Question.text=@"The official list that ranks the world's most powerful supercomputers according to their energy consumption per flop is named:";
+        QuestionLabel.text=@"The official list that ranks the world's most powerful supercomputers according to their energy consumption per flop is named:";
         AnswerA.text=@"GREEN1000";
         AnswerB.text=@"GREEN500";
         AnswerC.text=@"GREEN100";
@@ -603,7 +706,7 @@
         
     } else if (iquizz == 44) {
         
-        Question.text=@"The name of logarithmic scale that combines Green500+Top500 to look at \"performance vs energy efficiency\" through a single scalar:";
+        QuestionLabel.text=@"The name of logarithmic scale that combines Green500+Top500 to look at \"performance vs energy efficiency\" through a single scalar:";
         AnswerA.text=@"Exascalar";
         AnswerB.text=@"Petascalar";
         AnswerC.text=@"Terascalar";
@@ -611,7 +714,7 @@
         
     } else if (iquizz == 45) {
         
-        Question.text=@"The name of the NVIDIA exascale supercomputer that should be released by 2018 is .. ";
+        QuestionLabel.text=@"The name of the NVIDIA exascale supercomputer that should be released by 2018 is .. ";
         AnswerA.text=@"Achille";
         AnswerB.text=@"Echelle";
         AnswerC.text=@"Echelon";
@@ -619,7 +722,7 @@
         
     } else if (iquizz == 46) {
         
-        Question.text=@"Intel’s 2018 Exascale Goal is: delivering one Exaflops in a power envelope of .. ";
+        QuestionLabel.text=@"Intel’s 2018 Exascale Goal is: delivering one Exaflops in a power envelope of .. ";
         AnswerA.text=@"1 MW";
         AnswerB.text=@"5 MW";
         AnswerC.text=@"10 MW";
@@ -635,7 +738,7 @@
         
     } else if (iquizz == 47) {
                     
-        Question.text=@"In January 2012, which company announced the creation of the world's smallest storage device (12-atom size) ?";
+        QuestionLabel.text=@"In January 2012, which company announced the creation of the world's smallest storage device (12-atom size) ?";
         AnswerA.text=@"Cray";
         AnswerB.text=@"IBM";
         AnswerC.text=@"Intel";
@@ -652,7 +755,7 @@
         
     } else if (iquizz == 48) {
         
-        Question.text=@"Which countries are leading the supercomputing race ?";
+        QuestionLabel.text=@"Which countries are leading the supercomputing race ?";
         AnswerA.text=@"China & USA";
         AnswerC.text=@"Japan & USA";
         AnswerB.text=@"China & Japan";
@@ -660,7 +763,7 @@
         
     } else if (iquizz == 49) {
         
-        Question.text=@"Which country is leading the green supercomputing race ?";
+        QuestionLabel.text=@"Which country is leading the green supercomputing race ?";
         AnswerA.text=@"USA";
         AnswerB.text=@"China";
         AnswerC.text=@"Japan";
@@ -669,7 +772,7 @@
         
     } else if (iquizz == 50) {
         
-        Question.text=@"Which company is leading the green supercomputing race ?";
+        QuestionLabel.text=@"Which company is leading the green supercomputing race ?";
         AnswerA.text=@"IBM";
         AnswerB.text=@"Cray";
         AnswerC.text=@"Intel";
@@ -684,7 +787,87 @@
      */
 
 }
+#endif
 
+- (BOOL)containsAnswer:(NSString *)answer
+{
+    NSRange range= [self.currentQuestion.correctAnswers rangeOfString:answer];
+    return (range.location != NSNotFound);
+}
+
+
+- (IBAction)answerButton:(id)sender
+{
+	switch ([sender tag])
+	{
+		case 0:
+			// Answer A
+			if ([self containsAnswer:@"A"])
+			{
+				AnswerA.textColor=[UIColor greenColor];
+				self.next.enabled=YES;
+				iscore++;
+			}
+			else
+			{
+				AnswerA.textColor=[UIColor redColor];
+				iscore--;
+			}
+			break;
+			
+		case 1:
+			// Answer B
+			if ([self containsAnswer:@"B"])
+			{
+				AnswerB.textColor=[UIColor greenColor];
+				self.next.enabled=YES;
+				iscore++;
+			}
+			else
+			{
+				AnswerB.textColor=[UIColor redColor];
+				iscore--;
+			}
+			break;
+			
+		case 2:
+			// Answer C
+			if ([self containsAnswer:@"C"])
+			{
+				AnswerC.textColor=[UIColor greenColor];
+				self.next.enabled=YES;
+				iscore++;
+			}
+			else
+			{
+				AnswerC.textColor=[UIColor redColor];
+				iscore--;
+			}
+			break;
+			
+		case 3:
+			// Answer D
+			if ([self containsAnswer:@"D"])
+			{
+				AnswerD.textColor=[UIColor greenColor];
+				self.next.enabled=YES;
+				iscore++;
+			}
+			else
+			{
+				AnswerD.textColor=[UIColor redColor];
+				iscore--;
+			}
+			break;
+			
+		default:
+			break;
+	}
+	
+	self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+}
+
+#ifdef oldway
 -(IBAction)buttonA:(id)sender{
     
     if (iquizz == 0 || iquizz == 10 || iquizz == 20 || iquizz == 30 || iquizz == 40 || iquizz == 50 || iquizz == 27 || iquizz==32 || iquizz==26 || iquizz==28 || iquizz==13) {
@@ -874,10 +1057,11 @@
         
     }
 }
+#endif
 
--(void) dealloc{
-    
-    [Question release];
+-(void) dealloc
+{
+    [QuestionLabel release];
     [AnswerA release];
     [AnswerB release];
     [AnswerC release];
@@ -893,6 +1077,9 @@
     [result release];
     [next release];
     [startover release];
+	
+	[questions release];
+	
     [super dealloc];
   
 }

@@ -189,7 +189,7 @@
 
 - (void) failedTransaction: (SKPaymentTransaction *)transaction
 {
-	NSLog(@"failedTransaction");
+	DebugLog(@"failedTransaction: %@", transaction.JSONRepresentation);
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"failedTransaction" object:nil];
 	[[SKPaymentQueue defaultQueue] finishTransaction: transaction];
@@ -215,12 +215,15 @@
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
 }
 
--(void) paymentQueueRestoreCompletedTransactionsFinished: (SKPaymentTransaction *)transaction{
-    
+//-(void) paymentQueueRestoreCompletedTransactionsFinished: (SKPaymentTransaction *)transaction
+-(void) paymentQueueRestoreCompletedTransactionsFinished: (SKPaymentQueue *)queue
+{
+	DebugLog(@"paymentQueueRestoreCompletedTransactionsFinished:%d", queue.transactions.count);
 }
 
--(void) paymentQueue:(SKPaymentQueue *) paymentQueue restoreCompletedTransactionsFailedWithError:(NSError *)error{
-    
+-(void) paymentQueue:(SKPaymentQueue *) paymentQueue restoreCompletedTransactionsFailedWithError:(NSError *)error
+{
+	DebugLog(@"restoreCompletedTransactionsFailedWithError:%@", error);
 }
 
 // use this to get the receipt
