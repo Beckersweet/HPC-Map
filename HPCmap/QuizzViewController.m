@@ -16,7 +16,7 @@
 @synthesize next,startover,ask;
 @synthesize toolbar;
 
-@synthesize questions, nextQuestionIndex, quizClass, currentQuestion;
+@synthesize questions, nextQuestionIndex, quizClass, quizLevel, currentQuestion, currentQuizClass, randomized, gcHandler;
 
 - (void)didReceiveMemoryWarning
 {
@@ -28,6 +28,9 @@
 
 - (void)viewDidLoad
 {
+	// Init Gamecenter stuff
+	[[GCHandler sharedInstance] authenticateLocalUser];
+	
     iquizz=0;
     iscore=0;
     
@@ -65,13 +68,12 @@
 //    AnswerB.text=@"Bull";
 //    AnswerC.text=@"Univac";
 //    AnswerD.text=@"DataPlex";
-	
-	self.questions= [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"QuizQA" ofType:@"plist"]];
 
+	// Quiz defaults
 	self.nextQuestionIndex= 0;
-	self.quizClass= kQuizClass0;
-	[self fillQuestionForm] ;
-	    
+	self.quizClass= kQuizClass1;
+	self.quizLevel= kQuizLevelEasy;
+
     [self.view addSubview:QuestionLabel];
     [self.view addSubview:AnswerA];
     [self.view addSubview:AnswerB];
@@ -81,33 +83,45 @@
   //  score = [[UILabel alloc] init];
    //Question = [[UILabel alloc] init];
     
-       
-    self.next.enabled=NO;
+	[self startover:nil];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	[self askForLevel];
 
 }
 
 - (void)fillQuestionForm
 {
+//	DebugLog(@"Questions data:\n%@", [Question describeClassInstance:self.questions classType:[Question class]]);
+
 	self.xofy.text= [NSString stringWithFormat:@"%d of %d",iquizz+1, [Question questionCount:self.quizClass inQuestions:self.questions]];
     self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
 	
 	self.currentQuestion= [Question getNextQuestion:self.questions index:nextQuestionIndex class:self.quizClass];
 	DebugLog(@"Asking Q%d:%@",self.nextQuestionIndex, self.currentQuestion.question);
+	if (self.currentQuestion != nil)
+	{
+		QuestionLabel.text=self.currentQuestion.question;
+		
+		self.AnswerA.textColor=[UIColor blackColor];
+		self.AnswerB.textColor=[UIColor blackColor];
+		self.AnswerC.textColor=[UIColor blackColor];
+		self.AnswerD.textColor=[UIColor blackColor];
+		
+		AnswerA.text=self.currentQuestion.answers[0];
+		AnswerB.text=self.currentQuestion.answers[1];
+		AnswerC.text=self.currentQuestion.answers[2];
+		AnswerD.text=self.currentQuestion.answers[3];
 
-    QuestionLabel.text=self.currentQuestion.question;
-	
-    self.AnswerA.textColor=[UIColor blackColor];
-    self.AnswerB.textColor=[UIColor blackColor];
-    self.AnswerC.textColor=[UIColor blackColor];
-    self.AnswerD.textColor=[UIColor blackColor];
-	
-    AnswerA.text=self.currentQuestion.answers[0];
-    AnswerB.text=self.currentQuestion.answers[1];
-    AnswerC.text=self.currentQuestion.answers[2];
-    AnswerD.text=self.currentQuestion.answers[3];
+		[self.next setTitle:@"Next"];
+	}
+	else
+	{
+		self.next.enabled= YES;
+		[self.next setTitle:@"Done"];
+	}
 }
 
 #pragma mark - Ask A Friend
@@ -123,7 +137,7 @@
 													 otherButtonTitles:@"Ask via email", @"Ask via facebook", nil];
 		
 		[sendSheet showFromTabBar:self.tabBarController.tabBar];
-	
+		[sendSheet release];
 	}
 	else
 		[self sendEmail:nil];
@@ -177,28 +191,94 @@
 	[fbHandler release];
 }
 
--(void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
     
     [self dismissModalViewControllerAnimated:YES];
 }
 
+#pragma mark - GameCenter
+- (IBAction)showLeaderboard
+{
+    GKLeaderboardViewController *leaderboardController = [[GKLeaderboardViewController alloc] init];
+    if (leaderboardController != NULL)
+    {
+        leaderboardController.category= self.currentQuizClass.leaderboard;
+        leaderboardController.timeScope= GKLeaderboardTimeScopeAllTime;
+        leaderboardController.leaderboardDelegate= self;
+        [self presentModalViewController:leaderboardController animated:YES];
+    }
+}
+- (void)leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
+{
+    [self dismissModalViewControllerAnimated: YES];
+    [viewController release];
+}
+- (IBAction)showAchievements
+{
+    GKAchievementViewController *achievements= [[GKAchievementViewController alloc] init];
+    if (achievements != NULL)
+    {
+        achievements.achievementDelegate= self;
+        [self presentModalViewController:achievements animated:YES];
+    }
+}
+- (void)achievementViewControllerDidFinish:(GKAchievementViewController *)viewController;
+{
+    [self dismissModalViewControllerAnimated: YES];
+    [viewController release];
+}
+
+- (void)submitScore
+{
+    if(iscore > 0)
+    {
+        [[GCHandler sharedInstance] reportScore:iscore forCategory:self.currentQuizClass.leaderboard];
+    }
+}
+
+
 #pragma mark - Quiz control
+- (void)askForLevel
+{
+	// Ask for level
+	QuizLevelSelectViewController *qLevel= [[QuizLevelSelectViewController alloc] initWithNibName:@"QuizLevelSelectViewController" bundle:nil];
+	qLevel.view.opaque= NO;
+	qLevel.view.backgroundColor= [[UIColor blackColor] colorWithAlphaComponent:0.5f];
+	qLevel.delegate= self;
+	qLevel.quizClass= self.quizClass;
+	qLevel.quizLevel= self.quizLevel;
+	
+	[self.view addSubview:qLevel.view];
+}
+
 -(IBAction)startover:(id)sender
 {
-	self.nextQuestionIndex= 0;
-	self.quizClass= kQuizClass0;
-    
-    iquizz=0;
-    iscore=0;
-    
-	[self fillQuestionForm];
-	
-    self.next.enabled=NO;
-	
+	if (sender == nil)
+	{
+		self.nextQuestionIndex= 0;
+		
+		iquizz=0;
+		iscore=0;
+		
+		self.questions= [Question loadQuestionsOfClass:self.quizClass level:self.quizLevel];
+		[self fillQuestionForm];
+		
+		self.next.enabled=NO;
+	}
+	else
+		[self askForLevel];
 }
 
 -(IBAction)newQuestion
 {
+	if ([self.next.title isEqualToString:@"Done"])
+	{
+		// End of questions
+		self.next.enabled= NO;
+		[self submitScore];
+		return;
+	}
+	
 	iquizz++;
 	self.next.enabled= NO;
 	self.nextQuestionIndex++;
@@ -208,8 +288,7 @@
 }
 
 #ifdef oldway
--(IBAction)startover:(id)sender
-{
+-(IBAction)startover:(id)sender{
     
     iquizz=0;
     iscore=0;
@@ -232,7 +311,6 @@
     self.next.enabled=NO;
 	
 }
-
 -(IBAction)newQuestion{
     
     iquizz++;
@@ -787,6 +865,192 @@
      */
 
 }
+-(IBAction)buttonA:(id)sender{
+    
+    if (iquizz == 0 || iquizz == 10 || iquizz == 20 || iquizz == 30 || iquizz == 40 || iquizz == 50 || iquizz == 27 || iquizz==32 || iquizz==26 || iquizz==28 || iquizz==13) {
+		
+        AnswerA.textColor=[UIColor greenColor];
+        self.next.enabled=YES;
+		
+		
+    } else if (iquizz == 4 || iquizz == 14 || iquizz == 24 || iquizz == 34 || iquizz == 44 || iquizz== 11 || iquizz==28) {
+        
+		// iscore++;
+		//   result.text=@"You are right";
+        AnswerA.textColor=[UIColor greenColor];
+		;
+        self.next.enabled=YES;
+		//[self newQuestion];
+		
+        
+    } else if (iquizz == 9 || iquizz == 19 || iquizz == 29 || iquizz == 39 || iquizz == 49 ) {
+        
+		
+		AnswerA.textColor=[UIColor greenColor];
+		//  iquizz++;
+        self.next.enabled=YES;
+		//  [self newQuestion];
+		
+    } else {
+		//    iscore--;
+		//   result.text=@"Try again";
+        AnswerA.textColor=[UIColor redColor];
+		/// self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+        
+    }
+    
+    
+    if(AnswerA.textColor == [UIColor redColor]){
+        iscore--;
+		self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+    } else {
+        iscore++;
+		self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+		
+        
+    }
+    
+}
+-(IBAction)buttonB:(id)sender{
+    
+    
+    if (iquizz == 1 || iquizz == 11 || iquizz == 21 || iquizz == 31 || iquizz == 41 || iquizz==32 || iquizz==35 || iquizz==26 || iquizz==28) {
+        
+		//  iscore++;
+		//   result.text=@"You are right";
+		//  self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+		AnswerB.textColor=[UIColor greenColor];
+		//  iquizz++;
+        self.next.enabled=YES;
+		// [self newQuestion];
+        
+        
+    } else if (iquizz == 3 || iquizz == 23 || iquizz == 33 || iquizz == 43 || iquizz==13) {
+        
+		//  iscore++;
+		//   result.text=@"You are right";
+		//  self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+		AnswerB.textColor=[UIColor greenColor];
+		//  iquizz++;
+        self.next.enabled=YES;
+		//  [self newQuestion];
+        
+        
+    } else if (iquizz == 17 || iquizz == 27 || iquizz == 47 ) {
+        
+		//   iscore++;
+		//  result.text=@"You are right";
+		//  self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+		AnswerB.textColor=[UIColor greenColor];
+		//  iquizz++;
+        self.next.enabled=YES;
+		//   [self newQuestion];
+        
+        
+    } else {
+        
+		//  result.text=@"Try again";
+        AnswerB.textColor=[UIColor redColor];
+		// self.score.text= [NSString stringWithFormat:@"Score: %d",iscore-1];
+        
+    }
+	
+    if(AnswerB.textColor == [UIColor redColor]){
+        iscore--;
+        self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+    } else {
+        iscore++;
+        self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+        
+        
+    }
+    
+    
+}
+-(IBAction)buttonC:(id)sender{
+    
+    if (iquizz == 2 || iquizz == 12 || iquizz == 22 || iquizz == 32 || iquizz == 42 || iquizz==7 || iquizz==26 || iquizz==36 || iquizz==37) {
+        
+		
+		AnswerC.textColor=[UIColor greenColor];
+		//   iquizz++;
+        self.next.enabled=YES;
+		//  [self newQuestion];
+        
+        
+    } else if (iquizz == 5 || iquizz == 15 || iquizz == 25 || iquizz == 35 || iquizz == 45 ) {
+        
+		//  iscore++;
+		//  result.text=@"You are right";
+		//  self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+		AnswerC.textColor=[UIColor greenColor];
+		//    iquizz++;
+        self.next.enabled=YES;
+		//     [self newQuestion];
+        
+        
+    } else if (iquizz == 8 || iquizz == 18 || iquizz == 28 || iquizz == 38 || iquizz == 48 || iquizz==27) {
+        
+		//   iscore++;
+		//   result.text=@"You are right";
+		//   self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+		AnswerC.textColor=[UIColor greenColor];
+		//   iquizz++;
+        self.next.enabled=YES;
+		//  [self newQuestion];
+        
+        
+    } else {
+        
+		//  result.text=@"Try again";
+        AnswerC.textColor=[UIColor redColor];
+		//  self.score.text= [NSString stringWithFormat:@"Score: %d",iscore-1];
+        
+    }
+    
+    if(AnswerC.textColor == [UIColor redColor]){
+        iscore--;
+        self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+    } else {
+        iscore++;
+        self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+		
+    }
+	
+}
+-(IBAction)buttonD:(id)sender{
+    
+    
+    if (iquizz == 6 || iquizz == 16 || iquizz == 26 || iquizz == 46 || iquizz==27 || iquizz==28) {
+        
+		//   iscore++;
+		//   result.text=@"You are right";
+		//   self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+		AnswerD.textColor=[UIColor greenColor];
+		//   iquizz++;
+        self.next.enabled=YES;
+        
+		//  [self newQuestion];
+        
+        
+    } else {
+        
+		//  result.text=@"Try again";
+        AnswerD.textColor=[UIColor redColor];
+		//  self.score.text= [NSString stringWithFormat:@"Score: %d",iscore-1];
+        
+    }
+    
+    if(AnswerD.textColor == [UIColor redColor]){
+        iscore--;
+        self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+    } else {
+        iscore++;
+        self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
+        
+        
+    }
+}
 #endif
 
 - (BOOL)containsAnswer:(NSString *)answer
@@ -867,198 +1131,20 @@
 	self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
 }
 
-#ifdef oldway
--(IBAction)buttonA:(id)sender{
-    
-    if (iquizz == 0 || iquizz == 10 || iquizz == 20 || iquizz == 30 || iquizz == 40 || iquizz == 50 || iquizz == 27 || iquizz==32 || iquizz==26 || iquizz==28 || iquizz==13) {
-       
-        AnswerA.textColor=[UIColor greenColor];
-        self.next.enabled=YES;
-   
-                
-    } else if (iquizz == 4 || iquizz == 14 || iquizz == 24 || iquizz == 34 || iquizz == 44 || iquizz== 11 || iquizz==28) {
-        
-     // iscore++;
-   //   result.text=@"You are right";
-        AnswerA.textColor=[UIColor greenColor];
-     ;
-        self.next.enabled=YES;
-      //[self newQuestion];
-    
-        
-    } else if (iquizz == 9 || iquizz == 19 || iquizz == 29 || iquizz == 39 || iquizz == 49 ) {
-        
-     
-         AnswerA.textColor=[UIColor greenColor];
-       //  iquizz++;
-        self.next.enabled=YES;
-      //  [self newQuestion];
-          
-    } else {
-    //    iscore--;
-     //   result.text=@"Try again";
-        AnswerA.textColor=[UIColor redColor];
-   /// self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-        
-    }
-    
-    
-    if(AnswerA.textColor == [UIColor redColor]){
-        iscore--;
-         self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-    } else {
-        iscore++;
-         self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-       
-        
-    }
-    
+#pragma mark - Delegate functions
+- (void)quizLevelSelectViewControllerDidFinish:(QuizLevelSelectViewController *)controller
+{
+	self.quizClass= controller.quizClass;
+	self.quizLevel= controller.quizLevel;
+	self.currentQuizClass= ((QuizClass *)controller.quizClasses[self.quizClass]);
+	
+	[controller.view removeFromSuperview];
+	[self startover:nil];
+	
+	[controller release];
 }
 
--(IBAction)buttonB:(id)sender{
-    
-    
-    if (iquizz == 1 || iquizz == 11 || iquizz == 21 || iquizz == 31 || iquizz == 41 || iquizz==32 || iquizz==35 || iquizz==26 || iquizz==28) {
-        
-      //  iscore++;
-     //   result.text=@"You are right";
-     //  self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-         AnswerB.textColor=[UIColor greenColor];
-       //  iquizz++;
-        self.next.enabled=YES;
-       // [self newQuestion];
-        
-        
-    } else if (iquizz == 3 || iquizz == 23 || iquizz == 33 || iquizz == 43 || iquizz==13) {
-        
-      //  iscore++;
-     //   result.text=@"You are right";
-     //  self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-         AnswerB.textColor=[UIColor greenColor];
-       //  iquizz++;
-        self.next.enabled=YES;
-      //  [self newQuestion];
-        
-        
-    } else if (iquizz == 17 || iquizz == 27 || iquizz == 47 ) {
-        
-     //   iscore++;
-      //  result.text=@"You are right";
-     //  self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-         AnswerB.textColor=[UIColor greenColor];
-       //  iquizz++;
-        self.next.enabled=YES;
-     //   [self newQuestion];
-        
-        
-    } else {
-        
-      //  result.text=@"Try again";
-        AnswerB.textColor=[UIColor redColor];
-       // self.score.text= [NSString stringWithFormat:@"Score: %d",iscore-1];
-        
-    }
-
-    if(AnswerB.textColor == [UIColor redColor]){
-        iscore--;
-        self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-    } else {
-        iscore++;
-        self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-        
-        
-    }
-    
-    
-}
-
--(IBAction)buttonC:(id)sender{
-    
-    if (iquizz == 2 || iquizz == 12 || iquizz == 22 || iquizz == 32 || iquizz == 42 || iquizz==7 || iquizz==26 || iquizz==36 || iquizz==37) {
-        
-    
-         AnswerC.textColor=[UIColor greenColor];
-      //   iquizz++;
-        self.next.enabled=YES;
-      //  [self newQuestion];
-        
-        
-    } else if (iquizz == 5 || iquizz == 15 || iquizz == 25 || iquizz == 35 || iquizz == 45 ) {
-        
-      //  iscore++;
-      //  result.text=@"You are right";
-      //  self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-         AnswerC.textColor=[UIColor greenColor];
-     //    iquizz++;
-        self.next.enabled=YES;
-   //     [self newQuestion];
-        
-        
-    } else if (iquizz == 8 || iquizz == 18 || iquizz == 28 || iquizz == 38 || iquizz == 48 || iquizz==27) {
-        
-     //   iscore++;
-     //   result.text=@"You are right";
-     //   self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-         AnswerC.textColor=[UIColor greenColor];
-      //   iquizz++;
-        self.next.enabled=YES;
-      //  [self newQuestion];
-        
-        
-    } else {
-        
-      //  result.text=@"Try again";
-        AnswerC.textColor=[UIColor redColor];
-      //  self.score.text= [NSString stringWithFormat:@"Score: %d",iscore-1];
-        
-    }
-    
-    if(AnswerC.textColor == [UIColor redColor]){
-        iscore--;
-        self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-    } else {
-        iscore++;
-        self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-               
-    }
-
-}
-
--(IBAction)buttonD:(id)sender{
-    
-    
-    if (iquizz == 6 || iquizz == 16 || iquizz == 26 || iquizz == 46 || iquizz==27 || iquizz==28) {
-        
-     //   iscore++;
-     //   result.text=@"You are right";
-     //   self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-         AnswerD.textColor=[UIColor greenColor];
-    //   iquizz++;
-        self.next.enabled=YES;
-        
-      //  [self newQuestion];
-        
-        
-    } else {
-        
-      //  result.text=@"Try again";
-        AnswerD.textColor=[UIColor redColor];
-      //  self.score.text= [NSString stringWithFormat:@"Score: %d",iscore-1];
-        
-    }
-    
-    if(AnswerD.textColor == [UIColor redColor]){
-        iscore--;
-        self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-    } else {
-        iscore++;
-        self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-        
-        
-    }
-}
-#endif
-
+#pragma mark - Life cycle
 -(void) dealloc
 {
     [QuestionLabel release];

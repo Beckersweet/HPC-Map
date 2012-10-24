@@ -981,9 +981,9 @@ if (NOV11 == TRUE) {
     
     [super viewDidLoad];
 	
-	// ANT: Just testing purchases here without needing a button
-	[[InAppPurManager sharedInstance] requestProductData];
-           
+//	// ANT: Just testing purchases here without needing a button
+//	[[InAppPurManager sharedInstance] requestProductData];
+    
 }
 
 - (void)viewDidUnload {

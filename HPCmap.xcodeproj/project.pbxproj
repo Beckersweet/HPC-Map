@@ -95,9 +95,15 @@
 		21FB4CB514B5AFCB008BE8FF /* superenergysavings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21FB4CB314B5AFCB008BE8FF /* superenergysavings.xib */; };
 		21FB4CB914B5B026008BE8FF /* superimpact.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FB4CB714B5B025008BE8FF /* superimpact.m */; };
 		21FB4CBA14B5B026008BE8FF /* superimpact.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21FB4CB814B5B026008BE8FF /* superimpact.xib */; };
+		A930C1511635CCA900912267 /* QuizLevelSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A930C14F1635CCA900912267 /* QuizLevelSelectViewController.m */; settings = {COMPILER_FLAGS = " -fobjc-arc"; }; };
+		A930C1521635CCA900912267 /* QuizLevelSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A930C1501635CCA900912267 /* QuizLevelSelectViewController.xib */; };
+		A930C156163693CA00912267 /* QuizClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A930C155163693C900912267 /* QuizClass.m */; settings = {COMPILER_FLAGS = " -fobjc-arc"; }; };
 		A9348FA5162BE1FF00800A84 /* QuizQA.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9348FA4162BE1FF00800A84 /* QuizQA.plist */; };
 		A9348FAA162CADF600800A84 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = A9348FA9162CADF600800A84 /* Question.m */; settings = {COMPILER_FLAGS = " -fobjc-arc"; }; };
 		A9348FAC162DEE0C00800A84 /* QuizClasses.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9348FAB162DEE0C00800A84 /* QuizClasses.plist */; };
+		A9348FAF1630446400800A84 /* GCHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A9348FAE1630446400800A84 /* GCHandler.m */; settings = {COMPILER_FLAGS = " -fobjc-arc"; }; };
+		A9348FB21631300C00800A84 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9348FB01630582E00800A84 /* GameKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A9348FB31631301100800A84 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96F3FE01623122600694E7A /* StoreKit.framework */; };
 		A963C353161C127C004D3471 /* launchimage@2x-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A963C352161C127C004D3471 /* launchimage@2x-568h@2x.png */; };
 		A963C355161C128C004D3471 /* launchimage@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A963C354161C128C004D3471 /* launchimage@2x@2x.png */; };
 		A963C357161C12C4004D3471 /* launchimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A963C356161C12C4004D3471 /* launchimage@2x.png */; };
@@ -108,7 +114,6 @@
 		A96F3FDD1621910F00694E7A /* InAppPurManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A96F3FD91621910F00694E7A /* InAppPurManager.m */; };
 		A96F3FDE1621910F00694E7A /* MyStoreObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = A96F3FDB1621910F00694E7A /* MyStoreObserver.m */; };
 		A96F3FDF1621910F00694E7A /* MyStoreObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = A96F3FDB1621910F00694E7A /* MyStoreObserver.m */; };
-		A96F3FE11623122600694E7A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96F3FE01623122600694E7A /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,10 +248,18 @@
 		21FB4CB614B5B025008BE8FF /* superimpact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = superimpact.h; sourceTree = "<group>"; };
 		21FB4CB714B5B025008BE8FF /* superimpact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = superimpact.m; sourceTree = "<group>"; };
 		21FB4CB814B5B026008BE8FF /* superimpact.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = superimpact.xib; sourceTree = "<group>"; };
+		A930C14E1635CCA900912267 /* QuizLevelSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizLevelSelectViewController.h; sourceTree = "<group>"; };
+		A930C14F1635CCA900912267 /* QuizLevelSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizLevelSelectViewController.m; sourceTree = "<group>"; };
+		A930C1501635CCA900912267 /* QuizLevelSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizLevelSelectViewController.xib; sourceTree = "<group>"; };
+		A930C154163693C900912267 /* QuizClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizClass.h; sourceTree = "<group>"; };
+		A930C155163693C900912267 /* QuizClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizClass.m; sourceTree = "<group>"; };
 		A9348FA4162BE1FF00800A84 /* QuizQA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuizQA.plist; sourceTree = "<group>"; };
 		A9348FA8162CADF600800A84 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		A9348FA9162CADF600800A84 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		A9348FAB162DEE0C00800A84 /* QuizClasses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuizClasses.plist; sourceTree = "<group>"; };
+		A9348FAD1630446300800A84 /* GCHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCHandler.h; sourceTree = "<group>"; };
+		A9348FAE1630446400800A84 /* GCHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCHandler.m; sourceTree = "<group>"; };
+		A9348FB01630582E00800A84 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		A963C352161C127C004D3471 /* launchimage@2x-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x-568h@2x.png"; sourceTree = "<group>"; };
 		A963C354161C128C004D3471 /* launchimage@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x@2x.png"; sourceTree = "<group>"; };
 		A963C356161C12C4004D3471 /* launchimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x.png"; sourceTree = "<group>"; };
@@ -267,7 +280,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A96F3FE11623122600694E7A /* StoreKit.framework in Frameworks */,
+				A9348FB31631301100800A84 /* StoreKit.framework in Frameworks */,
+				A9348FB21631300C00800A84 /* GameKit.framework in Frameworks */,
 				A963C35D161C9572004D3471 /* Social.framework in Frameworks */,
 				2111AF2C15F837B2006FD566 /* MessageUI.framework in Frameworks */,
 				21F6BF141594DFFC00B04EA6 /* QuartzCore.framework in Frameworks */,
@@ -296,7 +310,6 @@
 		218EBAF71474E80700EDC3D6 = {
 			isa = PBXGroup;
 			children = (
-				A96F3FE01623122600694E7A /* StoreKit.framework */,
 				A963C356161C12C4004D3471 /* launchimage@2x.png */,
 				A963C354161C128C004D3471 /* launchimage@2x@2x.png */,
 				A963C352161C127C004D3471 /* launchimage@2x-568h@2x.png */,
@@ -319,6 +332,8 @@
 		218EBB051474E80700EDC3D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9348FB01630582E00800A84 /* GameKit.framework */,
+				A96F3FE01623122600694E7A /* StoreKit.framework */,
 				A963C35C161C9572004D3471 /* Social.framework */,
 				2111AF2B15F837B2006FD566 /* MessageUI.framework */,
 				21F6BF131594DFFC00B04EA6 /* QuartzCore.framework */,
@@ -484,6 +499,13 @@
 				A9348FAB162DEE0C00800A84 /* QuizClasses.plist */,
 				A9348FA8162CADF600800A84 /* Question.h */,
 				A9348FA9162CADF600800A84 /* Question.m */,
+				A930C154163693C900912267 /* QuizClass.h */,
+				A930C155163693C900912267 /* QuizClass.m */,
+				A9348FAD1630446300800A84 /* GCHandler.h */,
+				A9348FAE1630446400800A84 /* GCHandler.m */,
+				A930C14E1635CCA900912267 /* QuizLevelSelectViewController.h */,
+				A930C14F1635CCA900912267 /* QuizLevelSelectViewController.m */,
+				A930C1501635CCA900912267 /* QuizLevelSelectViewController.xib */,
 			);
 			name = Quiz;
 			sourceTree = "<group>";
@@ -636,6 +658,7 @@
 				A963C357161C12C4004D3471 /* launchimage@2x.png in Resources */,
 				A9348FA5162BE1FF00800A84 /* QuizQA.plist in Resources */,
 				A9348FAC162DEE0C00800A84 /* QuizClasses.plist in Resources */,
+				A930C1521635CCA900912267 /* QuizLevelSelectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,10 +724,13 @@
 				21875DB114C0F6930016EF86 /* QuizzViewController.m in Sources */,
 				21C6B24714C2B418009D476C /* modalView.m in Sources */,
 				2178A20E160937710007E7A4 /* FBNewsViewController.m in Sources */,
-				A963C360161C967F004D3471 /* FBHandler.m in Sources */,
 				A96F3FDC1621910F00694E7A /* InAppPurManager.m in Sources */,
 				A96F3FDE1621910F00694E7A /* MyStoreObserver.m in Sources */,
+				A963C360161C967F004D3471 /* FBHandler.m in Sources */,
 				A9348FAA162CADF600800A84 /* Question.m in Sources */,
+				A9348FAF1630446400800A84 /* GCHandler.m in Sources */,
+				A930C1511635CCA900912267 /* QuizLevelSelectViewController.m in Sources */,
+				A930C156163693CA00912267 /* QuizClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

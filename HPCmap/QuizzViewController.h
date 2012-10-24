@@ -10,13 +10,12 @@
 #import <MessageUI/MessageUI.h>
 #import "CommonDefines.h"
 #import "Question.h"
+#import "QuizClass.h"
 #import "FBHandler.h"
+#import "GCHandler.h"
+#import "QuizLevelSelectViewController.h"
 
-#define kQuizClass0		0
-#define kQuizClass1		1
-#define kQuizClass2		2
-
-@interface QuizzViewController : UIViewController <MFMailComposeViewControllerDelegate, UIActionSheetDelegate>
+@interface QuizzViewController : UIViewController <MFMailComposeViewControllerDelegate, UIActionSheetDelegate, GKLeaderboardViewControllerDelegate, GKAchievementViewControllerDelegate>
 {
     UILabel *QuestionLabel ;
     UILabel *AnswerA ;
@@ -40,7 +39,13 @@
 	NSArray *questions;
 	NSInteger nextQuestionIndex;
 	NSInteger quizClass;
+	NSInteger quizLevel;
 	Question *currentQuestion;
+	QuizClass *currentQuizClass;
+	BOOL randomized;
+	
+	GCHandler *gcHandler;
+	
 }
 
 @property (nonatomic,retain) IBOutlet UIToolbar *toolbar;
@@ -63,9 +68,14 @@
 @property (nonatomic, retain) NSArray *questions;
 @property (nonatomic, assign) NSInteger nextQuestionIndex;
 @property (nonatomic, assign) NSInteger quizClass;
+@property (nonatomic, assign) NSInteger quizLevel;
 @property (nonatomic, retain) Question *currentQuestion;
+@property (nonatomic, retain) QuizClass *currentQuizClass;
+@property (nonatomic, assign) BOOL randomized;
+
+@property (nonatomic, retain) GCHandler *gcHandler;
 
 - (IBAction)answerButton:(id)sender;
-
+- (void)askForLevel;
 
 @end

@@ -85,7 +85,6 @@
     [fbnews release];
 
     return YES;
-
 }
 
 - (void)dealloc {

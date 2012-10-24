@@ -2,8 +2,35 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>Kids</string>
-	<string>Teens</string>
-	<string>Mums and Dads</string>
+	<dict>
+		<key>Name</key>
+		<string>Kids</string>
+		<key>Difficulties</key>
+		<string>01</string>
+		<key>Paylevels</key>
+		<string>00</string>
+		<key>Leaderboard</key>
+		<string>com.beckersweet.hpcmap.quiz.kids</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Teens</string>
+		<key>Difficulties</key>
+		<string>012</string>
+		<key>Paylevels</key>
+		<string>001</string>
+		<key>Leaderboard</key>
+		<string>com.beckersweet.hpcmap.quiz.teens</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Mums and Dads</string>
+		<key>Difficulties</key>
+		<string>012</string>
+		<key>Paylevels</key>
+		<string>011</string>
+		<key>Leaderboard</key>
+		<string>com.beckersweet.hpcmap.quiz.md</string>
+	</dict>
 </array>
 </plist>

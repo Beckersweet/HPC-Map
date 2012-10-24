@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GCHandler.h"
 
 @class HPCMapViewController;
 
