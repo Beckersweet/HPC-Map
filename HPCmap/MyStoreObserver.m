@@ -30,9 +30,11 @@
 @implementation MyStoreObserver
 
 @synthesize delegate;
+@synthesize callingController;
 
 - (BOOL)verifyReceipt:(SKPaymentTransaction *)transaction {
-    NSString *jsonObjectString = [self encode:(uint8_t *)transaction.transactionReceipt.bytes length:transaction.transactionReceipt.length];      
+    NSString *jsonObjectString = [self encode:(uint8_t *)transaction.transactionReceipt.bytes length:transaction.transactionReceipt.length];
+	DebugLog(@"verifyReceipt: %@", jsonObjectString);
   //  NSString *completeString = [NSString stringWithFormat:@"https://sandbox.itunes.apple.com/verifyReceipt", jsonObjectString];      
     NSString *completeString = [NSString stringWithFormat:@"https://sandbox.itunes.apple.com/verifyReceipt"];
     NSURL *urlForValidation = [NSURL URLWithString:completeString];       
@@ -117,33 +119,33 @@
 
 - (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions
 {
-	NSLog(@"4 - paymentQueue");
+	DebugLog(@"4 - paymentQueue");
 	
 	for (SKPaymentTransaction* transaction in transactions)
 	{
 		switch (transaction.transactionState)
 		{
 			case SKPaymentTransactionStatePurchased:
-			//	NSLog(@"Complete Transaction");
+//				DebugLog(@"Complete Transaction");
 				[self completeTransaction:transaction];
               //  [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 				break;
 				
 			case SKPaymentTransactionStateFailed:
 				[self failedTransaction:transaction];
-           //     NSLog(@"failed Transaction");
+//				DebugLog(@"failed Transaction");
 				break;
 				
 			case SKPaymentTransactionStateRestored:
 				[self restoreTransaction:transaction];
-            //     NSLog(@"restoreTransaction");
+//            	DebugLog(@"restoreTransaction");
 				break;
 				
             case SKPaymentTransactionStatePurchasing:
                // [self PurchasedTransaction:transaction];
                //  [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                // [self paymentQueue:[SKPaymentQueue defaultQueue] updatedTransactions:transactions];
-                 NSLog(@"PurchasingTransaction");
+				DebugLog(@"PurchasingTransaction");
                 break;
                         
 			default:
@@ -154,7 +156,7 @@
 
 -(void) PurchasedTransaction: (SKPaymentTransaction *)transaction
 {
-    NSLog(@"Purchased Transaction");
+    DebugLog(@"Purchased Transaction");
 	 
     NSArray *transactions =[[NSArray alloc] initWithObjects:transaction, nil];
 	[self paymentQueue:[SKPaymentQueue defaultQueue] updatedTransactions:transactions];
@@ -169,11 +171,12 @@
     
   //  [self searchReceipt];
     
-      NSLog(@"complete Transaction");
+      DebugLog(@"complete Transaction");
     
 	if (transaction.transactionState==SKPaymentTransactionStatePurchased) 
 	{
-		[InAppPurManager RemoveAdsPurchased];
+//		[InAppPurManager RemoveAdsPurchased];
+		[self handlePurchaseResults:transaction];
 	}
 	
    // NSArray *transactions = [[SKPaymentQueue defaultQueue] transactions];
@@ -184,7 +187,7 @@
 	// Remove the transaction from the payment queue.
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
 	
-	NSLog(@"Transaction　complete");
+	DebugLog(@"Transaction　complete");
 }
 
 - (void) failedTransaction: (SKPaymentTransaction *)transaction
@@ -195,21 +198,23 @@
 	[[SKPaymentQueue defaultQueue] finishTransaction: transaction];
 }
 
-- (void) restoreTransaction: (SKPaymentTransaction *)transaction
+- (void)restoreTransaction:(SKPaymentTransaction *)transaction
 {
     //[self recordTransaction: transaction];
     //[self provideContent: transaction.originalTransaction.payment.productIdentifier];
 	
 	// save data
 	// change ads state
-    NSLog(@"restoreTransaction");
+    DebugLog(@"restoreTransaction");
     
-	 [InAppPurManager RemoveAdsPurchased];
+	// This was superfluous
+	//[InAppPurManager RemoveAdsPurchased];
 	
-	if (transaction.transactionState==SKPaymentTransactionStatePurchased 
-		|| transaction.transactionState==SKPaymentTransactionStateRestored) 
+	if (transaction.transactionState == SKPaymentTransactionStatePurchased ||
+		transaction.transactionState == SKPaymentTransactionStateRestored) 
 	{
-        [InAppPurManager RemoveAdsPurchased];
+//        [InAppPurManager RemoveAdsPurchased];
+		[self handlePurchaseResults:transaction];
 	}
 	
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
@@ -230,7 +235,7 @@
 #pragma mark connection delegate
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-	NSLog(@"%@",  [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease]);
+	DebugLog(@"%@",  [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease]);
 	//[self.receivedData appendData:data];
      [receiveData setLength:0];
 }
@@ -251,7 +256,7 @@
             NSDictionary *results = [jsonString JSONValue];
             
             NSArray *receipt=nil;
-            
+            DebugLog(@"Returned JSON stuf: %@, %@", results, receipt);
              
         
         [jsonString release];
@@ -277,6 +282,27 @@
     [connection release];
     connection=nil;
     
+}
+
+#pragma mark - Local store
+- (void)handlePurchaseResults:(SKPaymentTransaction *)transaction
+{
+	[InAppPurManager RemoveAdsPurchased];
+	[self saveTransactionResults:transaction];
+	[self.callingController performSelector:@selector(purchaseCompleted) withObject:nil];
+}
+
+- (void)saveTransactionResults:(SKPaymentTransaction *)transaction
+{
+	NSUserDefaults *prefs= [NSUserDefaults standardUserDefaults];
+	NSInteger purchasedLevel= 0;
+	
+	if ([transaction.payment.productIdentifier isEqualToString:kPurchaseLevelPay1ProductId])
+		purchasedLevel= kPurchasedLevelValuePay1;
+	
+	[prefs setInteger:purchasedLevel forKey:kPurchasedLevelKey];
+	[prefs synchronize];
+
 }
 
 @end

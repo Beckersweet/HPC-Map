@@ -105,18 +105,19 @@
 
 - (void)viewDidLoad
 {
-    
-    self.bannerView.delegate= self;
-  
-    bannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-        bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
-        if (bannerView !=nil) {
-            [self.view addSubview:bannerView];
-        }
-        [bannerView release];
-        
-        self.bannerIsVisible = YES;
-        
+	if (StoredPayLevel == 0)
+	{
+		bannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+
+		bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
+		self.bannerView.delegate= self;
+		if (bannerView !=nil) {
+			[self.view addSubview:bannerView];
+		}
+		[bannerView release];
+		
+		self.bannerIsVisible = YES;
+	}
    
 
     

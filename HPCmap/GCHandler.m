@@ -107,7 +107,7 @@ static GCHandler *sharedHandler= nil;
 	
 }
 
-- (void) reportScore:(int64_t)score forCategory:(NSString *)category
+- (void)reportScore:(int64_t)score forCategory:(NSString *)category
 {
 	GKScore *scoreReporter= [[GKScore alloc] initWithCategory:category];
 	scoreReporter.value = score;
@@ -117,6 +117,20 @@ static GCHandler *sharedHandler= nil;
 	 }];
 }
 
+#pragma mark - Match making
+- (void)matchmakerViewControllerWasCancelled:(GKMatchmakerViewController *)viewController
+{
+	DebugLog(@"matchmakerViewControllerWasCancelled");
+}
 
+- (void)matchmakerViewController:(GKMatchmakerViewController *)viewController didFailWithError:(NSError *)error
+{
+	DebugLog(@"matchmakerViewController didFailWithError: %@", error);
+}
+
+- (void)match:(GKMatch *)match didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID;
+{
+	DebugLog(@"match didReceiveData:%@\nfromPlayer:%@", data, playerID);
+}
 
 @end

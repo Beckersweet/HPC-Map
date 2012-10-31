@@ -980,10 +980,7 @@ if (NOV11 == TRUE) {
 //     timer = [NSTimer scheduledTimerWithTimeInterval:(0.5) target:self selector:@selector(loading) userInfo:nil repeats:YES];
     
     [super viewDidLoad];
-	
-//	// ANT: Just testing purchases here without needing a button
-//	[[InAppPurManager sharedInstance] requestProductData];
-    
+	    
 }
 
 - (void)viewDidUnload {

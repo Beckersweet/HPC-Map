@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 #import <QuartzCore/QuartzCore.h>
+#import "CommonDefines.h"
 
 //@class Favorites;
 

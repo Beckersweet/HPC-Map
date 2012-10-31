@@ -16,8 +16,11 @@
 {
     id <AppleServerConnectionDelegate> delegate ;
      NSMutableData   *receiveData;
+	
+	id callingController;
 }
 @property (nonatomic,assign) id <AppleServerConnectionDelegate> delegate;
+@property (nonatomic, assign) id callingController;
 
 - (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions;
 -(void) PurchasedTransaction: (SKPaymentTransaction *)transaction;
@@ -26,6 +29,9 @@
 - (void) restoreTransaction: (SKPaymentTransaction *)transaction;
 -(void) paymentQueueRestoreCompletedTransactionsFinished: (SKPaymentTransaction *)transaction;
 -(void) paymentQueue:(SKPaymentQueue *) paymentQueue restoreCompletedTransactionsFailedWithError:(NSError *)error;
+
+- (void)handlePurchaseResults:(SKPaymentTransaction *)transaction;
+- (void)saveTransactionResults:(SKPaymentTransaction *)transaction;
 
 @end
 

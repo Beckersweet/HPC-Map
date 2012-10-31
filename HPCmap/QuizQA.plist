@@ -15,11 +15,11 @@
 		<key>Correct</key>
 		<string>A</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Pay</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -36,11 +36,11 @@
 		<key>Correct</key>
 		<string>B</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Pay</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -57,11 +57,11 @@
 		<key>Correct</key>
 		<string>C</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Pay</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -78,11 +78,11 @@
 		<key>Correct</key>
 		<string>B</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Pay</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -99,9 +99,9 @@
 		<key>Correct</key>
 		<string>A</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -120,7 +120,7 @@
 		<key>Correct</key>
 		<string>C</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
@@ -141,9 +141,9 @@
 		<key>Correct</key>
 		<string>D</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -151,20 +151,20 @@
 	</dict>
 	<dict>
 		<key>Question</key>
-		<string>Which one of the following supercomputers uses GPUs ?</string>
+		<string>Which ones of the following supercomputers use GPUs ?</string>
 		<key>Answers</key>
 		<array>
-			<string>Jaguar, USA</string>
+			<string>Titan, USA</string>
 			<string>K Computer, Japan</string>
 			<string>Tianhe-1A, China</string>
 			<string>Kraken, USA</string>
 		</array>
 		<key>Correct</key>
-		<string>C</string>
+		<string>AC</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -183,9 +183,9 @@
 		<key>Correct</key>
 		<string>C</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -193,7 +193,7 @@
 	</dict>
 	<dict>
 		<key>Question</key>
-		<string>By 2012-2013, which supercomputer is going to be upgraded with GPUs ?</string>
+		<string>In autumn 2012, which supercomputer, renamed Titan, has been upgraded with GPUs ?</string>
 		<key>Answers</key>
 		<array>
 			<string>K Computer, Japan</string>
@@ -202,11 +202,11 @@
 			<string>Tianhe-1A, China</string>
 		</array>
 		<key>Correct</key>
-		<string>A</string>
+		<string>B</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -225,9 +225,9 @@
 		<key>Correct</key>
 		<string>A</string>
 		<key>Class</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -246,9 +246,9 @@
 		<key>Correct</key>
 		<string>AB</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -267,7 +267,7 @@
 		<key>Correct</key>
 		<string>C</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
@@ -288,9 +288,9 @@
 		<key>Correct</key>
 		<string>AB</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -309,9 +309,9 @@
 		<key>Correct</key>
 		<string>A</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -330,9 +330,9 @@
 		<key>Correct</key>
 		<string>C</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -351,9 +351,9 @@
 		<key>Correct</key>
 		<string>D</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -372,9 +372,9 @@
 		<key>Correct</key>
 		<string>B</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -393,11 +393,11 @@
 		<key>Correct</key>
 		<string>C</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Pay</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -414,9 +414,9 @@
 		<key>Correct</key>
 		<string>A</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -435,30 +435,53 @@
 		<key>Correct</key>
 		<string>A</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
-	<dict>
+    
+    <dict>
 		<key>Question</key>
-		<string>Which one of the following locations is ideal to build green computing centers and save cooling energy ?</string>
+		<string>How much power does that (roughly) correspond to ?</string>
 		<key>Answers</key>
 		<array>
-			<string>Tennessee</string>
-			<string>Iceland</string>
-			<string>France</string>
-			<string>Brazil</string>
+			<string>7 MW</string>
+			<string>14 MW</string>
+			<string>21 MW</string>
+			<string>28 MW</string>
 		</array>
 		<key>Correct</key>
-		<string>B</string>
+		<string>A</string>
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
+		<integer>2</integer>
+		<key>Pay</key>
 		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+    
+	<dict>
+		<key>Question</key>
+		<string>How much power Titan, the new GPU-based supercomputer roughly uses ?</string>
+		<key>Answers</key>
+		<array>
+			<string>7 MW</string>
+			<string>8 MW</string>
+			<string>9 MW</string>
+			<string>10 MW</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>1</integer>
+		<key>Level</key>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -477,14 +500,38 @@
 		<key>Correct</key>
 		<string>C</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
+    
+    <dict>
+		<key>Question</key>
+		<string>supercomputers can be used to predict:</string>
+		<key>Answers</key>
+		<array>
+			<string>Weather changes</string>
+			<string>How flu spreads</string>
+			<string>The movies I like</string>
+			<string>Traffic jams</string>
+		</array>
+		<key>Correct</key>
+		<string>ABCD</string>
+		<key>Class</key>
+		<integer>1</integer>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Pay</key>
+		<integer>1</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+
+    
 	<dict>
 		<key>Question</key>
 		<string>Which is the #1 most powerful supercomputer in the world?</string>
@@ -498,35 +545,83 @@
 		<key>Correct</key>
 		<string>B</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
-	<dict>
+    
+    <dict>
 		<key>Question</key>
-		<string>Which is the #2 most powerful supercomputer in the world?</string>
+		<string>Which is the #1 most powerful supercomputer in the world?</string>
 		<key>Answers</key>
 		<array>
-			<string>Tianhe-1A, China</string>
-			<string>K Computer, Japan</string>
 			<string>Jaguar, USA</string>
-			<string>IBM BlueGene/Q, USA</string>
+			<string>K Computer, Japan</string>
+			<string>Tsanhe-1A, China</string>
+			<string>Sequoia, BG/Q, USA</string>
 		</array>
 		<key>Correct</key>
-		<string>A</string>
+		<string>B</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
+
+    
+	<dict>
+		<key>Question</key>
+		<string>Where is located the #1 most powerful supercomputer in the world?</string>
+		<key>Answers</key>
+		<array>
+			<string>China</string>
+			<string>Japan</string>
+			<string>USA</string>
+			<string>France</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>1</integer>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Pay</key>
+		<integer>1</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+    
+    <dict>
+		<key>Question</key>
+		<string>Where is located the #2 most powerful supercomputer in the world?</string>
+		<key>Answers</key>
+		<array>
+			<string>China</string>
+			<string>Japan</string>
+			<string>USA</string>
+			<string>France</string>
+		</array>
+		<key>Correct</key>
+		<string>B</string>
+		<key>Class</key>
+		<integer>1</integer>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Pay</key>
+		<integer>1</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+
+    
 	<dict>
 		<key>Question</key>
 		<string>Which is the #3 most powerful supercomputer in the world?</string>
@@ -540,9 +635,9 @@
 		<key>Correct</key>
 		<string>C</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -561,7 +656,7 @@
 		<key>Correct</key>
 		<string>ABCD</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
@@ -582,7 +677,7 @@
 		<key>Correct</key>
 		<string>ABCD</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
@@ -603,9 +698,9 @@
 		<key>Correct</key>
 		<string>ABCD</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -624,9 +719,9 @@
 		<key>Correct</key>
 		<string>A</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -645,7 +740,7 @@
 		<key>Correct</key>
 		<string>A</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
@@ -666,7 +761,7 @@
 		<key>Correct</key>
 		<string>B</string>
 		<key>Class</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
@@ -708,7 +803,7 @@
 		<key>Correct</key>
 		<string>B</string>
 		<key>Class</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>Level</key>
 		<integer>1</integer>
 		<key>Pay</key>
@@ -729,7 +824,7 @@
 		<key>Correct</key>
 		<string>A</string>
 		<key>Class</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
@@ -750,7 +845,7 @@
 		<key>Correct</key>
 		<string>BC</string>
 		<key>Class</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
@@ -771,9 +866,9 @@
 		<key>Correct</key>
 		<string>C</string>
 		<key>Class</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -792,9 +887,9 @@
 		<key>Correct</key>
 		<string>C</string>
 		<key>Class</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -815,7 +910,7 @@
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -836,7 +931,7 @@
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -857,7 +952,7 @@
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -876,9 +971,9 @@
 		<key>Correct</key>
 		<string>B</string>
 		<key>Class</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -897,7 +992,7 @@
 		<key>Correct</key>
 		<string>C</string>
 		<key>Class</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
@@ -1073,5 +1168,228 @@
 		<key>Active</key>
 		<true/>
 	</dict>
+    
+    <dict>
+		<key>Question</key>
+		<string>What can you do with a computer ? </string>
+		<key>Answers</key>
+		<array>
+			<string>calculate fast</string>
+			<string>talk to friends</string>
+			<string>play games</string>
+			<string>learn new things</string>
+		</array>
+		<key>Correct</key>
+		<string>ABCD</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Pay</key>
+		<integer>1</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+
+    <dict>
+		<key>Question</key>
+		<string>What is a computer made of ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Electronics</string>
+			<string>Wood</string>
+			<string>Pumpkin</string>
+			<string>Strawberries</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Pay</key>
+		<integer>1</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+
+    <dict>
+		<key>Question</key>
+		<string>Who build computers ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Engineers</string>
+			<string>Cooks</string>
+			<string>Magicians</string>
+			<string>Hairdressers</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Pay</key>
+		<integer>1</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+    
+    <dict>
+		<key>Question</key>
+		<string>Where can I buy a computer ?</string>
+		<key>Answers</key>
+		<array>
+			<string>At Wall Mart</string>
+			<string>At the bakery</string>
+			<string>At the grocery</string>
+			<string>At the physician</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Pay</key>
+		<integer>1</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+    
+    <dict>
+		<key>Question</key>
+		<string>Is a computer expensive ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Yes</string>
+            <string>X</string>
+			<string>NO</string>
+            <string>X</string>
+            
+        </array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Pay</key>
+		<integer>1</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+
+    <dict>
+		<key>Question</key>
+		<string>Which of the following objects are computers ?</string>
+		<key>Answers</key>
+		<array>
+			<string>A Phone</string>
+			<string>An iPad</string>
+            <string>A laptop</string>
+			<string>A TV</string>
+        </array>
+		<key>Correct</key>
+		<string>ABC</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>Pay</key>
+		<integer>1</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+    
+    <dict>
+		<key>Question</key>
+		<string>How big can be a computer like ?</string>
+		<key>Answers</key>
+		<array>
+			<string>like a lego</string>
+			<string>like a Phone</string>
+            <string>like an iPad</string>
+			<string>like many iPads</string>
+        </array>
+		<key>Correct</key>
+		<string>ABCD</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>Pay</key>
+		<integer>1</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+
+    <dict>
+		<key>Question</key>
+		<string>What does cloud computing provide ?</string>
+		<key>Answers</key>
+		<array>
+			<string>Flying computers </string>
+			<string>Many computers</string>
+            <string>Many user access</string>
+			<string>Connected computers</string>
+        </array>
+		<key>Correct</key>
+		<string>BCD</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>Pay</key>
+		<integer>1</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+    
+    <dict>
+		<key>Question</key>
+		<string>A supercomputer is a computer: </string>
+		<key>Answers</key>
+		<array>
+			<string>As big as a house</string>
+			<string>Very expensive</string>
+            <string>With superpowers</string>
+			<string>For scientists</string>
+        </array>
+		<key>Correct</key>
+		<string>ABD</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>Pay</key>
+		<integer>1</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+
+       <dict>
+		<key>Question</key>
+           <string>Mobile computing is doing computing with: </string>
+		<key>Answers</key>
+		<array>
+			<string>A Smartphone</string>
+			<string>An ipad</string>
+            <string>A very light device</string>
+			<string>A supercomputer</string>
+        </array>
+		<key>Correct</key>
+		<string>ABC</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>Pay</key>
+		<integer>1</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+    
+    
 </array>
 </plist>

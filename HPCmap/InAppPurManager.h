@@ -27,12 +27,14 @@
 	SKProduct *productGamesLevel3;
     SKProductsRequest *productsRequest;
     
+	id callingController;
 }
 
 @property (nonatomic, retain) SKProduct *productNoAds;
 @property (nonatomic, retain) SKProduct *productGamesLevel2;
 @property (nonatomic, retain) SKProduct *productGamesLevel3;
 @property (nonatomic, retain) MyStoreObserver *observer;
+@property (nonatomic, retain) id callingController;
 
 // public methods
 

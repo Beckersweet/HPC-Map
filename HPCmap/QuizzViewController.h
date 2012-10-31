@@ -14,6 +14,8 @@
 #import "FBHandler.h"
 #import "GCHandler.h"
 #import "QuizLevelSelectViewController.h"
+#import "InAppPurManager.h"
+#import "MyStoreObserver.h"
 
 @interface QuizzViewController : UIViewController <MFMailComposeViewControllerDelegate, UIActionSheetDelegate, GKLeaderboardViewControllerDelegate, GKAchievementViewControllerDelegate>
 {
@@ -27,6 +29,7 @@
     UIButton *buttonC ;
     UIButton *buttonD ;
     UILabel *score ;
+    UILabel *elapsed;
     UILabel *xofy ;
     UILabel *result ;
     UIToolbar *toolbar;
@@ -40,9 +43,11 @@
 	NSInteger nextQuestionIndex;
 	NSInteger quizClass;
 	NSInteger quizLevel;
+	NSDate *startTime;
 	Question *currentQuestion;
 	QuizClass *currentQuizClass;
 	BOOL randomized;
+	BOOL quizRunning;
 	
 	GCHandler *gcHandler;
 	
@@ -53,7 +58,8 @@
 @property (nonatomic,retain) IBOutlet UILabel *result ;
 @property (nonatomic,retain) IBOutlet UILabel *xofy;
 @property (nonatomic,retain) IBOutlet UILabel *score;
-@property (nonatomic,retain) IBOutlet UILabel *AnswerA ; 
+@property (nonatomic,retain) IBOutlet UILabel *elapsed;
+@property (nonatomic,retain) IBOutlet UILabel *AnswerA ;
 @property (nonatomic,retain) IBOutlet UILabel *AnswerB ; 
 @property (nonatomic,retain) IBOutlet UILabel *AnswerC ; 
 @property (nonatomic,retain) IBOutlet UILabel *AnswerD ; 
@@ -69,13 +75,17 @@
 @property (nonatomic, assign) NSInteger nextQuestionIndex;
 @property (nonatomic, assign) NSInteger quizClass;
 @property (nonatomic, assign) NSInteger quizLevel;
+@property (nonatomic, retain) NSDate *startTime;
 @property (nonatomic, retain) Question *currentQuestion;
 @property (nonatomic, retain) QuizClass *currentQuizClass;
 @property (nonatomic, assign) BOOL randomized;
+@property (nonatomic, assign) BOOL quizRunning;
 
 @property (nonatomic, retain) GCHandler *gcHandler;
 
 - (IBAction)answerButton:(id)sender;
 - (void)askForLevel;
+- (void)updateTime;
+
 
 @end

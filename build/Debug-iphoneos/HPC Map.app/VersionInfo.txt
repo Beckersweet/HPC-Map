@@ -9,10 +9,17 @@
 
 + ADD:
 
-** Version 1.9.1 changes
+** Version 1.9.2 changes
 
 + FIX:
 - handle backgrounding properly
+- change the quiz code to use a plist
 
 + ADD:
-- in app purchasing
+? in app purchasing
+- post photos to fb
+- post questions to fb
+
+
+Last build changes:
+- GC above tabbar

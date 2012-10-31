@@ -23,8 +23,6 @@
     
    // sleep(10) ;
     
-	[InAppPurManager sharedInstance];
-	
     HPCMapViewController *mymap = [[HPCMapViewController alloc]init];
     RootViewController *myroot = [[RootViewController alloc] init];
     RootViewController2 *myroot2 = [[RootViewController2 alloc] init]; 

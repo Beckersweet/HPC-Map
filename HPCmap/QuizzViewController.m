@@ -12,11 +12,12 @@
 
 @synthesize QuestionLabel,AnswerA,AnswerB,AnswerC,AnswerD;
 @synthesize buttonA,buttonB,buttonC,buttonD;
-@synthesize xofy,score,result;
+@synthesize xofy,score,result, elapsed;
 @synthesize next,startover,ask;
 @synthesize toolbar;
 
-@synthesize questions, nextQuestionIndex, quizClass, quizLevel, currentQuestion, currentQuizClass, randomized, gcHandler;
+@synthesize questions, nextQuestionIndex, quizClass, quizLevel, startTime;
+@synthesize currentQuestion, currentQuizClass, randomized, quizRunning, gcHandler;
 
 - (void)didReceiveMemoryWarning
 {
@@ -83,13 +84,12 @@
   //  score = [[UILabel alloc] init];
    //Question = [[UILabel alloc] init];
     
-	[self startover:nil];
-    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	
+	[self fillQuestionForm];
 	[self askForLevel];
-
+	
 }
 
 - (void)fillQuestionForm
@@ -98,7 +98,7 @@
 
 	self.xofy.text= [NSString stringWithFormat:@"%d of %d",iquizz+1, [Question questionCount:self.quizClass inQuestions:self.questions]];
     self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-	
+
 	self.currentQuestion= [Question getNextQuestion:self.questions index:nextQuestionIndex class:self.quizClass];
 	DebugLog(@"Asking Q%d:%@",self.nextQuestionIndex, self.currentQuestion.question);
 	if (self.currentQuestion != nil)
@@ -110,17 +110,22 @@
 		self.AnswerC.textColor=[UIColor blackColor];
 		self.AnswerD.textColor=[UIColor blackColor];
 		
-		AnswerA.text=self.currentQuestion.answers[0];
-		AnswerB.text=self.currentQuestion.answers[1];
-		AnswerC.text=self.currentQuestion.answers[2];
-		AnswerD.text=self.currentQuestion.answers[3];
+		self.AnswerA.text=self.currentQuestion.answers[0];
+		self.AnswerB.text=self.currentQuestion.answers[1];
+		self.AnswerC.text=self.currentQuestion.answers[2];
+		self.AnswerD.text=self.currentQuestion.answers[3];
 
+		self.buttonA.enabled= YES;
+		self.buttonB.enabled= YES;
+		self.buttonC.enabled= YES;
+		self.buttonD.enabled= YES;
+		
 		[self.next setTitle:@"Next"];
 	}
-	else
+	
+	if (iquizz == [Question questionCount:self.quizClass inQuestions:self.questions]-1)
 	{
-		self.next.enabled= YES;
-		[self.next setTitle:@"Done"];
+		[self.next setTitle:@"Finish"];
 	}
 }
 
@@ -197,22 +202,25 @@
 }
 
 #pragma mark - GameCenter
-- (IBAction)showLeaderboard
+- (void)showLeaderboard
 {
-    GKLeaderboardViewController *leaderboardController = [[GKLeaderboardViewController alloc] init];
-    if (leaderboardController != NULL)
-    {
-        leaderboardController.category= self.currentQuizClass.leaderboard;
-        leaderboardController.timeScope= GKLeaderboardTimeScopeAllTime;
-        leaderboardController.leaderboardDelegate= self;
-        [self presentModalViewController:leaderboardController animated:YES];
-    }
+	GKLeaderboardViewController *leaderboardController = [[GKLeaderboardViewController alloc] init];
+	if (leaderboardController != NULL)
+	{
+		leaderboardController.category= self.currentQuizClass.leaderboard;
+		leaderboardController.timeScope= GKLeaderboardTimeScopeAllTime;
+		leaderboardController.leaderboardDelegate= (id)self;
+		[self presentModalViewController:leaderboardController animated:YES];
+	}
+	return;
 }
+
 - (void)leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
 {
     [self dismissModalViewControllerAnimated: YES];
     [viewController release];
 }
+
 - (IBAction)showAchievements
 {
     GKAchievementViewController *achievements= [[GKAchievementViewController alloc] init];
@@ -232,10 +240,32 @@
 {
     if(iscore > 0)
     {
-        [[GCHandler sharedInstance] reportScore:iscore forCategory:self.currentQuizClass.leaderboard];
+        [[GCHandler sharedInstance] reportScore:[self fullScore] forCategory:self.currentQuizClass.leaderboard];
     }
 }
 
+#pragma mark - Scoring
+- (int64_t)fullScore
+{
+	int64_t fScore= (iscore*1000000.0*(self.quizLevel+1))/[Question questionCount:self.quizClass inQuestions:self.questions]/[[NSDate date] timeIntervalSinceDate:self.startTime];
+	
+	return fScore;
+}
+
+- (void)updateTime
+{
+	NSTimeInterval eTime= [[NSDate date] timeIntervalSinceDate:self.startTime];
+	self.elapsed.text= [NSString stringWithFormat:@"Elapsed: %.2f", eTime];
+
+	if (self.quizRunning)
+	{
+		self.elapsed.hidden= NO;
+		[self performSelector:@selector(updateTime) withObject:nil afterDelay:0.10];
+	}
+	else
+		self.elapsed.hidden= YES;
+
+}
 
 #pragma mark - Quiz control
 - (void)askForLevel
@@ -253,28 +283,36 @@
 
 -(IBAction)startover:(id)sender
 {
+	self.nextQuestionIndex= 0;
+	
+	iquizz=0;
+	iscore=0;
+	self.startTime= [NSDate date];
+	
+
 	if (sender == nil)
 	{
-		self.nextQuestionIndex= 0;
-		
-		iquizz=0;
-		iscore=0;
-		
 		self.questions= [Question loadQuestionsOfClass:self.quizClass level:self.quizLevel];
 		[self fillQuestionForm];
 		
 		self.next.enabled=NO;
+		self.quizRunning= YES;
+		[self performSelector:@selector(updateTime) withObject:nil afterDelay:0.10];
 	}
 	else
+	{
+		self.quizRunning= NO;
 		[self askForLevel];
+	}
 }
 
 -(IBAction)newQuestion
 {
-	if ([self.next.title isEqualToString:@"Done"])
+	if ([self.next.title isEqualToString:@"Finish"])
 	{
 		// End of questions
 		self.next.enabled= NO;
+		self.quizRunning= NO;
 		[self submitScore];
 		return;
 	}
@@ -284,6 +322,87 @@
 	self.nextQuestionIndex++;
 
 	[self fillQuestionForm];
+	
+}
+
+- (BOOL)containsAnswer:(NSString *)answer
+{
+    NSRange range= [self.currentQuestion.correctAnswers rangeOfString:answer];
+    return (range.location != NSNotFound);
+}
+
+- (IBAction)answerButton:(UIButton *)sender
+{
+	// Only allow one answer once
+	sender.enabled= NO;
+	
+	switch ([sender tag])
+	{
+		case 0:
+			// Answer A
+			if ([self containsAnswer:@"A"])
+			{
+				AnswerA.textColor=[UIColor greenColor];
+				self.next.enabled=YES;
+				iscore++;
+			}
+			else
+			{
+				AnswerA.textColor=[UIColor redColor];
+				iscore--;
+			}
+			break;
+			
+		case 1:
+			// Answer B
+			if ([self containsAnswer:@"B"])
+			{
+				AnswerB.textColor=[UIColor greenColor];
+				self.next.enabled=YES;
+				iscore++;
+			}
+			else
+			{
+				AnswerB.textColor=[UIColor redColor];
+				iscore--;
+			}
+			break;
+			
+		case 2:
+			// Answer C
+			if ([self containsAnswer:@"C"])
+			{
+				AnswerC.textColor=[UIColor greenColor];
+				self.next.enabled=YES;
+				iscore++;
+			}
+			else
+			{
+				AnswerC.textColor=[UIColor redColor];
+				iscore--;
+			}
+			break;
+			
+		case 3:
+			// Answer D
+			if ([self containsAnswer:@"D"])
+			{
+				AnswerD.textColor=[UIColor greenColor];
+				self.next.enabled=YES;
+				iscore++;
+			}
+			else
+			{
+				AnswerD.textColor=[UIColor redColor];
+				iscore--;
+			}
+			break;
+			
+		default:
+			break;
+	}
+	
+	self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
 	
 }
 
@@ -1053,84 +1172,6 @@
 }
 #endif
 
-- (BOOL)containsAnswer:(NSString *)answer
-{
-    NSRange range= [self.currentQuestion.correctAnswers rangeOfString:answer];
-    return (range.location != NSNotFound);
-}
-
-
-- (IBAction)answerButton:(id)sender
-{
-	switch ([sender tag])
-	{
-		case 0:
-			// Answer A
-			if ([self containsAnswer:@"A"])
-			{
-				AnswerA.textColor=[UIColor greenColor];
-				self.next.enabled=YES;
-				iscore++;
-			}
-			else
-			{
-				AnswerA.textColor=[UIColor redColor];
-				iscore--;
-			}
-			break;
-			
-		case 1:
-			// Answer B
-			if ([self containsAnswer:@"B"])
-			{
-				AnswerB.textColor=[UIColor greenColor];
-				self.next.enabled=YES;
-				iscore++;
-			}
-			else
-			{
-				AnswerB.textColor=[UIColor redColor];
-				iscore--;
-			}
-			break;
-			
-		case 2:
-			// Answer C
-			if ([self containsAnswer:@"C"])
-			{
-				AnswerC.textColor=[UIColor greenColor];
-				self.next.enabled=YES;
-				iscore++;
-			}
-			else
-			{
-				AnswerC.textColor=[UIColor redColor];
-				iscore--;
-			}
-			break;
-			
-		case 3:
-			// Answer D
-			if ([self containsAnswer:@"D"])
-			{
-				AnswerD.textColor=[UIColor greenColor];
-				self.next.enabled=YES;
-				iscore++;
-			}
-			else
-			{
-				AnswerD.textColor=[UIColor redColor];
-				iscore--;
-			}
-			break;
-			
-		default:
-			break;
-	}
-	
-	self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
-}
-
 #pragma mark - Delegate functions
 - (void)quizLevelSelectViewControllerDidFinish:(QuizLevelSelectViewController *)controller
 {
@@ -1142,6 +1183,18 @@
 	[self startover:nil];
 	
 	[controller release];
+}
+
+- (void)showGameCenterLeaderboards:(QuizLevelSelectViewController *)controller
+{
+	self.quizClass= controller.quizClass;
+	self.quizLevel= controller.quizLevel;
+	self.currentQuizClass= ((QuizClass *)controller.quizClasses[self.quizClass]);
+	
+//	[controller.view removeFromSuperview];
+//	[controller release];
+	
+	[self showLeaderboard];
 }
 
 #pragma mark - Life cycle

@@ -95,10 +95,10 @@
 		21FB4CB514B5AFCB008BE8FF /* superenergysavings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21FB4CB314B5AFCB008BE8FF /* superenergysavings.xib */; };
 		21FB4CB914B5B026008BE8FF /* superimpact.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FB4CB714B5B025008BE8FF /* superimpact.m */; };
 		21FB4CBA14B5B026008BE8FF /* superimpact.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21FB4CB814B5B026008BE8FF /* superimpact.xib */; };
+		A91E6756163FBED100FC45EA /* QuizQA.plist in Resources */ = {isa = PBXBuildFile; fileRef = A91E6755163FBED100FC45EA /* QuizQA.plist */; };
 		A930C1511635CCA900912267 /* QuizLevelSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A930C14F1635CCA900912267 /* QuizLevelSelectViewController.m */; settings = {COMPILER_FLAGS = " -fobjc-arc"; }; };
 		A930C1521635CCA900912267 /* QuizLevelSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A930C1501635CCA900912267 /* QuizLevelSelectViewController.xib */; };
 		A930C156163693CA00912267 /* QuizClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A930C155163693C900912267 /* QuizClass.m */; settings = {COMPILER_FLAGS = " -fobjc-arc"; }; };
-		A9348FA5162BE1FF00800A84 /* QuizQA.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9348FA4162BE1FF00800A84 /* QuizQA.plist */; };
 		A9348FAA162CADF600800A84 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = A9348FA9162CADF600800A84 /* Question.m */; settings = {COMPILER_FLAGS = " -fobjc-arc"; }; };
 		A9348FAC162DEE0C00800A84 /* QuizClasses.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9348FAB162DEE0C00800A84 /* QuizClasses.plist */; };
 		A9348FAF1630446400800A84 /* GCHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A9348FAE1630446400800A84 /* GCHandler.m */; settings = {COMPILER_FLAGS = " -fobjc-arc"; }; };
@@ -248,12 +248,12 @@
 		21FB4CB614B5B025008BE8FF /* superimpact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = superimpact.h; sourceTree = "<group>"; };
 		21FB4CB714B5B025008BE8FF /* superimpact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = superimpact.m; sourceTree = "<group>"; };
 		21FB4CB814B5B026008BE8FF /* superimpact.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = superimpact.xib; sourceTree = "<group>"; };
+		A91E6755163FBED100FC45EA /* QuizQA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuizQA.plist; sourceTree = "<group>"; };
 		A930C14E1635CCA900912267 /* QuizLevelSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizLevelSelectViewController.h; sourceTree = "<group>"; };
 		A930C14F1635CCA900912267 /* QuizLevelSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizLevelSelectViewController.m; sourceTree = "<group>"; };
 		A930C1501635CCA900912267 /* QuizLevelSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizLevelSelectViewController.xib; sourceTree = "<group>"; };
 		A930C154163693C900912267 /* QuizClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizClass.h; sourceTree = "<group>"; };
 		A930C155163693C900912267 /* QuizClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizClass.m; sourceTree = "<group>"; };
-		A9348FA4162BE1FF00800A84 /* QuizQA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuizQA.plist; sourceTree = "<group>"; };
 		A9348FA8162CADF600800A84 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		A9348FA9162CADF600800A84 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		A9348FAB162DEE0C00800A84 /* QuizClasses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuizClasses.plist; sourceTree = "<group>"; };
@@ -495,7 +495,7 @@
 		A9348FA7162CADA000800A84 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				A9348FA4162BE1FF00800A84 /* QuizQA.plist */,
+				A91E6755163FBED100FC45EA /* QuizQA.plist */,
 				A9348FAB162DEE0C00800A84 /* QuizClasses.plist */,
 				A9348FA8162CADF600800A84 /* Question.h */,
 				A9348FA9162CADF600800A84 /* Question.m */,
@@ -656,9 +656,9 @@
 				A963C353161C127C004D3471 /* launchimage@2x-568h@2x.png in Resources */,
 				A963C355161C128C004D3471 /* launchimage@2x@2x.png in Resources */,
 				A963C357161C12C4004D3471 /* launchimage@2x.png in Resources */,
-				A9348FA5162BE1FF00800A84 /* QuizQA.plist in Resources */,
 				A9348FAC162DEE0C00800A84 /* QuizClasses.plist in Resources */,
 				A930C1521635CCA900912267 /* QuizLevelSelectViewController.xib in Resources */,
+				A91E6756163FBED100FC45EA /* QuizQA.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

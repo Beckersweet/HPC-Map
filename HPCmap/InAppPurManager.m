@@ -9,10 +9,8 @@
 #import "InAppPurManager.h"
 #import "MyStoreObserver.h"
 
-#pragma mark SotoreKit method
+#pragma mark StoreKit method
 // kMyFeatureIdentifier is the product id which you defined in the iTunes Connect
-#define kMyFeatureIdentifier @"com.beckersweet.hpcmap.inapptest"
-#define kInAppPurchaseProUpgradeProductId @"com.beckersweet.hpcmap.inapptest"
 
 // case of mulyiple products: http://stackoverflow.com/questions/4223366/iphone-in-app-purchase-problem
 // best in app tutorial : http://troybrant.net/blog/2010/01/in-app-purchases-a-full-walkthrough/
@@ -20,7 +18,7 @@
 @implementation InAppPurManager
 
 @synthesize productNoAds, productGamesLevel2, productGamesLevel3;
-@synthesize observer;
+@synthesize observer, callingController;
 
 
 #pragma mark - Class lifecycle
@@ -32,6 +30,7 @@
    // delegate = nil;
     
 	observer= [[MyStoreObserver alloc] init];
+	observer.callingController= self.callingController;
 	if ([SKPaymentQueue canMakePayments])
         [[SKPaymentQueue defaultQueue] addTransactionObserver:observer];
 
@@ -50,6 +49,12 @@
     //  productsRequest = nil;
     
     [super dealloc];
+}
+
+- (void)setCallingController:(id)calling
+{
+	callingController= calling;
+	observer.callingController= calling;
 }
 
 #pragma mark - Action methods
@@ -94,7 +99,7 @@
 - (void)requestProductData
 {
 	DebugLog(@"1 - requestProductData");
-	SKProductsRequest *request= [[SKProductsRequest alloc] initWithProductIdentifiers: [NSSet setWithObject: kMyFeatureIdentifier]];
+	SKProductsRequest *request= [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject: kMyFeatureIdentifier]];
 	request.delegate = self;
 	[request start];
 }
@@ -111,7 +116,8 @@
     return myInstance;
 }
 
-+ (InAppPurManager *) RemoveAdsPurchased {
++(InAppPurManager *)RemoveAdsPurchased
+{
     
     static InAppPurManager *myInstance = nil;
     
@@ -141,29 +147,40 @@
     DebugLog(@"3.3 - the count of valid products is %d", [myProduct count]);
     DebugLog(@"3.4 - the count of invalid products is %d", [invalidProducts count]);
 	
-	// populate UI
-	for(SKProduct *product in myProduct)
+	if ([myProduct count] == 1)
 	{
-		DebugLog(@"%@", [product description]);
-		DebugLog(@"%@", [product productIdentifier]);
-        
-        // to be changed
-      //  myselectProduct = [SKProduct  product ;
+		// One product only. Go ahead and buy it
+		SKPayment *payment= [SKPayment paymentWithProduct:(SKProduct *)[myProduct objectAtIndex:0]];
+		[[SKPaymentQueue defaultQueue] addPayment:payment];
 	}
-    
-    // populate UI
-	for(SKProduct *product in invalidProducts)
+	else
 	{
-		DebugLog(@"%@", [product description]);
-		DebugLog(@"%@", [product productIdentifier]);
-        
-        // to be changed
-        //  myselectProduct = [SKProduct  product ;
+		// TODO: Find out what the plan was and handle multiple products the right way
+		// Handle multiple products. (legacy code)
+		// populate UI
+		for(SKProduct *product in myProduct)
+		{
+			DebugLog(@"%@", [product description]);
+			DebugLog(@"%@", [product productIdentifier]);
+			
+			// to be changed
+		  //  myselectProduct = [SKProduct  product ;
+		}
+		
+		// populate UI
+		for(SKProduct *product in invalidProducts)
+		{
+			DebugLog(@"%@", [product description]);
+			DebugLog(@"%@", [product productIdentifier]);
+			
+			// to be changed
+			//  myselectProduct = [SKProduct  product ;
+		}
 	}
 	
-    //SHOULD use paymentwithproduct instead of paymentwithpid
-	SKPayment *payment = [SKPayment paymentWithProductIdentifier:kMyFeatureIdentifier];
-	[[SKPaymentQueue defaultQueue] addPayment:payment];
+//    //SHOULD use paymentwithproduct instead of paymentwithpid
+//	SKPayment *payment = [SKPayment paymentWithProductIdentifier:kMyFeatureIdentifier];
+
 	[request autorelease];
 }
 

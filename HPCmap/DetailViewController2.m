@@ -176,20 +176,24 @@
    //  NSLog(@"MyImage x size:%4.4f",self.imageview.image.size.width);
    //  NSLog(@"MyImage y size:%4.4f",self.imageview.image.size.height);
     
-    self.bannerView.delegate= self;
-    
-    if (self.imageview.image.size.height != 240.0) {
-           
-    bannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-    bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
-    if (bannerView !=nil) {
-            [self.view addSubview:bannerView];
-    }
-    [bannerView release];
-    
-    self.bannerIsVisible = YES;
-            
-    }
+	
+	if (StoredPayLevel == 0)
+	{
+		
+		if (self.imageview.image.size.height != 240.0) {
+			
+		bannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+		bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
+		bannerView.delegate= self;
+		if (bannerView !=nil) {
+				[self.view addSubview:bannerView];
+		}
+		[bannerView release];
+		
+		self.bannerIsVisible = YES;
+				
+		}
+	}
     
 	// ANT: Change to email button to "Send" if FB is an option
     UIBarButtonItem *emailbutton= [UIBarButtonItem alloc];

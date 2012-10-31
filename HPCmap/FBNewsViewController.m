@@ -42,8 +42,6 @@
     
     // Do any additional setup after loading the view from its nib.
 	
-	// ANT: Just testing purchases here without needing a button
-	[[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
 }
 
 - (void)didReceiveMemoryWarning

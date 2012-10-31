@@ -13,5 +13,24 @@
 #endif
 
 
-// HPC Specific
-#define HPCFacebookURL		@"http://www.facebook.com/pages/HPC-Map-iPhone-App/321586984527863"
+// HPC Specific constants
+#define kMyFeatureIdentifier				@"com.beckersweet.hpcmap.inapptest"
+#define kInAppPurchaseProUpgradeProductId	@"com.beckersweet.hpcmap.inapptest"
+#define HPCFacebookURL						@"http://www.facebook.com/pages/HPC-Map-iPhone-App/321586984527863"
+#define kPurchasedLevelKey					@"PurchasedLevel"
+
+#define kPurchaseLevelPay1ProductId			@"com.beckersweet.hpcmap.inapptest"
+#define kPurchasedLevelValueFree			0
+#define kPurchasedLevelValuePay1			1
+#define kPurchasedLevelValuePay2			2
+
+#define kDifficultyLevelTextBlank			@" "
+#define kDifficultyLevelTextEasy			@"Easy"
+#define kDifficultyLevelTextMedium			@"Medium"
+#define kDifficultyLevelTextHard			@"Hard"
+#define kLevelButtonNamePadding				@"   "
+
+
+// HPC Specific macros
+#define requiredPayLevel(l)	(NSInteger)([payLevels characterAtIndex:l]-'0')
+#define StoredPayLevel		[[NSUserDefaults standardUserDefaults] integerForKey:kPurchasedLevelKey]
