@@ -30,7 +30,8 @@
 -(void) paymentQueueRestoreCompletedTransactionsFinished: (SKPaymentTransaction *)transaction;
 -(void) paymentQueue:(SKPaymentQueue *) paymentQueue restoreCompletedTransactionsFailedWithError:(NSError *)error;
 
-- (void)handlePurchaseResults:(SKPaymentTransaction *)transaction;
+- (void)handleSuccessfulPurchaseResults:(SKPaymentTransaction *)transaction;
+- (void)handleFailedPurchaseResults:(SKPaymentTransaction *)transaction;
 - (void)saveTransactionResults:(SKPaymentTransaction *)transaction;
 
 @end

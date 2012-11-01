@@ -176,7 +176,7 @@
 	if (transaction.transactionState==SKPaymentTransactionStatePurchased) 
 	{
 //		[InAppPurManager RemoveAdsPurchased];
-		[self handlePurchaseResults:transaction];
+		[self handleSuccessfulPurchaseResults:transaction];
 	}
 	
    // NSArray *transactions = [[SKPaymentQueue defaultQueue] transactions];
@@ -194,6 +194,8 @@
 {
 	DebugLog(@"failedTransaction: %@", transaction.JSONRepresentation);
     
+	[self handleFailedPurchaseResults:transaction];
+
     [[NSNotificationCenter defaultCenter] postNotificationName:@"failedTransaction" object:nil];
 	[[SKPaymentQueue defaultQueue] finishTransaction: transaction];
 }
@@ -214,7 +216,7 @@
 		transaction.transactionState == SKPaymentTransactionStateRestored) 
 	{
 //        [InAppPurManager RemoveAdsPurchased];
-		[self handlePurchaseResults:transaction];
+		[self handleSuccessfulPurchaseResults:transaction];
 	}
 	
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
@@ -229,6 +231,7 @@
 -(void) paymentQueue:(SKPaymentQueue *) paymentQueue restoreCompletedTransactionsFailedWithError:(NSError *)error
 {
 	DebugLog(@"restoreCompletedTransactionsFailedWithError:%@", error);
+	[self handleFailedPurchaseResults:nil];
 }
 
 // use this to get the receipt
@@ -285,10 +288,15 @@
 }
 
 #pragma mark - Local store
-- (void)handlePurchaseResults:(SKPaymentTransaction *)transaction
+- (void)handleSuccessfulPurchaseResults:(SKPaymentTransaction *)transaction
 {
 	[InAppPurManager RemoveAdsPurchased];
 	[self saveTransactionResults:transaction];
+	[self.callingController performSelector:@selector(purchaseCompleted) withObject:nil afterDelay:1];
+}
+
+- (void)handleFailedPurchaseResults:(SKPaymentTransaction *)transaction
+{
 	[self.callingController performSelector:@selector(purchaseCompleted) withObject:nil];
 }
 

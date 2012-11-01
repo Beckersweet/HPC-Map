@@ -10,7 +10,7 @@
 #import "MyStoreObserver.h"
 
 #pragma mark StoreKit method
-// kMyFeatureIdentifier is the product id which you defined in the iTunes Connect
+// kPurchaseLevelPay1ProductId is the product id which you defined in the iTunes Connect
 
 // case of mulyiple products: http://stackoverflow.com/questions/4223366/iphone-in-app-purchase-problem
 // best in app tutorial : http://troybrant.net/blog/2010/01/in-app-purchases-a-full-walkthrough/
@@ -99,7 +99,7 @@
 - (void)requestProductData
 {
 	DebugLog(@"1 - requestProductData");
-	SKProductsRequest *request= [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject: kMyFeatureIdentifier]];
+	SKProductsRequest *request= [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject: kPurchaseLevelPay1ProductId]];
 	request.delegate = self;
 	[request start];
 }
@@ -179,7 +179,7 @@
 	}
 	
 //    //SHOULD use paymentwithproduct instead of paymentwithpid
-//	SKPayment *payment = [SKPayment paymentWithProductIdentifier:kMyFeatureIdentifier];
+//	SKPayment *payment = [SKPayment paymentWithProductIdentifier:kPurchaseLevelPay1ProductId];
 
 	[request autorelease];
 }

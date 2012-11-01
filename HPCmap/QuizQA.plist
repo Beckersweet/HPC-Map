@@ -19,7 +19,7 @@
 		<key>Level</key>
 		<integer>1</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -40,7 +40,7 @@
 		<key>Level</key>
 		<integer>1</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -61,7 +61,7 @@
 		<key>Level</key>
 		<integer>1</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -82,7 +82,7 @@
 		<key>Level</key>
 		<integer>1</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -397,7 +397,7 @@
 		<key>Level</key>
 		<integer>1</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -526,7 +526,7 @@
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -549,7 +549,7 @@
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -571,7 +571,7 @@
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -594,7 +594,7 @@
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -616,7 +616,7 @@
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -906,7 +906,7 @@
 			<string>Obama was there</string>
 		</array>
 		<key>Correct</key>
-		<string>C</string>
+		<string>A</string>
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
@@ -1186,7 +1186,7 @@
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -1208,7 +1208,7 @@
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -1230,7 +1230,7 @@
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -1252,7 +1252,7 @@
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -1275,7 +1275,7 @@
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Pay</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -1295,9 +1295,9 @@
 		<key>Class</key>
 		<integer>0</integer>
 		<key>Level</key>
-		<integer>2</integer>
-		<key>Pay</key>
 		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -1317,9 +1317,9 @@
 		<key>Class</key>
 		<integer>0</integer>
 		<key>Level</key>
-		<integer>2</integer>
-		<key>Pay</key>
 		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -1339,9 +1339,9 @@
 		<key>Class</key>
 		<integer>0</integer>
 		<key>Level</key>
-		<integer>2</integer>
-		<key>Pay</key>
 		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -1361,9 +1361,9 @@
 		<key>Class</key>
 		<integer>0</integer>
 		<key>Level</key>
-		<integer>2</integer>
-		<key>Pay</key>
 		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
@@ -1383,9 +1383,9 @@
 		<key>Class</key>
 		<integer>0</integer>
 		<key>Level</key>
-		<integer>2</integer>
-		<key>Pay</key>
 		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>

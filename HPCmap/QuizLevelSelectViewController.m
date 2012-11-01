@@ -85,6 +85,7 @@
 - (IBAction)levelButton:(UIButton *)sender
 {
 	self.quizClass= sender.tag;
+	self.quizLevel= 0;		// defaulting to easy
 	
 	// Clear other buttons
 	[self.level0Button setImage:nil forState:UIControlStateNormal];
@@ -215,6 +216,9 @@
 		self.askMediumLabel.text= kDifficultyLevelTextMedium;
 		self.askHardLabel.text= kDifficultyLevelTextHard;
 	}
+	
+	// Simulate slider action
+	[self difficultySlider:self.difficultySlider];
 }
 
 - (void)showWaiting:(BOOL)show;
