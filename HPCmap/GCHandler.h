@@ -26,12 +26,18 @@
 	UIViewController *presentingViewController;
 	GKMatch *match;
 	BOOL matchStarted;
+	
+	NSDate *gcTimingStart;
+	NSInteger gcQuickFailCount;
+
 }
 
 @property (strong) id <GCHandlerDelegate> delegate;
 @property (assign, readonly) BOOL gameCenterAvailable;
 @property (strong) UIViewController *presentingViewController;
 @property (strong) GKMatch *match;
+@property (nonatomic, strong) NSDate *gcTimingStart;
+@property (nonatomic, assign) NSInteger gcQuickFailCount;
 
 + (GCHandler *)sharedInstance;
 - (void)authenticateLocalUser;

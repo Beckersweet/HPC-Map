@@ -37,7 +37,7 @@
 	UILabel *payHardLabel;
 	UIView *waitView;
 	UIActivityIndicatorView *waiting;
-
+	
 	NSInteger quizClass;
 	NSInteger quizLevel;
 	NSInteger purchasedLevel;

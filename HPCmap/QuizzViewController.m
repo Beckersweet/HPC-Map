@@ -1194,7 +1194,13 @@
 //	[controller.view removeFromSuperview];
 //	[controller release];
 	
-	[self showLeaderboard];
+	if ([GKLocalPlayer localPlayer].isAuthenticated)
+		[self showLeaderboard];
+	else
+	{
+		// Trying to detect if GC is disabled by gauging how fast it returns cancelled
+		[[GCHandler sharedInstance] authenticateLocalUser];
+	}
 }
 
 #pragma mark - Life cycle

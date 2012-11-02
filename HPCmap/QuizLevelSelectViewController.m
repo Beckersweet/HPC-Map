@@ -133,7 +133,9 @@
 
 - (IBAction)scores
 {
+	
 	[self.delegate showGameCenterLeaderboards:self];
+	
 }
 
 #pragma mark - Delegate methods

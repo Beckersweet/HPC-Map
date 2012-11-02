@@ -13,6 +13,7 @@
 @synthesize presentingViewController;
 @synthesize match;
 @synthesize delegate;
+@synthesize gcTimingStart, gcQuickFailCount;
 
 #pragma mark Initialization
 
@@ -47,6 +48,7 @@ static GCHandler *sharedHandler= nil;
 {
     if ((self = [super init])) {
         gameCenterAvailable= [self isGameCenterAvailable];
+		gcQuickFailCount= 0;
         if (gameCenterAvailable)
 		{
             NSNotificationCenter *nc= [NSNotificationCenter defaultCenter];
@@ -73,12 +75,52 @@ static GCHandler *sharedHandler= nil;
 
 - (void)authenticateLocalUser
 {
+	
     if (!gameCenterAvailable)
 		return;
 	
     DebugLog(@"Authenticating local user...");
     if ([GKLocalPlayer localPlayer].authenticated == NO)
-        [[GKLocalPlayer localPlayer] authenticateWithCompletionHandler:nil];
+	{
+		self.gcTimingStart= [NSDate date];
+        [[GKLocalPlayer localPlayer] authenticateWithCompletionHandler:^(NSError *error)
+		 {
+			 if (error == nil)
+			 {
+				 // Game Center Active and Player Sucessfully logged in
+			 }
+			 else
+			 {
+				 // Player Is not Logged In, so proceed as not having Game Center
+				 // Also if game center disabled?
+				 DebugLog(@"GK authenticate failed: %@", error);
+				 NSTimeInterval delay= [[NSDate date] timeIntervalSinceDate:self.gcTimingStart];
+				 DebugLog(@"GK authenticate failed in %f seconds",delay);
+				 if (delay < 0.10)
+				 {
+					 if (++self.gcQuickFailCount > 2)
+					 {
+						 self.gcQuickFailCount= 0;
+						 UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"Is Game Center disabled?"
+																		message:@"You can enable Game Center by signing in through the Game Center Application"
+																	   delegate:nil
+															  cancelButtonTitle:@"OK"
+															  otherButtonTitles:nil];
+						 [alert show];
+					 }
+					 else
+					 {
+						 UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"Scores not available"
+																		message:@"You must be logged in to Game Center to keep score"
+																	   delegate:nil
+															  cancelButtonTitle:@"OK"
+															  otherButtonTitles:nil];
+						 [alert show];
+					 }
+				 }
+			 }
+		 }];
+	}
     else
 		DebugLog(@"Already authenticated!");
 }
