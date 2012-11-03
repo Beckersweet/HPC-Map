@@ -17,4 +17,6 @@
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
 
+- (void)loadFBPage;
+
 @end

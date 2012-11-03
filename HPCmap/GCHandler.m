@@ -149,12 +149,25 @@ static GCHandler *sharedHandler= nil;
 	
 }
 
+- (void)showLeaderboardInfo
+{
+	// **NOTE**: iOS 6 only. Don't enable this outside debug until ready to drop older version users
+#ifdef DEBUG
+    [GKLeaderboard loadLeaderboardsWithCompletionHandler:^(NSArray *leaderboards, NSError *error)
+	{
+		DebugLog(@"Available leaderboards:\n%@", leaderboards);
+	}];
+#endif
+}
+
 - (void)reportScore:(int64_t)score forCategory:(NSString *)category
 {
 	GKScore *scoreReporter= [[GKScore alloc] initWithCategory:category];
 	scoreReporter.value = score;
+	scoreReporter.shouldSetDefaultLeaderboard= YES;
 	[scoreReporter reportScoreWithCompletionHandler: ^(NSError *error)
 	 {
+		 [self showLeaderboardInfo];
 		 DebugLog(@"Score reported for category %@: %lld", category, score);
 	 }];
 }

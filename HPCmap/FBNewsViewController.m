@@ -29,7 +29,19 @@
 {
     [super viewDidLoad];
     
-    NSString *urlAddress = HPCFacebookURL;
+    // Do any additional setup after loading the view from its nib.
+	[self loadFBPage];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)loadFBPage
+{
+	NSString *urlAddress = HPCFacebookURL;
     
     //Create a URL object.
     NSURL *url = [NSURL URLWithString:urlAddress];
@@ -39,15 +51,7 @@
     
     //Load the request in the UIWebView.
     [webView loadRequest:requestObj];
-    
-    // Do any additional setup after loading the view from its nib.
-	
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

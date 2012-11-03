@@ -344,12 +344,12 @@
 			{
 				AnswerA.textColor=[UIColor greenColor];
 				self.next.enabled=YES;
-				iscore++;
+				iscore+= self.currentQuestion.questionPoints;
 			}
 			else
 			{
 				AnswerA.textColor=[UIColor redColor];
-				iscore--;
+				iscore-= self.currentQuestion.questionPoints;
 			}
 			break;
 			
@@ -359,12 +359,12 @@
 			{
 				AnswerB.textColor=[UIColor greenColor];
 				self.next.enabled=YES;
-				iscore++;
+				iscore+= self.currentQuestion.questionPoints;
 			}
 			else
 			{
 				AnswerB.textColor=[UIColor redColor];
-				iscore--;
+				iscore-= self.currentQuestion.questionPoints;
 			}
 			break;
 			
@@ -374,12 +374,12 @@
 			{
 				AnswerC.textColor=[UIColor greenColor];
 				self.next.enabled=YES;
-				iscore++;
+				iscore+= self.currentQuestion.questionPoints;
 			}
 			else
 			{
 				AnswerC.textColor=[UIColor redColor];
-				iscore--;
+				iscore-= self.currentQuestion.questionPoints;
 			}
 			break;
 			
@@ -389,12 +389,12 @@
 			{
 				AnswerD.textColor=[UIColor greenColor];
 				self.next.enabled=YES;
-				iscore++;
+				iscore+= self.currentQuestion.questionPoints;
 			}
 			else
 			{
 				AnswerD.textColor=[UIColor redColor];
-				iscore--;
+				iscore-= self.currentQuestion.questionPoints;
 			}
 			break;
 			
@@ -404,6 +404,96 @@
 	
 	self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];
 	
+}
+
+#pragma mark - Delegate functions
+- (void)quizLevelSelectViewControllerDidFinish:(QuizLevelSelectViewController *)controller
+{
+	self.quizClass= controller.quizClass;
+	self.quizLevel= controller.quizLevel;
+	self.currentQuizClass= ((QuizClass *)controller.quizClasses[self.quizClass]);
+	
+	[controller.view removeFromSuperview];
+	[self startover:nil];
+	
+	[controller release];
+}
+
+- (void)showGameCenterLeaderboards:(QuizLevelSelectViewController *)controller
+{
+	self.quizClass= controller.quizClass;
+	self.quizLevel= controller.quizLevel;
+	self.currentQuizClass= ((QuizClass *)controller.quizClasses[self.quizClass]);
+	
+//	[controller.view removeFromSuperview];
+//	[controller release];
+	
+	if ([GKLocalPlayer localPlayer].isAuthenticated)
+		[self showLeaderboard];
+	else
+	{
+		// Trying to detect if GC is disabled by gauging how fast it returns cancelled
+		[[GCHandler sharedInstance] authenticateLocalUser];
+	}
+}
+
+#pragma mark - Life cycle
+-(void) dealloc
+{
+    [QuestionLabel release];
+    [AnswerA release];
+    [AnswerB release];
+    [AnswerC release];
+    [AnswerD release];
+    [buttonA release];
+    [buttonB release];
+    [buttonC release];
+    [buttonD release];
+    [xofy release];
+    [score release];
+    [result release];
+    [toolbar release];
+    [result release];
+    [next release];
+    [startover release];
+	
+	[questions release];
+	
+    [super dealloc];
+  
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+	[super viewDidDisappear:animated];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
 #ifdef oldway
@@ -435,7 +525,7 @@
     iquizz++;
     
     self.xofy.text= [NSString stringWithFormat:@"%d of 50",iquizz+1];
-       
+	
     self.next.enabled=NO;
     AnswerA.textColor=[UIColor blackColor];
     AnswerB.textColor=[UIColor blackColor];
@@ -451,15 +541,15 @@
         AnswerD.text=@"1981";
         
     } else if (iquizz == 2) {
-       
+		
         QuestionLabel.text=@"Where was the first supercomputer built ?";
         AnswerA.text=@"France";
         AnswerB.text=@"Spain";
         AnswerC.text=@"USA";
         AnswerD.text=@"Japan";
-   
+		
     } else if (iquizz == 3) {
-            
+		
         
         QuestionLabel.text=@"Who designed the first supercomputer ?";
         AnswerA.text=@"Seymour IBM";
@@ -469,12 +559,12 @@
         
     } else if (iquizz == 4) {
         
-         QuestionLabel.text=@"Serial vs parallel calculations: How much power per operation may a CPU consume compared to a GPU (latest technologies) ?";
+		QuestionLabel.text=@"Serial vs parallel calculations: How much power per operation may a CPU consume compared to a GPU (latest technologies) ?";
         AnswerA.text=@"7 times more";
         AnswerB.text=@"7 times less";
         AnswerC.text=@"70 times more";
         AnswerD.text=@"70 times less";
-    
+		
     }  else if (iquizz == 5) {
         
         QuestionLabel.text=@"Which company marketed \"the world's first GPU\" in 1999 ?";
@@ -482,7 +572,7 @@
         AnswerB.text=@"IBM";
         AnswerC.text=@"MVIDIA";
         AnswerD.text=@"AMD";
-               
+		
         
     } else if (iquizz == 6) {
         
@@ -491,7 +581,7 @@
         AnswerB.text=@"Intel GPU";
         AnswerC.text=@"Intel GIT";
         AnswerD.text=@"Intel MIC";
-             
+		
     } else if (iquizz == 7) {
         
         QuestionLabel.text=@"Which one of the following supercomputers uses GPUs ?";
@@ -499,7 +589,7 @@
         AnswerB.text=@"K Computer, Japan";
         AnswerC.text=@"Tianhe-1A, China";
         AnswerD.text=@"Kraken, USA";
-             
+		
     }  else if (iquizz == 8) {
         
         QuestionLabel.text=@"What kind of chips does the second most powerful supercomputer in the world (K computer) contain ?";
@@ -507,7 +597,7 @@
         AnswerB.text=@"CPUs+MICs";
         AnswerC.text=@"CPUs only";
         AnswerD.text=@"GPUs only";
-            
+		
     } else if (iquizz == 9) {
         
         QuestionLabel.text=@"By 2012-2013, which supercomputer is going to be upgraded with GPUs ?";
@@ -525,13 +615,13 @@
         AnswerD.text=@"GPU";
         
         /*
-        Question.text=@"By 2018, supercomputers are expected to be able to process information on a level similar to a ..";
-        AnswerA.text=@"human brain";
-        AnswerB.text=@"dog brain";
-        AnswerC.text=@"cat brain";
-        AnswerD.text=@"wale brain";
-        */
-         
+		 Question.text=@"By 2018, supercomputers are expected to be able to process information on a level similar to a ..";
+		 AnswerA.text=@"human brain";
+		 AnswerB.text=@"dog brain";
+		 AnswerC.text=@"cat brain";
+		 AnswerD.text=@"wale brain";
+		 */
+		
     } else if (iquizz == 11) {
         
         QuestionLabel.text=@"Researchers have recently built computer chips that use .. instead of electricity (electrons) to transmit the information.";
@@ -541,14 +631,14 @@
         AnswerD.text=@"Air";
         
         /*
-        Question.text=@"Which projects use distributed Desktops & Laptops that communicate through the network to resolve scientific questions ?";
-        AnswerA.text=@"SETI@HOME";
-        AnswerB.text=@"Folding@HOME";
-        AnswerC.text=@"Docking@HOME";
-        AnswerD.text=@"Africa@HOME";
+		 Question.text=@"Which projects use distributed Desktops & Laptops that communicate through the network to resolve scientific questions ?";
+		 AnswerA.text=@"SETI@HOME";
+		 AnswerB.text=@"Folding@HOME";
+		 AnswerC.text=@"Docking@HOME";
+		 AnswerD.text=@"Africa@HOME";
          */
-          
-    
+		
+		
     } else if (iquizz == 12) {
         
         
@@ -557,14 +647,14 @@
         AnswerB.text=@"Australia";
         AnswerC.text=@"China";
         AnswerD.text=@"Brazil";
-
+		
         
         /*
-        Question.text=@"Grid computing is a distributed system from multiple and .. administrative domains to achieve a common goal (i.e., scientific research).";
-        AnswerA.text=@"interactive";
-        AnswerB.text=@"dependent";
-        AnswerC.text=@"independent";
-        AnswerD.text=@"communicating";
+		 Question.text=@"Grid computing is a distributed system from multiple and .. administrative domains to achieve a common goal (i.e., scientific research).";
+		 AnswerA.text=@"interactive";
+		 AnswerB.text=@"dependent";
+		 AnswerC.text=@"independent";
+		 AnswerD.text=@"communicating";
          */
         
         
@@ -578,15 +668,15 @@
         AnswerD.text=@"Fortran";
         
         /*
-        Question.text=@"Recent findings says that biogas-powered cells would allow to pump up to .. into the grid.";
-        AnswerA.text=@"5 MW";
-        AnswerB.text=@"10 MW";
-        AnswerC.text=@"50 MW";
-        AnswerD.text=@"150 MW";
-          */    
+		 Question.text=@"Recent findings says that biogas-powered cells would allow to pump up to .. into the grid.";
+		 AnswerA.text=@"5 MW";
+		 AnswerB.text=@"10 MW";
+		 AnswerC.text=@"50 MW";
+		 AnswerD.text=@"150 MW";
+		 */
         
     } else if (iquizz == 14) {
-             
+		
         QuestionLabel.text=@"In which journal appeared this quote : \"The processor is going through a bit of a schizophrenic mid-life crisis\" ?";
         AnswerA.text=@"EE times";
         AnswerB.text=@"NY times";
@@ -594,13 +684,13 @@
         AnswerD.text=@"Vancouver Sun";
         
         /*
-        Question.text=@"The annual International Consumer Electronics Show (CES) in Las Vegas is a major technology-related ..";
-        AnswerA.text=@"Trade show";
-        AnswerB.text=@"Design show";
-        AnswerC.text=@"Mum show";
-        AnswerD.text=@"Academic show";
+		 Question.text=@"The annual International Consumer Electronics Show (CES) in Las Vegas is a major technology-related ..";
+		 AnswerA.text=@"Trade show";
+		 AnswerB.text=@"Design show";
+		 AnswerC.text=@"Mum show";
+		 AnswerD.text=@"Academic show";
          */
-            
+		
     } else if (iquizz == 15) {
         
         QuestionLabel.text=@"In what year the world's first hacker ruined a public demonstration of a wireless telegraph by sending Morse code insults via wire ?";
@@ -612,14 +702,14 @@
         
         
         /*
-        Question.text=@"What happened at CES 2012 ?";
-        AnswerA.text=@"iPhone 5 unveiled";
-        AnswerB.text=@"Eminem was there";
-        AnswerC.text=@"50 Cents was there";
-        AnswerD.text=@"Obama was there";
-        */
+		 Question.text=@"What happened at CES 2012 ?";
+		 AnswerA.text=@"iPhone 5 unveiled";
+		 AnswerB.text=@"Eminem was there";
+		 AnswerC.text=@"50 Cents was there";
+		 AnswerD.text=@"Obama was there";
+		 */
         
-                
+		
     } else if (iquizz == 16) {
         
         QuestionLabel.text=@"The telegraph hacker was known as a ..";
@@ -627,7 +717,7 @@
         AnswerA.text=@"civil engineer";
         AnswerB.text=@"cook";
         AnswerC.text=@"school teacher";
-        AnswerD.text=@"magician";        
+        AnswerD.text=@"magician";
         
     } else if (iquizz == 17) {
         
@@ -646,13 +736,13 @@
         AnswerD.text=@"ET brain";
         
         /*
-        Question.text=@"In Spain, the Barcelona supercomputing center recently developped a hybrid chip architecture: GPU + ..";
-        AnswerA.text=@"MIC";
-        AnswerB.text=@"CPU";
-        AnswerC.text=@"Smartphone chip";
-        AnswerD.text=@"GPU";
+		 Question.text=@"In Spain, the Barcelona supercomputing center recently developped a hybrid chip architecture: GPU + ..";
+		 AnswerA.text=@"MIC";
+		 AnswerB.text=@"CPU";
+		 AnswerC.text=@"Smartphone chip";
+		 AnswerD.text=@"GPU";
          */
-       
+		
         
     } else if (iquizz == 19) {
         
@@ -686,7 +776,7 @@
         AnswerC.text=@"rzuseq, BG/Q, USA";
         AnswerD.text=@"Jaguar, USA";
         
-       
+		
         
     } else if (iquizz == 23) {
         
@@ -723,7 +813,7 @@
         
     } else if (iquizz == 27) {
         
-              
+		
         QuestionLabel.text=@"Which of the following energy sources could be used to power the battery of your cell phones ?";
         AnswerA.text=@"Solar panels";
         AnswerB.text=@"Human movements";
@@ -737,15 +827,15 @@
         AnswerB.text=@"Folding@HOME";
         AnswerC.text=@"Docking@HOME";
         AnswerD.text=@"Africa@HOME";
-               
+		
         /*
-        Question.text=@"Researchers have recently built computer chips that use light (photons) instead of electricity (electrons) to transmit the information.";
-        AnswerA.text=@"";
-        AnswerB.text=@"NO";
-        AnswerC.text=@"YES";
-        AnswerD.text=@"";
+		 Question.text=@"Researchers have recently built computer chips that use light (photons) instead of electricity (electrons) to transmit the information.";
+		 AnswerA.text=@"";
+		 AnswerB.text=@"NO";
+		 AnswerC.text=@"YES";
+		 AnswerD.text=@"";
          */
-               
+		
     } else if (iquizz == 29) {
         
         QuestionLabel.text=@"Which platform is known as the social supecomputing platform for providing ready-to-use programs that would answer a single question ?";
@@ -756,11 +846,11 @@
         AnswerD.text=@"Jaguar";
         
         /*
-        Question.text=@"Which country recently developed its first own computer chip ? ";
-        AnswerA.text=@"China";
-        AnswerB.text=@"Australia";
-        AnswerC.text=@"Japan";  
-        AnswerD.text=@"Brazil";
+		 Question.text=@"Which country recently developed its first own computer chip ? ";
+		 AnswerA.text=@"China";
+		 AnswerB.text=@"Australia";
+		 AnswerC.text=@"Japan";
+		 AnswerD.text=@"Brazil";
          */
         
         
@@ -803,15 +893,15 @@
         AnswerB.text=@"150";
         AnswerC.text=@"100";
         AnswerD.text=@"50";
-              
+		
     } else if (iquizz == 35) {
-       
+		
         QuestionLabel.text=@"Which of the following techniques are used to reduce energy costs and hardware failures ?";
         AnswerA.text=@"Umbrella cooling";
         AnswerB.text=@"Water cooling";
         AnswerC.text=@"Air cooling";
         AnswerD.text=@"Quantum cooling";
-              
+		
     } else if (iquizz == 36) {
         
         QuestionLabel.text=@"The K Computer, second most powerful supercomputer in the world uses ..";
@@ -829,36 +919,36 @@
         AnswerD.text=@"150 MW";
         
         /*
-        Question.text=@"Which language(s) can be used to develop on GPUs ? ";
-        AnswerA.text=@"CUDA";
-        AnswerB.text=@"OpenACC";
-        AnswerC.text=@"C/C++";
-        AnswerD.text=@"Fortran";
-        */
-    
+		 Question.text=@"Which language(s) can be used to develop on GPUs ? ";
+		 AnswerA.text=@"CUDA";
+		 AnswerB.text=@"OpenACC";
+		 AnswerC.text=@"C/C++";
+		 AnswerD.text=@"Fortran";
+		 */
+		
     } else if (iquizz == 38) {
         
         /*
-        Question.text=@"The annual International Consumer Electronics Show (CES) in Las Vegas is a major technology-related ..";
-        AnswerA.text=@"Trade show";
-        AnswerB.text=@"Design show";
-        AnswerC.text=@"Mum show";
-        AnswerD.text=@"Academic show";
+		 Question.text=@"The annual International Consumer Electronics Show (CES) in Las Vegas is a major technology-related ..";
+		 AnswerA.text=@"Trade show";
+		 AnswerB.text=@"Design show";
+		 AnswerC.text=@"Mum show";
+		 AnswerD.text=@"Academic show";
          */
         
-    
-         QuestionLabel.text=@"What happened at the annual International Consumer Electronics Show (CES 2012) ?";
-         AnswerC.text=@"50 Cent was there";
-         AnswerB.text=@"Eminem was there";
-         AnswerA.text=@"iPhone5 unveiled"; 
-         AnswerD.text=@"Obama was there";
-                
+		
+		QuestionLabel.text=@"What happened at the annual International Consumer Electronics Show (CES 2012) ?";
+		AnswerC.text=@"50 Cent was there";
+		AnswerB.text=@"Eminem was there";
+		AnswerA.text=@"iPhone5 unveiled";
+		AnswerD.text=@"Obama was there";
+		
         /*
-        Question.text=@"Which journal this quote is attributed to: \"The processor is going through a bit of a schizophrenic mid-life crisis\"";
-        AnswerA.text=@"LA times";
-        AnswerB.text=@"NY times";
-        AnswerC.text=@"EE times";
-        AnswerD.text=@"Vancouver Sun";
+		 Question.text=@"Which journal this quote is attributed to: \"The processor is going through a bit of a schizophrenic mid-life crisis\"";
+		 AnswerA.text=@"LA times";
+		 AnswerB.text=@"NY times";
+		 AnswerC.text=@"EE times";
+		 AnswerD.text=@"Vancouver Sun";
          */
         
     } else if (iquizz == 39) {
@@ -872,10 +962,10 @@
     } else if (iquizz == 40) {
         
         QuestionLabel.text=@"By 2020, we are going to reach the era of supercomputing at the .. ";
-         AnswerA.text=@"Exascale";
-         AnswerB.text=@"Petascale";
+		AnswerA.text=@"Exascale";
+		AnswerB.text=@"Petascale";
         AnswerC.text=@"Terascale";
-         AnswerD.text=@"Bugscale";
+		AnswerD.text=@"Bugscale";
         
     } else if (iquizz == 41) {
         
@@ -926,15 +1016,15 @@
         AnswerD.text=@"20 MW";
         
         /*
-        Question.text=@"In January 2012, what new technology for the developing world was unveiled by a Cambridge nonprofit organization ? ";
-        AnswerA.text=@"10$ smartphone";
-        AnswerB.text=@"100$ smartphone";
-        AnswerC.text=@"10$ tablet";
-        AnswerD.text=@"100$ tablet";
+		 Question.text=@"In January 2012, what new technology for the developing world was unveiled by a Cambridge nonprofit organization ? ";
+		 AnswerA.text=@"10$ smartphone";
+		 AnswerB.text=@"100$ smartphone";
+		 AnswerC.text=@"10$ tablet";
+		 AnswerD.text=@"100$ tablet";
          */
         
     } else if (iquizz == 47) {
-                    
+		
         QuestionLabel.text=@"In January 2012, which company announced the creation of the world's smallest storage device (12-atom size) ?";
         AnswerA.text=@"Cray";
         AnswerB.text=@"IBM";
@@ -942,13 +1032,13 @@
         AnswerD.text=@"Nvidia";
         
         /*
-        Question.text=@"How many barrels of oil per year equals to the excess consumption of water & fossil fuels due to food waste ? ";
-        AnswerA.text=@"30 million";
-        AnswerB.text=@"300 million";
-        AnswerC.text=@"30 billion";
-        AnswerD.text=@"300 billion";
+		 Question.text=@"How many barrels of oil per year equals to the excess consumption of water & fossil fuels due to food waste ? ";
+		 AnswerA.text=@"30 million";
+		 AnswerB.text=@"300 million";
+		 AnswerC.text=@"30 billion";
+		 AnswerD.text=@"300 billion";
          */
-
+		
         
     } else if (iquizz == 48) {
         
@@ -965,7 +1055,7 @@
         AnswerB.text=@"China";
         AnswerC.text=@"Japan";
         AnswerD.text=@"France";
-                
+		
         
     } else if (iquizz == 50) {
         
@@ -973,16 +1063,16 @@
         AnswerA.text=@"IBM";
         AnswerB.text=@"Cray";
         AnswerC.text=@"Intel";
-        AnswerD.text=@"Bull";   
+        AnswerD.text=@"Bull";
         
-    }  
+    }
     
     
-     /*
-       The European Commission has honored 27 IBM data centers for 
-      their energy efficiency
+	/*
+	 The European Commission has honored 27 IBM data centers for
+	 their energy efficiency
      */
-
+	
 }
 -(IBAction)buttonA:(id)sender{
     
@@ -1172,94 +1262,5 @@
 }
 #endif
 
-#pragma mark - Delegate functions
-- (void)quizLevelSelectViewControllerDidFinish:(QuizLevelSelectViewController *)controller
-{
-	self.quizClass= controller.quizClass;
-	self.quizLevel= controller.quizLevel;
-	self.currentQuizClass= ((QuizClass *)controller.quizClasses[self.quizClass]);
-	
-	[controller.view removeFromSuperview];
-	[self startover:nil];
-	
-	[controller release];
-}
-
-- (void)showGameCenterLeaderboards:(QuizLevelSelectViewController *)controller
-{
-	self.quizClass= controller.quizClass;
-	self.quizLevel= controller.quizLevel;
-	self.currentQuizClass= ((QuizClass *)controller.quizClasses[self.quizClass]);
-	
-//	[controller.view removeFromSuperview];
-//	[controller release];
-	
-	if ([GKLocalPlayer localPlayer].isAuthenticated)
-		[self showLeaderboard];
-	else
-	{
-		// Trying to detect if GC is disabled by gauging how fast it returns cancelled
-		[[GCHandler sharedInstance] authenticateLocalUser];
-	}
-}
-
-#pragma mark - Life cycle
--(void) dealloc
-{
-    [QuestionLabel release];
-    [AnswerA release];
-    [AnswerB release];
-    [AnswerC release];
-    [AnswerD release];
-    [buttonA release];
-    [buttonB release];
-    [buttonC release];
-    [buttonD release];
-    [xofy release];
-    [score release];
-    [result release];
-    [toolbar release];
-    [result release];
-    [next release];
-    [startover release];
-	
-	[questions release];
-	
-    [super dealloc];
-  
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
 
 @end

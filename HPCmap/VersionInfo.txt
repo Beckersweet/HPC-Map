@@ -14,12 +14,11 @@
 + FIX:
 - handle backgrounding properly
 - change the quiz code to use a plist
+- news tab button resets fb view
 
 + ADD:
-? in app purchasing
+- in app purchasing
 - post photos to fb
 - post questions to fb
 
 
-Last build changes:
-- GC above tabbar

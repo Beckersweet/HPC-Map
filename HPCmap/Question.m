@@ -9,7 +9,7 @@
 #import "Question.h"
 
 @implementation Question
-@synthesize question, answers, correctAnswers, questionClass, questionLevel, payLevel, active;
+@synthesize question, answers, correctAnswers, questionClass, questionLevel, questionPoints, payLevel, active;
 
 + (NSString *)describeClassInstance:(id)instance classType:(Class)classType
 {
@@ -106,6 +106,7 @@
 		correctAnswers= [questionEntry objectForKey:@"Correct"];
 		questionClass=	[(NSNumber *)[questionEntry objectForKey:@"Class"] integerValue];
 		questionLevel=	[(NSNumber *)[questionEntry objectForKey:@"Level"] integerValue];
+		questionPoints=	[(NSNumber *)[questionEntry objectForKey:@"Points"] integerValue];
 		payLevel=		[(NSNumber *)[questionEntry objectForKey:@"Pay"] integerValue];
 		active=			[(NSNumber *)[questionEntry objectForKey:@"Active"] boolValue];
 	}

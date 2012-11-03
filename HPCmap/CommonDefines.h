@@ -22,7 +22,7 @@
 #define HPCFacebookURL						@"http://www.facebook.com/pages/HPC-Map-iPhone-App/321586984527863"
 #define kPurchasedLevelKey					@"PurchasedLevel"
 
-#define kPurchaseLevelPay1ProductId			@"com.beckersweet.hpcmap.inapp.removeads"
+#define kPurchaseLevelPay1ProductId			@"com.beckersweet.hpcmap.inapp.quiz.game"
 #define kPurchasedLevelValueFree			0
 #define kPurchasedLevelValuePay1			1
 #define kPurchasedLevelValuePay2			2

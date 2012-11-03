@@ -35,6 +35,9 @@
     
     
     NSArray* controllers = [NSArray arrayWithObjects:navig3,navig2,fbnews,navig1,myquizz,nil];
+	// **NOTE**: It is imperative that the order of controllers don't change, and if they do change the next define
+#define kFbnewsControllerIndex	2
+	// TODO: do it like a good programmer, not an idiot. Need to tag the controllers, which don't have a tag property, which needs subclassing, and we're out of time
     
    // NSArray* controllers = [NSArray arrayWithObjects:myquizz,nil];
           
@@ -58,6 +61,7 @@
     [tabBarItem5 release];
     
     tabBarController.viewControllers = controllers;
+	tabBarController.delegate= self;
     
     //navig1.navigationItem.title=@"Green HPC";
     
@@ -90,6 +94,15 @@
     [tabBarController release];
     [window release];
     [super dealloc];
+}
+
+#pragma mark - Tab Bar delegates
+- (void)tabBarController:(UITabBarController *)tbController didSelectViewController:(UIViewController *)viewController
+{
+    if (viewController == [tbController.viewControllers objectAtIndex:kFbnewsControllerIndex] )
+    {
+        [(FBNewsViewController *)viewController loadFBPage];
+    }
 }
 
 #pragma mark - App backgrounding

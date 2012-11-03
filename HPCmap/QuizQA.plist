@@ -18,6 +18,8 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -38,6 +40,8 @@
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
@@ -60,6 +64,8 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -80,6 +86,8 @@
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
@@ -102,6 +110,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -123,6 +133,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -143,6 +155,8 @@
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
@@ -165,6 +179,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -186,6 +202,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -207,6 +225,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -228,6 +248,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -248,6 +270,8 @@
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
@@ -270,6 +294,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -290,6 +316,8 @@
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
@@ -312,6 +340,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -333,6 +363,8 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -354,6 +386,8 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -374,6 +408,8 @@
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
@@ -396,6 +432,8 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -417,6 +455,8 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -438,34 +478,13 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>2</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-    
-    <dict>
-		<key>Question</key>
-		<string>How much power does that (roughly) correspond to ?</string>
-		<key>Answers</key>
-		<array>
-			<string>7 MW</string>
-			<string>14 MW</string>
-			<string>21 MW</string>
-			<string>28 MW</string>
-		</array>
-		<key>Correct</key>
-		<string>A</string>
-		<key>Class</key>
+		<key>Points</key>
 		<integer>1</integer>
-		<key>Level</key>
-		<integer>2</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
 		<true/>
 	</dict>
-    
 	<dict>
 		<key>Question</key>
 		<string>How much power Titan, the new GPU-based supercomputer roughly uses ?</string>
@@ -482,6 +501,8 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -503,6 +524,8 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -525,6 +548,8 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -537,17 +562,19 @@
 		<string>Which is the #1 most powerful supercomputer in the world?</string>
 		<key>Answers</key>
 		<array>
-			<string>Jaguar, USA</string>
+			<string>Titan, USA</string>
 			<string>K Computer, Japan</string>
 			<string>Tsanhe-1A, China</string>
 			<string>Sequoia, BG/Q, USA</string>
 		</array>
 		<key>Correct</key>
-		<string>B</string>
+		<string>A</string>
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -556,7 +583,7 @@
     
     <dict>
 		<key>Question</key>
-		<string>Which is the #1 most powerful supercomputer in the world?</string>
+		<string>Which is the #2 most powerful supercomputer in the world?</string>
 		<key>Answers</key>
 		<array>
 			<string>Jaguar, USA</string>
@@ -565,11 +592,13 @@
 			<string>Sequoia, BG/Q, USA</string>
 		</array>
 		<key>Correct</key>
-		<string>B</string>
+		<string>D</string>
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -593,6 +622,8 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -610,11 +641,13 @@
 			<string>France</string>
 		</array>
 		<key>Correct</key>
-		<string>B</string>
+		<string>C</string>
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -638,6 +671,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -659,6 +694,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -680,6 +717,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -701,6 +740,8 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -722,6 +763,8 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -743,6 +786,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -764,6 +809,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -784,6 +831,8 @@
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
@@ -806,6 +855,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -827,6 +878,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -848,6 +901,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -864,11 +919,13 @@
 			<string>Nitrogen cooling</string>
 		</array>
 		<key>Correct</key>
-		<string>C</string>
+		<string>B</string>
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -890,6 +947,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -910,6 +969,8 @@
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
@@ -932,6 +993,8 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -953,6 +1016,8 @@
 		<integer>1</integer>
 		<key>Level</key>
 		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -973,6 +1038,8 @@
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
@@ -995,6 +1062,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1016,6 +1085,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1037,6 +1108,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1058,6 +1131,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1079,6 +1154,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1100,6 +1177,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1116,11 +1195,13 @@
 			<string>France &amp; Germany</string>
 		</array>
 		<key>Correct</key>
-		<string>C</string>
+		<string>B</string>
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1142,6 +1223,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1163,6 +1246,8 @@
 		<integer>2</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1185,6 +1270,8 @@
 		<integer>0</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1207,6 +1294,8 @@
 		<integer>0</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1229,6 +1318,8 @@
 		<integer>0</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1251,6 +1342,8 @@
 		<integer>0</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1274,6 +1367,8 @@
 		<integer>0</integer>
 		<key>Level</key>
 		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1295,6 +1390,8 @@
 		<key>Class</key>
 		<integer>0</integer>
 		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
@@ -1318,6 +1415,8 @@
 		<integer>0</integer>
 		<key>Level</key>
 		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1339,6 +1438,8 @@
 		<key>Class</key>
 		<integer>0</integer>
 		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
@@ -1362,6 +1463,8 @@
 		<integer>0</integer>
 		<key>Level</key>
 		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>
 		<key>Active</key>
@@ -1383,6 +1486,8 @@
 		<key>Class</key>
 		<integer>0</integer>
 		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
 		<integer>0</integer>

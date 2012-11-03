@@ -11,7 +11,8 @@
 
 @class HPCMapViewController;
 
-@interface HPCMapAppDelegate : NSObject <UIApplicationDelegate> {
+@interface HPCMapAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate>
+{
     UIWindow *window;
   //  UIViewController *viewController;
     UITabBarController *tabBarController;

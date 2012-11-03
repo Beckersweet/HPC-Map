@@ -72,6 +72,11 @@
 	
 	// TODO: Maybe we should do something special for first time run
 	self.purchasedLevel= [prefs integerForKey:kPurchasedLevelKey];
+	
+#ifdef DEBUG
+	self.purchasedLevel= 1;
+#endif
+	
 }
 
 - (void)savePurchaseHistory
@@ -117,7 +122,7 @@
 		
 		// See if they would like to purchase
 		UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"Level Purchase Required"
-													   message:@"You have selected a paid level quiz\nYou need to purchase this level to continue"
+													   message:@"You have selected a paid level quiz.\nYou need to purchase this level to continue"
 													  delegate:self
 											 cancelButtonTitle:@"Never mind"
 											 otherButtonTitles:@"Purchase now", @"Restore my purchase", nil];

@@ -24,6 +24,7 @@
 	NSString *correctAnswers;
 	NSInteger questionClass;
 	NSInteger questionLevel;
+	NSInteger questionPoints;
 	NSInteger payLevel;
 	BOOL active;
 
@@ -34,6 +35,7 @@
 @property (nonatomic, strong) NSString *correctAnswers;
 @property (nonatomic, assign) NSInteger questionClass;
 @property (nonatomic, assign) NSInteger questionLevel;
+@property (nonatomic, assign) NSInteger questionPoints;
 @property (nonatomic, assign) NSInteger payLevel;
 @property (nonatomic, assign) BOOL active;
 
