@@ -193,19 +193,6 @@
          timestampString = "373549313.796885"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "412"
-         endingLineNumber = "412"
-         landmarkName = "-startover:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "HPCmap/QuizzViewController.m"
-         timestampString = "373549313.796885"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
          startingLineNumber = "99"
          endingLineNumber = "99"
          landmarkName = "-fillQuestionForm"
@@ -260,7 +247,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "131"
          endingLineNumber = "131"
-         landmarkName = "-start"
+         landmarkName = "-difficultySlider:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -307,11 +294,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HPCmap/QuizzViewController.m"
-         timestampString = "373549313.796885"
+         timestampString = "373628749.808384"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1197"
-         endingLineNumber = "1197"
+         startingLineNumber = "431"
+         endingLineNumber = "431"
          landmarkName = "-showGameCenterLeaderboards:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -385,11 +372,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HPCmap/InAppPurManager.m"
-         timestampString = "373368047.364277"
+         timestampString = "373593882.065151"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "154"
-         endingLineNumber = "154"
+         startingLineNumber = "150"
+         endingLineNumber = "150"
          landmarkName = "-productsRequest:didReceiveResponse:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -416,7 +403,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "228"
          endingLineNumber = "228"
-         landmarkName = "-showWaiting:"
+         landmarkName = "-showDifficultyView"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -429,8 +416,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "185"
          endingLineNumber = "185"
-         landmarkName = "-showDifficultyView"
-         landmarkType = "5">
+         landmarkName = "@implementation QuizLevelSelectViewController"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -494,7 +481,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "87"
          endingLineNumber = "87"
-         landmarkName = "-levelButton:"
+         landmarkName = "-savePurchaseHistory"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -502,11 +489,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HPCmap/QuizzViewController.m"
-         timestampString = "373549313.796885"
+         timestampString = "373628749.808384"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1178"
-         endingLineNumber = "1178"
+         startingLineNumber = "412"
+         endingLineNumber = "412"
          landmarkName = "-quizLevelSelectViewControllerDidFinish:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -533,7 +520,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "176"
          endingLineNumber = "176"
-         landmarkName = "-purchaseCompleted"
+         landmarkName = "-alertView:clickedButtonAtIndex:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
