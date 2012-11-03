@@ -22,7 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
    // sleep(10) ;
-    
+//    DebugLog(@"launchOptions: %@",launchOptions);
+	
     HPCMapViewController *mymap = [[HPCMapViewController alloc]init];
     RootViewController *myroot = [[RootViewController alloc] init];
     RootViewController2 *myroot2 = [[RootViewController2 alloc] init]; 
@@ -114,10 +115,11 @@
      */
 	DebugLog(@"Entered background");
 	
-	UIApplication  *app = [UIApplication sharedApplication];
-	UIBackgroundTaskIdentifier bgTask;
+	UIApplication  *app= [UIApplication sharedApplication];
+	UIBackgroundTaskIdentifier bgTask= UIBackgroundTaskInvalid;
 	
-	bgTask = [app beginBackgroundTaskWithExpirationHandler:^{
+	bgTask= [app beginBackgroundTaskWithExpirationHandler:^
+	{
         [app endBackgroundTask:bgTask];
 	}];
 }

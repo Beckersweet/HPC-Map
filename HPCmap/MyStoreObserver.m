@@ -249,28 +249,31 @@
        
     [delegate AppleServerConnection:self didReceiveData:receiveData];
     
-    if (receiveData != nil) {
-        NSString *jsonString=[[NSString alloc] initWithData:receiveData encoding:NSUTF8StringEncoding];
+    if (receiveData != nil)
+	{
+        NSString *jsonString= [[NSString alloc] initWithData:receiveData encoding:NSUTF8StringEncoding];
         
         debug(@"jsonString: %@", jsonString);
         
         // Create a dictionary from the JSON string
-        if([jsonString JSONValue] != nil){
+        if([jsonString JSONValue] != nil)
+		{
             NSDictionary *results = [jsonString JSONValue];
             
             NSArray *receipt=nil;
             DebugLog(@"Returned JSON stuf: %@, %@", results, receipt);
              
         
-        [jsonString release];
-        jsonString=nil;
         }
         //   NSLog(@"here again6");
         
-    [receiveData release];
-    receiveData=nil;
-    //  [connection release];
-    //  connection=nil;
+		[jsonString release];
+		jsonString=nil;
+
+		[receiveData release];
+		receiveData=nil;
+		//  [connection release];
+		//  connection=nil;
     }
     
    

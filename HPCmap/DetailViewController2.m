@@ -102,6 +102,7 @@
 												 otherButtonTitles:@"Email A Friend", @"Post to facebook", nil];
 	
 	[sendSheet showFromTabBar:self.tabBarController.tabBar];
+	[sendSheet release];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -195,12 +196,18 @@
 		}
 	}
     
-	// ANT: Change to email button to "Send" if FB is an option
-    UIBarButtonItem *emailbutton= [UIBarButtonItem alloc];
-	if ([FBHandler isSocialFrameworkAvailable])
-		[emailbutton initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(sendPicture:)];
-	else
-		[emailbutton initWithTitle:@"Email A Friend" style:UIBarButtonItemStylePlain target:self action:@selector(sendEmail:)];
+	// ANT: Change the email button to "Send" if FB is an option
+    UIBarButtonItem *emailbutton= [[UIBarButtonItem alloc] initWithTitle:([FBHandler isSocialFrameworkAvailable]?@"Share":@"Email A Friend")
+																   style:UIBarButtonItemStylePlain
+																  target:self
+																  action:([FBHandler isSocialFrameworkAvailable]?@selector(sendPicture:):@selector(sendEmail:))];
+	// **NOTE**
+	// Using the above monster statement instead of the below 5 lines because Static Analyzer complains when alloc/init are decoupled
+//    UIBarButtonItem *emailbutton= [UIBarButtonItem alloc];
+//	if ([FBHandler isSocialFrameworkAvailable])
+//		[emailbutton initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(sendPicture:)];
+//	else
+//		[emailbutton initWithTitle:@"Email A Friend" style:UIBarButtonItemStylePlain target:self action:@selector(sendEmail:)];
     
     //  self.navigationItem.rightBarButtonItem=favbutton;
     NSArray *rightButtonsArray = [[NSArray alloc] initWithObjects:emailbutton, nil];

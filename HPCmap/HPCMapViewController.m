@@ -105,7 +105,8 @@
    // dvc.detailURL = nil;
   //  [dvc release];
  //   [self presentModalViewController:dvc animated:YES];
-    
+	
+    [dvc release];
 }
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKPinAnnotationView *)view {

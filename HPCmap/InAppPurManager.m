@@ -182,6 +182,8 @@
 //	SKPayment *payment = [SKPayment paymentWithProductIdentifier:kPurchaseLevelPay1ProductId];
 
 	[request autorelease];
+	[myProduct release];
+	[invalidProducts release];
 }
 
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error

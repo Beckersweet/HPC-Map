@@ -18,7 +18,7 @@
 
 @protocol QuizLevelSelectViewControllerDelegate;
 
-@interface QuizLevelSelectViewController : UIViewController <UIAlertViewDelegate>
+@interface QuizLevelSelectViewController : UIViewController <UIAlertViewDelegate, GKChallengeEventHandlerDelegate>
 {
 	id <QuizLevelSelectViewControllerDelegate> delegate;
 	
