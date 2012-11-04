@@ -247,7 +247,7 @@
 #pragma mark - Scoring
 - (int64_t)fullScore
 {
-	int64_t fScore= (iscore*1000000.0*(self.quizLevel+1))/[Question questionCount:self.quizClass inQuestions:self.questions]/[[NSDate date] timeIntervalSinceDate:self.startTime];
+	int64_t fScore= (iscore*1000000.0*(self.quizLevel+1))/([Question questionCount:self.quizClass inQuestions:self.questions]/[[NSDate date] timeIntervalSinceDate:self.startTime]);
 	
 	return fScore;
 }

@@ -121,7 +121,9 @@
 {
 	DebugLog(@"4 - paymentQueue");
 	
-	for (SKPaymentTransaction* transaction in transactions)
+	int restoreFail= 0;
+	
+	for (SKPaymentTransaction *transaction in transactions)
 	{
 		switch (transaction.transactionState)
 		{
@@ -137,7 +139,17 @@
 				break;
 				
 			case SKPaymentTransactionStateRestored:
-				[self restoreTransaction:transaction];
+				// Ignore transactions other than the current
+				DebugLog(@"Found transaction to restore:%@",transaction.payment.productIdentifier);
+				if ([transaction.payment.productIdentifier isEqualToString:kPurchaseLevelPay1ProductId])
+					[self restoreTransaction:transaction];
+				else
+				{
+					restoreFail++;
+					// Remove the transaction from the payment queue.
+					[[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+				}
+
 //            	DebugLog(@"restoreTransaction");
 				break;
 				
@@ -151,6 +163,11 @@
 			default:
 				break;
 		}
+	}
+	
+	if (restoreFail == transactions.count)
+	{
+		[self handleFailedRestoreResults:nil];
 	}
 }
 
@@ -185,9 +202,9 @@
    // }
     
 	// Remove the transaction from the payment queue.
-    [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
+    [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 	
-	DebugLog(@"Transaction　complete");
+	DebugLog(@"Transaction complete");
 }
 
 - (void) failedTransaction: (SKPaymentTransaction *)transaction
@@ -207,7 +224,7 @@
 	
 	// save data
 	// change ads state
-    DebugLog(@"restoreTransaction");
+    DebugLog(@"restoreTransaction: %@:", transaction);
     
 	// This was superfluous
 	//[InAppPurManager RemoveAdsPurchased];
@@ -301,6 +318,11 @@
 - (void)handleFailedPurchaseResults:(SKPaymentTransaction *)transaction
 {
 	[self.callingController performSelector:@selector(purchaseCompleted) withObject:nil];
+}
+
+- (void)handleFailedRestoreResults:(SKPaymentTransaction *)transaction
+{
+	[self.callingController performSelector:@selector(restoreFailed) withObject:nil];
 }
 
 - (void)saveTransactionResults:(SKPaymentTransaction *)transaction

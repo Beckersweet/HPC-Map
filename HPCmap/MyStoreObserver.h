@@ -32,6 +32,7 @@
 
 - (void)handleSuccessfulPurchaseResults:(SKPaymentTransaction *)transaction;
 - (void)handleFailedPurchaseResults:(SKPaymentTransaction *)transaction;
+- (void)handleFailedRestoreResults:(SKPaymentTransaction *)transaction;
 - (void)saveTransactionResults:(SKPaymentTransaction *)transaction;
 
 @end

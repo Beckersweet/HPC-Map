@@ -72,11 +72,6 @@
 	
 	// TODO: Maybe we should do something special for first time run
 	self.purchasedLevel= [prefs integerForKey:kPurchasedLevelKey];
-	
-#ifdef DEBUG
-	self.purchasedLevel= 1;
-#endif
-	
 }
 
 - (void)savePurchaseHistory
@@ -179,6 +174,18 @@
 - (void)purchaseCompleted
 {
 	[self loadPurchaseHistory];
+	[self hideWaiting];
+	[self showDifficultyView];
+}
+
+- (void)restoreFailed
+{
+	UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"Cannot restore purchase"
+												   message:@"Cannot find your previous purchase.\nPlease make sure you log in with the same iTunes account you have purchased before."
+												  delegate:self
+										 cancelButtonTitle:@"Continue"
+										 otherButtonTitles:nil];
+	[alert show];
 	[self hideWaiting];
 	[self showDifficultyView];
 }
