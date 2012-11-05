@@ -72,6 +72,13 @@
 	
 	// TODO: Maybe we should do something special for first time run
 	self.purchasedLevel= [prefs integerForKey:kPurchasedLevelKey];
+	
+#ifdef DEBUG
+#ifdef EVERYTHINGFREE
+	self.purchasedLevel= 10;
+#endif
+#endif
+	
 }
 
 - (void)savePurchaseHistory

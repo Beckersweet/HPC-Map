@@ -11,6 +11,7 @@
 #import "CommonDefines.h"
 #import "Question.h"
 #import "QuizClass.h"
+#import "Achievement.h"
 #import "FBHandler.h"
 #import "GCHandler.h"
 #import "QuizLevelSelectViewController.h"
@@ -48,6 +49,7 @@
 	QuizClass *currentQuizClass;
 	BOOL randomized;
 	BOOL quizRunning;
+	NSArray *quizAchievements;
 	
 	GCHandler *gcHandler;
 	
@@ -80,6 +82,7 @@
 @property (nonatomic, retain) QuizClass *currentQuizClass;
 @property (nonatomic, assign) BOOL randomized;
 @property (nonatomic, assign) BOOL quizRunning;
+@property (nonatomic, retain) NSArray *quizAchievements;
 
 @property (nonatomic, retain) GCHandler *gcHandler;
 

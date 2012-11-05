@@ -16,7 +16,7 @@
 @synthesize next,startover,ask;
 @synthesize toolbar;
 
-@synthesize questions, nextQuestionIndex, quizClass, quizLevel, startTime;
+@synthesize questions, nextQuestionIndex, quizClass, quizLevel, startTime, quizAchievements;
 @synthesize currentQuestion, currentQuizClass, randomized, quizRunning, gcHandler;
 
 - (void)didReceiveMemoryWarning
@@ -86,6 +86,8 @@
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	[self loadAchievementData];
 	
 	[self fillQuestionForm];
 	[self askForLevel];
@@ -202,12 +204,38 @@
 }
 
 #pragma mark - GameCenter
+
+- (NSString *)currentLeaderboard
+{
+	NSString *boardSuffix;
+	
+	switch (self.quizLevel)
+	{
+		case 0:		// easy
+			boardSuffix= kDifficultyLevelTagEasy;
+			break;
+		case 1:		// medium
+			boardSuffix= kDifficultyLevelTagMedium;
+			break;
+		case 2:		// hard
+			boardSuffix= kDifficultyLevelTagHard;
+			break;
+			
+		default:
+			break;
+	}
+	
+	NSString *currentLeaderboard= [NSString stringWithFormat:@"%@%@", self.currentQuizClass.leaderboard, boardSuffix];
+	DebugLog(@"Current leaderboard: %@", currentLeaderboard);
+	return currentLeaderboard;
+}
+
 - (void)showLeaderboard
 {
 	GKLeaderboardViewController *leaderboardController = [[GKLeaderboardViewController alloc] init];
 	if (leaderboardController != NULL)
 	{
-		leaderboardController.category= self.currentQuizClass.leaderboard;
+		leaderboardController.category= [self currentLeaderboard];
 		leaderboardController.timeScope= GKLeaderboardTimeScopeAllTime;
 		leaderboardController.leaderboardDelegate= (id)self;
 		[self presentModalViewController:leaderboardController animated:YES];
@@ -240,14 +268,56 @@
 {
     if(iscore > 0)
     {
-        [[GCHandler sharedInstance] reportScore:[self fullScore] forCategory:self.currentQuizClass.leaderboard];
+        [[GCHandler sharedInstance] reportScore:[self fullScore] forCategory:[self currentLeaderboard]];
     }
+}
+
+#pragma mark - Achievements
+- (void)loadAchievementData
+{
+	self.quizAchievements= [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"QuizAchievements" ofType:@"plist"]];
+}
+
+- (void)checkAchievements
+{
+	for (int i= 0; i<([self.quizAchievements count]); i++)
+	{
+		Achievement *a= [[Achievement alloc] initWithData:self.quizAchievements[i]];
+		if ([a.trigger isEqualToString:@"points"])
+		{
+			if (self.currentQuestion.questionPoints == a.triggerValue)
+			{
+				// Achieved
+				GKAchievement *achievement= [[[GKAchievement alloc] initWithIdentifier:a.achievement] autorelease];
+				achievement.percentComplete= 100.0;
+				if(achievement != nil)
+				{
+					[achievement reportAchievementWithCompletionHandler: ^(NSError *error)
+					{
+						if(error != nil)
+						{
+							DebugLog(@"Achievement submission failed: %@", error);
+						} else
+						{
+							DebugLog(@"Achievement submitted: %@", achievement);
+						}
+						
+					}];
+				}
+			}
+		}
+		[a release];
+	}
 }
 
 #pragma mark - Scoring
 - (int64_t)fullScore
 {
-	int64_t fScore= (iscore*1000000.0*(self.quizLevel+1))/([Question questionCount:self.quizClass inQuestions:self.questions]/[[NSDate date] timeIntervalSinceDate:self.startTime]);
+	NSTimeInterval elapsedTime= [[NSDate date] timeIntervalSinceDate:self.startTime];
+	NSInteger numberOfQuestions= [Question questionCount:self.quizClass inQuestions:self.questions];
+	int64_t fScore;
+	//	fScore= (iscore*1000000.0*(self.quizLevel+1))/(numberOfQuestions/elapsedTime); // this doesn't work, makes elapsedtime a multiplier
+	fScore= (iscore*1000000.0*(self.quizLevel+1))/numberOfQuestions/elapsedTime;
 	
 	return fScore;
 }
@@ -336,6 +406,8 @@
 	// Only allow one answer once
 	sender.enabled= NO;
 	
+	BOOL correct= NO;
+	
 	switch ([sender tag])
 	{
 		case 0:
@@ -343,13 +415,11 @@
 			if ([self containsAnswer:@"A"])
 			{
 				AnswerA.textColor=[UIColor greenColor];
-				self.next.enabled=YES;
-				iscore+= self.currentQuestion.questionPoints;
+				correct= YES;
 			}
 			else
 			{
 				AnswerA.textColor=[UIColor redColor];
-				iscore-= self.currentQuestion.questionPoints;
 			}
 			break;
 			
@@ -358,13 +428,11 @@
 			if ([self containsAnswer:@"B"])
 			{
 				AnswerB.textColor=[UIColor greenColor];
-				self.next.enabled=YES;
-				iscore+= self.currentQuestion.questionPoints;
+				correct= YES;
 			}
 			else
 			{
 				AnswerB.textColor=[UIColor redColor];
-				iscore-= self.currentQuestion.questionPoints;
 			}
 			break;
 			
@@ -373,13 +441,11 @@
 			if ([self containsAnswer:@"C"])
 			{
 				AnswerC.textColor=[UIColor greenColor];
-				self.next.enabled=YES;
-				iscore+= self.currentQuestion.questionPoints;
+				correct= YES;
 			}
 			else
 			{
 				AnswerC.textColor=[UIColor redColor];
-				iscore-= self.currentQuestion.questionPoints;
 			}
 			break;
 			
@@ -388,18 +454,28 @@
 			if ([self containsAnswer:@"D"])
 			{
 				AnswerD.textColor=[UIColor greenColor];
-				self.next.enabled=YES;
-				iscore+= self.currentQuestion.questionPoints;
+				correct= YES;
 			}
 			else
 			{
 				AnswerD.textColor=[UIColor redColor];
-				iscore-= self.currentQuestion.questionPoints;
 			}
 			break;
 			
 		default:
 			break;
+	}
+	
+	if (correct)
+	{
+		self.next.enabled=YES;
+		iscore+= self.currentQuestion.questionPoints;
+		[self checkAchievements];
+	}
+	else
+	{
+		iscore-= self.currentQuestion.questionPoints;
+	
 	}
 	
 	self.score.text= [NSString stringWithFormat:@"Score: %d",iscore];

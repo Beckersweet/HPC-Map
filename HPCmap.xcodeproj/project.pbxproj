@@ -104,6 +104,8 @@
 		A9348FAF1630446400800A84 /* GCHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A9348FAE1630446400800A84 /* GCHandler.m */; settings = {COMPILER_FLAGS = " -fobjc-arc"; }; };
 		A9348FB21631300C00800A84 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9348FB01630582E00800A84 /* GameKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A9348FB31631301100800A84 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96F3FE01623122600694E7A /* StoreKit.framework */; };
+		A9424B51164787000010A57A /* QuizAchievements.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9424B50164787000010A57A /* QuizAchievements.plist */; };
+		A9424B541647E2CE0010A57A /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = A9424B531647E2CE0010A57A /* Achievement.m */; settings = {COMPILER_FLAGS = " -fobjc-arc"; }; };
 		A963C353161C127C004D3471 /* launchimage@2x-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A963C352161C127C004D3471 /* launchimage@2x-568h@2x.png */; };
 		A963C355161C128C004D3471 /* launchimage@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A963C354161C128C004D3471 /* launchimage@2x@2x.png */; };
 		A963C357161C12C4004D3471 /* launchimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A963C356161C12C4004D3471 /* launchimage@2x.png */; };
@@ -260,6 +262,9 @@
 		A9348FAD1630446300800A84 /* GCHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCHandler.h; sourceTree = "<group>"; };
 		A9348FAE1630446400800A84 /* GCHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCHandler.m; sourceTree = "<group>"; };
 		A9348FB01630582E00800A84 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		A9424B50164787000010A57A /* QuizAchievements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuizAchievements.plist; sourceTree = "<group>"; };
+		A9424B521647E2CE0010A57A /* Achievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Achievement.h; sourceTree = "<group>"; };
+		A9424B531647E2CE0010A57A /* Achievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Achievement.m; sourceTree = "<group>"; };
 		A963C352161C127C004D3471 /* launchimage@2x-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x-568h@2x.png"; sourceTree = "<group>"; };
 		A963C354161C128C004D3471 /* launchimage@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x@2x.png"; sourceTree = "<group>"; };
 		A963C356161C12C4004D3471 /* launchimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x.png"; sourceTree = "<group>"; };
@@ -497,10 +502,13 @@
 			children = (
 				A91E6755163FBED100FC45EA /* QuizQA.plist */,
 				A9348FAB162DEE0C00800A84 /* QuizClasses.plist */,
+				A9424B50164787000010A57A /* QuizAchievements.plist */,
 				A9348FA8162CADF600800A84 /* Question.h */,
 				A9348FA9162CADF600800A84 /* Question.m */,
 				A930C154163693C900912267 /* QuizClass.h */,
 				A930C155163693C900912267 /* QuizClass.m */,
+				A9424B521647E2CE0010A57A /* Achievement.h */,
+				A9424B531647E2CE0010A57A /* Achievement.m */,
 				A9348FAD1630446300800A84 /* GCHandler.h */,
 				A9348FAE1630446400800A84 /* GCHandler.m */,
 				A930C14E1635CCA900912267 /* QuizLevelSelectViewController.h */,
@@ -659,6 +667,7 @@
 				A9348FAC162DEE0C00800A84 /* QuizClasses.plist in Resources */,
 				A930C1521635CCA900912267 /* QuizLevelSelectViewController.xib in Resources */,
 				A91E6756163FBED100FC45EA /* QuizQA.plist in Resources */,
+				A9424B51164787000010A57A /* QuizAchievements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +740,7 @@
 				A9348FAF1630446400800A84 /* GCHandler.m in Sources */,
 				A930C1511635CCA900912267 /* QuizLevelSelectViewController.m in Sources */,
 				A930C156163693CA00912267 /* QuizClass.m in Sources */,
+				A9424B541647E2CE0010A57A /* Achievement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

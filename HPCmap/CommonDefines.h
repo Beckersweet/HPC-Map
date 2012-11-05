@@ -19,6 +19,9 @@
 //#define kMyFeatureIdentifier				@"com.beckersweet.hpcmap.inapp.removeads"
 //#define kInAppPurchaseProUpgradeProductId	@"com.beckersweet.hpcmap.inapp.removeads"
 
+// Uncomment the following line to not bother with purchases. Works only in DEBUG mode
+//#define EVERYTHINGFREE
+
 #define HPCFacebookURL						@"http://www.facebook.com/pages/HPC-Map-iPhone-App/321586984527863"
 #define kPurchasedLevelKey					@"PurchasedLevel"
 
@@ -32,6 +35,11 @@
 #define kDifficultyLevelTextMedium			@"Medium"
 #define kDifficultyLevelTextHard			@"Hard"
 #define kLevelButtonNamePadding				@"   "
+
+#define kDifficultyLevelTagEasy				@"_easy"
+#define kDifficultyLevelTagMedium			@"_medium"
+#define kDifficultyLevelTagHard				@"_hard"
+#define kDifficultyLevelTagCombo			@"_comb"
 
 
 // HPC Specific macros

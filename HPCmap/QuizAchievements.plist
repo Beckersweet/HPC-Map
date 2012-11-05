@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>10 point question</string>
+		<key>Achievement</key>
+		<string>com.beckersweet.hpcmap.quiz.ach1</string>
+		<key>Trigger</key>
+		<string>points</string>
+		<key>Value</key>
+		<integer>10</integer>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>5 point question</string>
+		<key>Achievement</key>
+		<string>com.beckersweet.hpcmap.quiz.ach2</string>
+		<key>Trigger</key>
+		<string>points</string>
+		<key>Value</key>
+		<integer>5</integer>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>2 point question</string>
+		<key>Achievement</key>
+		<string>com.beckersweet.hpcmap.quiz.ach3</string>
+		<key>Trigger</key>
+		<string>points</string>
+		<key>Value</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>15 point question</string>
+		<key>Achievement</key>
+		<string>com.beckersweet.hpcmap.quiz.ach4</string>
+		<key>Trigger</key>
+		<string>points</string>
+		<key>Value</key>
+		<integer>15</integer>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>20 point question</string>
+		<key>Achievement</key>
+		<string>com.beckersweet.hpcmap.quiz.ach5</string>
+		<key>Trigger</key>
+		<string>points</string>
+		<key>Value</key>
+		<integer>20</integer>
+	</dict>
+</array>
+</plist>
