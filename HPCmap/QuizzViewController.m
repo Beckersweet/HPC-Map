@@ -317,7 +317,7 @@
 	NSInteger numberOfQuestions= [Question questionCount:self.quizClass inQuestions:self.questions];
 	int64_t fScore;
 	//	fScore= (iscore*1000000.0*(self.quizLevel+1))/(numberOfQuestions/elapsedTime); // this doesn't work, makes elapsedtime a multiplier
-	fScore= (iscore*1000000.0*(self.quizLevel+1))/numberOfQuestions/elapsedTime;
+	fScore= (iscore*100000.0*(self.quizLevel+1))/(numberOfQuestions*1.0)/(elapsedTime*1.0);
 	
 	return fScore;
 }

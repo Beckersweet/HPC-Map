@@ -36,10 +36,10 @@
 #define kDifficultyLevelTextHard			@"Hard"
 #define kLevelButtonNamePadding				@"   "
 
-#define kDifficultyLevelTagEasy				@"_easy"
-#define kDifficultyLevelTagMedium			@"_medium"
-#define kDifficultyLevelTagHard				@"_hard"
-#define kDifficultyLevelTagCombo			@"_comb"
+#define kDifficultyLevelTagEasy				@"_easy1"
+#define kDifficultyLevelTagMedium			@"_medium1"
+#define kDifficultyLevelTagHard				@"_hard1"
+#define kDifficultyLevelTagCombo			@"_comb1"
 
 
 // HPC Specific macros
