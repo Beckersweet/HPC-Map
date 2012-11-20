@@ -121,21 +121,18 @@
 		// Reset selected level to easy/free
 		self.quizLevel= 0;
 		sender.value= 0;
-		
-		// See if they would like to purchase
-		UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"Level Purchase Required"
-													   message:@"You have selected a paid level quiz.\nYou need to purchase this level to continue"
-													  delegate:self
-											 cancelButtonTitle:@"Never mind"
-											 otherButtonTitles:@"Purchase now", @"Restore my purchase", nil];
-		alert.tag= kTagAlertViewPurchaseRestore;
-		[alert show];
+
+		[self askForPurchase];
 	}
 }
 
 - (IBAction)start
 {
-	[self.delegate quizLevelSelectViewControllerDidFinish:self];
+	NSString *payLevels= ((QuizClass *)self.quizClasses[self.quizClass]).payLevels;
+	if ([payLevels length] > 0 && self.purchasedLevel < requiredPayLevel(self.quizLevel))
+		[self askForPurchase];
+	else
+		[self.delegate quizLevelSelectViewControllerDidFinish:self];
 }
 
 - (IBAction)scores
@@ -198,6 +195,18 @@
 }
 
 #pragma mark - Visuals
+- (void)askForPurchase
+{
+	// See if they would like to purchase
+	UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"Level Purchase Required"
+												   message:@"You have selected a paid level quiz.\nYou need to purchase this level to continue"
+												  delegate:self
+										 cancelButtonTitle:@"Never mind"
+										 otherButtonTitles:@"Purchase now", @"Restore my purchase", nil];
+	alert.tag= kTagAlertViewPurchaseRestore;
+	[alert show];
+}
+
 - (void)showDifficultyView
 {
 	// Difficulty view

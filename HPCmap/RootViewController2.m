@@ -66,6 +66,88 @@ NSString *const groupid2 = @"72157627879677415";
 {
 	DebugLog(@"Flickr download finished");
     
+    [delegate flickrConnection:self didReceiveData:receiveData];
+	if (receiveData != nil)
+	{
+        NSString *jsonString=[[NSString alloc] initWithData:receiveData encoding:NSUTF8StringEncoding];
+		
+		// Create a dictionary from the JSON string
+        if([jsonString JSONValue] != nil)
+		{
+            NSDictionary *results = [jsonString JSONValue];
+			
+            NSArray *photos=nil;
+			
+            if (myBOOL == YES)
+			{
+                photos = [[results objectForKey:@"photos"] objectForKey:@"photo"];
+            }
+			else
+			{
+                photos = [[results objectForKey:@"photos"] objectForKey:@"photo"];
+            }
+            
+            // Loop through each entry in the dictionary...
+            for (NSDictionary *photo in photos)
+            {
+                // Get title of the image
+                NSString *title = [photo objectForKey:@"title"];
+                NSString *owner =  [photo objectForKey:@"ownername"];
+				
+                if([title isEqualToString:@"I Want My Supercomputer"] == YES || [title isEqualToString:@"CRAY-XT5"] == YES ||[title isEqualToString:@"Curated Store"] == YES || [title isEqualToString:@"Control room MAX experiment"] == YES || [title isEqualToString:@"Nuclear Engineer Laural Briggs"] == YES || [title isEqualToString:@"MasPar Mug"] == YES || [title isEqualToString:@"Thinking Machines Mug"] == YES || [title isEqualToString:@"NAYLAMP,DHN-(El Callao,Perú)"] == YES ||[title isEqualToString:@"New Blue Gene Super Computer"] == YES || [title isEqualToString:@"DSCF3609"] == YES || [title isEqualToString:@"Deep Blue"] == YES || [title isEqualToString:@"Master Of Supercomputing"] == YES || [title isEqualToString:@"Amy on the Cray-1"] == YES || [title isEqualToString:@"CRAY-3"] == YES || [title isEqualToString:@"Gene Amdahl!"] == YES || [title isEqualToString:@"Danny Hillis and ? 77 million  IMG_4400"] == YES || [title isEqualToString:@"MHPCC_Supercomputer"] == YES || [owner isEqualToString:@"Ultimate fish"] == YES || [owner isEqualToString:@"danregal"] == YES || [title isEqualToString:@""] == YES || [owner isEqualToString:@""] == YES || [owner isEqualToString:@"peterhoneyman"] == YES || [owner isEqualToString:@"EbbeSand"] == YES || [owner isEqualToString:@"Fauxlaroid"] == YES || [owner isEqualToString:@"Monkey River Town"] == YES || [owner isEqualToString:@"Chris_Samuel"] == YES || [owner isEqualToString:@"Burpythehippo"] == YES || [owner isEqualToString:@"dabcanboulet"] == YES || [owner isEqualToString:@"nolan"] == YES || [owner isEqualToString:@"recompiler"] == YES || [owner isEqualToString:@"Kelt"] == YES || [owner isEqualToString:@"Eric E Johnson"] == YES || [owner isEqualToString:@"NoisyAstronomer"] == YES || [owner isEqualToString:@"Nik Bourbaki"] == YES || [owner isEqualToString:@"jonMR"] == YES || [owner isEqualToString:@"Grudnick"] == YES || [owner isEqualToString:@"ecoev"] == YES || [owner isEqualToString:@"kowgod"] == YES)
+				{
+					//DebugLog(@"In the special if block for photo names");
+				}
+				else
+				{
+					[photoTitles addObject:(title.length > 0 ? title : @"Untitled")];
+					[ownerNames addObject:(owner.length > 0 ? owner : @"Unknown")];
+					
+					if ([title isEqualToString:@"Untitled"] == YES || [owner isEqualToString:@"Unknown"] == YES)
+					{
+						// do nothing
+					} else
+					{
+						NSString *photoURLString = [NSString stringWithFormat:@"http://farm%@.static.flickr.com/%@/%@_%@_s.jpg", [photo objectForKey:@"farm"], [photo objectForKey:@"server"], [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
+						[photoSmallImageData addObject:[NSData dataWithContentsOfURL:[NSURL URLWithString:photoURLString]]];
+						
+						// Build and save the URL to the large image so we can zoom
+						// in on the image if requested
+						photoURLString = [NSString stringWithFormat:@"http://farm%@.static.flickr.com/%@/%@_%@_m.jpg", [photo objectForKey:@"farm"], [photo objectForKey:@"server"], [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
+						[photoURLsLargeImage addObject:[NSData dataWithContentsOfURL:[NSURL URLWithString:photoURLString]]];
+					}
+				}
+                
+            }
+			DebugLog(@"Flickr photos processed");
+        }
+
+        [theTableView reloadData];
+
+        [jsonString release];
+        jsonString=nil;
+        
+    }
+    
+    [receiveData release];
+    receiveData=nil;
+	
+	// ANT: Moved the next line here as this whole method takes very long to finish
+	// Ideally, we would turn off the network indicator at the top and have a different wait signal to the user on this view
+	[UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
+	
+    // ANT: The thread can now exit
+	CFRunLoopStop(CFRunLoopGetCurrent());
+    
+	
+    
+}
+
+#ifdef OLD_METHODS
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+	DebugLog(@"Flickr download finished");
+    
   //  HPCMapViewController *map = [[HPCMapViewController alloc] init];
   //  [map.activityView stopAnimating];
   //  map.activityView.hidden=YES;
@@ -74,7 +156,7 @@ NSString *const groupid2 = @"72157627879677415";
 
     [delegate flickrConnection:self didReceiveData:receiveData];
  //   [connection release];
- //    connection=nil;  
+ //    connection=nil;
     
 // jsonString=nil;
     
@@ -187,6 +269,7 @@ NSString *const groupid2 = @"72157627879677415";
    
     
 }
+#endif
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data 
 {
@@ -347,7 +430,7 @@ NSString *const groupid2 = @"72157627879677415";
 		photoURLsLargeImage = [[NSMutableArray alloc] init];
 
 		// ANT: Changed the call for FlickrPhotos to run in the background to avoid hanging while it is done
-//        [self searchFlickrPhotos:@"cray"];
+		//[self searchFlickrPhotos:@"cray"];
 		[self performSelectorInBackground:@selector(searchFlickrPhotos:) withObject:@"cray"];
 
     }
