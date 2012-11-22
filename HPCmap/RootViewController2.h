@@ -41,7 +41,7 @@
 
 @property (nonatomic,assign) id <FlickrConnectionDelegate> delegate;
 @property (nonatomic, assign)  Boolean myBOOL;
-@property (nonatomic,retain) UIImage *mynewimage ; 
+@property (nonatomic,retain) UIImage *mynewimage ;
 
 @end
 

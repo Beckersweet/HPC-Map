@@ -316,12 +316,18 @@
 	NSTimeInterval elapsedTime= [[NSDate date] timeIntervalSinceDate:self.startTime];
 	NSInteger numberOfQuestions= [Question questionCount:self.quizClass inQuestions:self.questions];
 	int64_t fScore;
+<<<<<<< HEAD
 	//	fScore= (iscore*1000000.0*(self.quizLevel+1))/(numberOfQuestions/elapsedTime); // this doesn't work, makes elapsedtime a multiplier//
   //	fScore= (iscore*100000.0*(self.quizLevel+1))/(numberOfQuestions*1.0)/(elapsedTime*1.0);
     fScore= (iscore*10000.0*(self.quizLevel+1))/((elapsedTime*1.0)/(numberOfQuestions*1.0));
    // fScore= (iscore*(self.quizLevel+1))/(numberOfQuestions*1.0)/(elapsedTime*1.0);
   //  NSLog(@"%lld",fScore) ;
 	
+=======
+	//	fScore= (iscore*1000000.0*(self.quizLevel+1))/(numberOfQuestions/elapsedTime); // this doesn't work, makes elapsedtime a multiplier
+	//	fScore= (iscore*100000.0*(self.quizLevel+1))/(numberOfQuestions*1.0)/(elapsedTime*1.0);
+	fScore= (iscore*10000.0*(self.quizLevel+1))/((elapsedTime*1.0)/(numberOfQuestions*1.0));
+>>>>>>> Fix bug that allowed M&D Easy level game to be played without paying
 	return fScore;
 }
 
