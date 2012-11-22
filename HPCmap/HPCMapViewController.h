@@ -41,6 +41,8 @@ UIScrollViewDelegate,ADBannerViewDelegate> {
 @property (nonatomic, retain) ADBannerView *bannerView;
 @property (nonatomic,assign) BOOL bannerIsVisible;
 @property (nonatomic,assign) BOOL NOV11;
+@property (nonatomic,assign) BOOL JUN12;
+
 
 -(void) loading ;
 
