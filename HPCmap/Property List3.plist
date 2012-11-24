@@ -110,7 +110,7 @@
 			<string>112.9388</string>
 			<string>-121.7104</string>
 			<string>117.2009</string>
-			<string>10.40233</string>
+			<string>139.62101</string>
 			<string>-97.90181</string>
 			<string>-105.27503</string>
 			<string>144.96658</string>
@@ -149,7 +149,7 @@
 			<string>National Supercomputing Center in Changsha</string>
 			<string>Lawrence Livermore National Laboratory</string>
 			<string>National Supercomputing Center in Tianjin</string>
-			<string>Norwegian University of Science and Technology</string>
+			<string>Central Research Institute of Electric Power Industry (CRIEPI) </string>
 			<string>Texas Advanced Supercomputing Center/ University of Texas</string>
 			<string>National Center For Atmospheric Research (NCAR)</string>
 			<string>National Computing Infrastructure (NCI), Australian National University</string>
@@ -188,7 +188,7 @@
 			<string>28.2282</string>
 			<string>37.6888</string>
 			<string>39.0841</string>
-			<string>63.41810</string>
+			<string>35.22498</string>
 			<string>30.3860</string>
 			<string>39.97832</string>
 			<string>-37.81642</string>
@@ -309,7 +309,7 @@
 			<string>#66 - BlueGene/Q - GREEN24</string>
 			<string>#142 - BlueGene/Q - GREEN9</string>
 			<string>#67 - BlueGene/Q - GREEN25</string>
-			<string>#23 - DIRAC - BlueGene/Q - GREEN18</string>
+			<string>#23 - DIRAC - GREEN18</string>
 			<string>#400 - BG/Q - GREEN8</string>
 			<string>#290 - Bullx B505 - GREEN35</string>
 			<string>#43 - Mole-8.5 - GREEN50</string>
@@ -351,7 +351,6 @@
 			<string>http://i.top500.org/system/177735</string>
 			<string>http://i.top500.org/system/177736</string>
 			<string>http://i.top500.org/system/177728</string>
-			<string>http://i.top500.org/system/177728</string>
 			<string>http://i.top500.org/system/177816</string>
 			<string>http://i.top500.org/system/177799</string>
 			<string>http://i.top500.org/system/177464</string>
@@ -385,7 +384,6 @@
 			<string>Rensslaer Polytechnic Institute</string>
 			<string>University of Rochester</string>
 			<string>IDRIS/GENCI</string>
-			<string>IBM J. Watson Research Center</string>
 			<string>Intel</string>
 			<string>LANL</string>
 			<string>CEA/TGCC-GENCI</string>
@@ -419,15 +417,14 @@
 			<string>#144 - BG/Q - GREEN14</string>
 			<string>#145 - BG/Q - GREEN15</string>
 			<string>#32 - Zumbrota - GREEN21</string>
-			<string>#?? - NNSA/SC BG/Q - GREEN21</string>
 			<string>#53 - Discover - GREEN31</string>
 			<string>#?? - Moonlight - GREEN36</string>
-			<string>#261 - Curie Hybrid - GREEN39</string>
+			<string>#261 Curie Hybrid - GR39</string>
 			<string>#364 - Virgo - GREEN47</string>
-			<string>#447 - iDataPlex - GREEN46</string>
-			<string>#168 - iDataPlex - GREEN48</string>
-			<string>#192 - iDataPlex - GREEN49</string>
-			<string>#158 - Blue Wonder - GREEN45</string>
+			<string>#447 - iDataPlex - GR46</string>
+			<string>#168 - iDataPlex - GR48</string>
+			<string>#192 - iDataPlex - GR49</string>
+			<string>#158 - Blue Wonder - GR45</string>
 			<string>#58 - Endeavor - GREEN34</string>
 			<string>#253 - Beacon - GREEN1</string>
 			<string>#52 - SANAM - GREEN2</string>
@@ -438,10 +435,10 @@
 			<string>#143 - BGQ - GREEN11</string>
 			<string>#41 - HIMAWARI - GREEN16</string>
 			<string>#68 - BGQ ORION - GREEN26</string>
-			<string>#59 - MVS-10P Tornado - GR30</string>
+			<string>#59 MVS-10P Tornado GR30</string>
 			<string>#277 - Chundoong - GR32</string>
 			<string>#117 - Maia - GREEN33</string>
-			<string>#170 - RSC Tornado - GREEN40</string>
+			<string>#170 - RSC Tornado - GR40</string>
 			<string>#?? - iDataPlex - GREEN41</string>
 			<string>#469 - Cernan - GREEN42</string>
 		</array>
@@ -453,7 +450,6 @@
 			<string>42.72988</string>
 			<string>43.12863</string>
 			<string>48.70728</string>
-			<string>32.7857</string>
 			<string>47.13</string>
 			<string>35.8333</string>
 			<string>48.593388</string>
@@ -474,7 +470,7 @@
 			<string>43.95</string>
 			<string>55.21079</string>
 			<string>37.45996</string>
-			<string>42.03014</string>
+			<string>37.4300</string>
 			<string>55.16103</string>
 			<string>18.5502</string>
 			<string>39.78907</string>
@@ -487,7 +483,6 @@
 			<string>-73.67674</string>
 			<string>-77.62787</string>
 			<string>2.17584</string>
-			<string>129.8664</string>
 			<string>-122.6300</string>
 			<string>-106.2508</string>
 			<string>2.192499</string>
@@ -508,7 +503,7 @@
 			<string>-79.25640</string>
 			<string>37.5778</string>
 			<string>126.95125</string>
-			<string>-93.64281</string>
+			<string>-122.05000</string>
 			<string>61.37090</string>
 			<string>73.82228</string>
 			<string>-84.08227</string>
@@ -538,19 +533,19 @@
 		<array>
 			<string>#79 - Haedam - GREEN335</string>
 			<string>#78 - Haeon - GREEN334</string>
-			<string>#80 - Monte Rosa - GREEN162</string>
-			<string>#86 - Cray XE6 - GREEN364</string>
+			<string>#80 - Monte Rosa - GR162</string>
+			<string>#86 - Cray XE6 - GR364</string>
 			<string>#89 - JUROPA - GREEN360</string>
-			<string>#90 - Tachyonll - GREEN254</string>
-			<string>#96 - Lonestar 4 - GREEN???</string>
+			<string>#90 - Tachyonll - GR254</string>
+			<string>#96 - Lonestar 4 - GR???</string>
 			<string>#99 - HP POD - GREEN385</string>
-			<string>#101 - Rackable - GREEN149</string>
+			<string>#101 - Rackable - GR149</string>
 			<string>#104 - Jade - GREEN246</string>
 			<string>#109 - Mustang - GREEN158</string>
 			<string>#111 - RCC - GREEN375</string>
 			<string>#116 - Tup - GREEN377</string>
 			<string>#375 - Rackable - GREEN78</string>
-			<string>#374 - Formosa 5 - GREEN??</string>
+			<string>#374 - Formosa 5 - GR???</string>
 		</array>
 		<key>Longitude</key>
 		<array>
@@ -651,19 +646,19 @@
 		</array>
 		<key>Name</key>
 		<array>
-			<string>#161 - Tera-100 Hybrid - GREEN96</string>
+			<string>#161 Tera-100 Hybrid - GR96</string>
 			<string>#71 - Chama - GREEN107</string>
 			<string>#88 - Gordon - GREEN95</string>
 			<string>#270 - Titane - GREEN241</string>
 			<string>#129 - Carter - GREEN103</string>
 			<string>#84 - LOEWE-CSC - GREEN109</string>
 			<string>#105 - Lindgren - GREEN363</string>
-			<string>#102- Amazon EC2 - GREEN119</string>
+			<string>#102 Amazon EC2 - GR119</string>
 			<string>#302 - Edge - GREEN124</string>
 			<string>#63 - Cab - GREEN86</string>
-			<string>#61 - Bull B. SC II - GREEN92</string>
+			<string>#61 - Bull B. SC II - GR92</string>
 			<string>#64 - Luna - GREEN100</string>
-			<string>#56 - SGI Altix X - GREEN105</string>
+			<string>#56 - SGI Altix X - GR105</string>
 			<string>#54 - Dawn - GREEN171</string>
 			<string>#75 - Keeneland - GREEN215</string>
 			<string>#240 - iDataPlex - GREEN53</string>

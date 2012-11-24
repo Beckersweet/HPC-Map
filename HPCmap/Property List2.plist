@@ -192,7 +192,6 @@
 			<string>http://i.top500.org/system/177556</string>
 			<string>http://i.top500.org/system/177718</string>
 			<string>http://i.top500.org/system/177719</string>
-			<string>http://i.top500.org/system/177720</string>
 			<string>http://i.top500.org/system/177722</string>
 			<string>http://i.top500.org/system/177723</string>
 			<string>http://i.top500.org/system/177789</string>
@@ -209,7 +208,6 @@
 			<string>#1 Sequoia - GREEN20</string>
 			<string>#3 Mira - GREEN19</string>
 			<string>#4 SuperMUC - GREEN40</string>
-			<string>#7 Fermi - GREEN11</string>
 			<string>#8 JuQueen - GREEN10</string>
 			<string>#13 Blue Joule - GREEN9</string>
 			<string>#18 Oakleaf-FX - GREEN44</string>
@@ -226,7 +224,6 @@
 			<string>-121.71</string>
 			<string>-87.9609</string>
 			<string>11.67125</string>
-			<string>11.3465</string>
 			<string>6.4000</string>
 			<string>-2.63544</string>
 			<string>139.76244</string>
@@ -243,7 +240,6 @@
 			<string>Lawrence Livermore National Laboratory</string>
 			<string>DOE/SC/Argone National Laboratory</string>
 			<string>Leibniz - Reichenzentrum (LRZ)</string>
-			<string>CINECA</string>
 			<string>Forschungszentrum Julich (FZJ) </string>
 			<string>STFC/Daresbury Laboratory</string>
 			<string>ITC/The University of Tokyo</string>
@@ -260,7 +256,6 @@
 			<string>37.68808</string>
 			<string>41.7106</string>
 			<string>48.26503</string>
-			<string>44.4941</string>
 			<string>50.907033</string>
 			<string>53.34402</string>
 			<string>35.71340</string>
@@ -371,7 +366,6 @@
 			<string>http://i.top500.org/system/177735</string>
 			<string>http://i.top500.org/system/177736</string>
 			<string>http://i.top500.org/system/177728</string>
-			<string>http://i.top500.org/system/177728</string>
 			<string>http://i.top500.org/system/177816</string>
 			<string>http://i.top500.org/system/177799</string>
 			<string>http://i.top500.org/system/177464</string>
@@ -392,7 +386,6 @@
 			<string>Rensslaer Polytechnic Institute</string>
 			<string>University of Rochester</string>
 			<string>IDRIS/GENCI</string>
-			<string>IBM J. Watson Research Center</string>
 			<string>Intel</string>
 			<string>LANL</string>
 			<string>CEA/TGCC-GENCI</string>
@@ -413,7 +406,6 @@
 			<string>#102 BG/Q - GREEN5</string>
 			<string>#103 BG/Q - GREEN6</string>
 			<string>#30 BG/Q - GREEN14</string>
-			<string>#?? NNSA/SC BG/Q - GREEN21</string>
 			<string>#150 Discovery - GREEN22</string>
 			<string>#74 Moonlight - GREEN26</string>
 			<string>#162 Curie Hybrid - GREEN27</string>
@@ -434,7 +426,6 @@
 			<string>42.72988</string>
 			<string>43.12863</string>
 			<string>48.70728</string>
-			<string>32.7857</string>
 			<string>47.13</string>
 			<string>35.8333</string>
 			<string>48.593388</string>
@@ -445,7 +436,7 @@
 			<string>53.34402</string>
 			<string>52.44648</string>
 			<string>43.47136</string>
-			<string>50.9120</string>
+			<string>44.4941</string>
 		</array>
 		<key>Longitude</key>
 		<array>
@@ -455,7 +446,6 @@
 			<string>-73.67674</string>
 			<string>-77.62787</string>
 			<string>2.17584</string>
-			<string>129.8664</string>
 			<string>-122.6300</string>
 			<string>-106.2508</string>
 			<string>2.192499</string>
@@ -466,7 +456,7 @@
 			<string>-2.63544</string>
 			<string>13.27839</string>
 			<string>-3.80144</string>
-			<string>11.3565</string>
+			<string>11.3465</string>
 		</array>
 	</dict>
 	<key>BLACK500</key>

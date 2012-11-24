@@ -737,7 +737,7 @@ if (NOV11 == TRUE) {
             
             count2n++;
             //  NSLog(@"count:%d",count);
-            if(count2n == 31) {
+            if(count2n == 30) {
                 //limit number of events to 300
                 break;
             }
@@ -1014,7 +1014,7 @@ if (NOV11 == TRUE) {
             
             countn++;
             //  NSLog(@"count:%d",count2);
-            if(countn == 14) {
+            if(countn == 13) {
                 //limit number of events to 300
                 break;
             }
@@ -1077,7 +1077,7 @@ if (NOV11 == TRUE) {
             
             count2n++;
             //  NSLog(@"count:%d",count);
-            if(count2n == 18) {
+            if(count2n == 17) {
                 //limit number of events to 300
                 break;
             }
