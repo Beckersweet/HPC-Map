@@ -1,349 +1,0 @@
-THPCmapTests
-v5
-r1
-cCheck dependencies
-cProcessInfoPlistFile /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/Info.plist HPCmapTests/HPCmapTests-Info.plist
-cProcessPCH /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-csapcouhtaxvdehfrjukrbegrgif/HPCmap-Prefix.pch.pth HPCmap/HPCmap-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/HPCmapTests.o /Robomagic/Development/GitHub/HPC-Map/HPCmapTests/HPCmapTests.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/DetailViewController2.o /Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/HPCmapTests normal i386
-cCopyStringsFile /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/en.lproj/InfoPlist.strings HPCmapTests/en.lproj/InfoPlist.strings
-cCompileXIB /Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.xib
-cPhaseScriptExecution "Run Script" /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Script-218EBB211474E80700EDC3D6.sh
-cTouch /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest
-
-N/Applications/Xcode.app/Contents/Developer/Library/Frameworks/SenTestingKit.framework/SenTestingKit
-c00000000505A214D0000000000030F60
-t1348084045
-s200544
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk
-c00000000504916AD0000000000000110
-t1346967213
-s272
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/NSException_SenTestFailure.h
-c00000000505A21CB0000000000000E25
-t1348084171
-s3621
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenInterfaceTestCase.h
-c00000000505A21CB0000000000000701
-t1348084171
-s1793
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTest.h
-c00000000505A21CB000000000000084C
-t1348084171
-s2124
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestCase.h
-c00000000505A21CB00000000000019FB
-t1348084171
-s6651
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestCaseRun.h
-c00000000505A21CB0000000000000875
-t1348084171
-s2165
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestCase_Macros.h
-c00000000505A21CB0000000000007F41
-t1348084171
-s32577
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestDefines.h
-c00000000505A21CB0000000000000947
-t1348084171
-s2375
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestDistributedNotifier.h
-c00000000505A21CB0000000000000800
-t1348084171
-s2048
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestLog.h
-c00000000505A21CB000000000000079D
-t1348084171
-s1949
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestObserver.h
-c00000000505A21CB0000000000000A6C
-t1348084171
-s2668
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestProbe.h
-c00000000505A21CB0000000000000AD1
-t1348084171
-s2769
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestRun.h
-c00000000505A21CB0000000000000A79
-t1348084171
-s2681
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestSuite.h
-c00000000505A21CB0000000000000CCF
-t1348084171
-s3279
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestSuiteRun.h
-c00000000505A21CB00000000000007E1
-t1348084171
-s2017
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestingKit.h
-c00000000505A21CB00000000000008A5
-t1348084171
-s2213
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestingUtilities.h
-c00000000505A21CB0000000000000C37
-t1348084171
-s3127
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c00000000505A21FC00000000003DCEF0
-t1348084220
-s4050672
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c00000000505A22130000000000AB3D60
-t1348084243
-s11222368
-
-N/Robomagic/Development/GitHub/HPC-Map/HPCmap/CommonDefines.h
-c00000000506D7EA700000000000002D6
-t1349353127
-s726
-
-N/Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.h
-c00000000506D78E1000000000000040D
-t1349351649
-s1037
-
-N/Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.m
-c00000000506D7B0E0000000000001BBD
-t1349352206
-s7101
-
-N/Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.xib
-c0000000050642D130000000000001E2A
-t1348742419
-s7722
-
-N/Robomagic/Development/GitHub/HPC-Map/HPCmap/FBHandler.h
-c00000000506D7B0E00000000000001B1
-t1349352206
-s433
-
-N/Robomagic/Development/GitHub/HPC-Map/HPCmap/HPCmap-Prefix.pch
-c0000000050642D13000000000000013B
-t1348742419
-s315
-
-N/Robomagic/Development/GitHub/HPC-Map/HPCmapTests/HPCmapTests.h
-c0000000050642D1300000000000000F2
-t1348742419
-s242
-
-N/Robomagic/Development/GitHub/HPC-Map/HPCmapTests/HPCmapTests.m
-c0000000050642D1300000000000001C5
-t1348742419
-s453
-
-N/Robomagic/Development/GitHub/HPC-Map/HPCmapTests/en.lproj/InfoPlist.strings
-c0000000050642D13000000000000002D
-t1348742419
-s45
-
-N/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest
-t1349355992
-s204
-
-N/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest.dSYM
-t2
-s0
-
-N/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/DetailViewController2.nib
-t1349355991
-s999
-
-N/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/HPCmapTests
-t1349355984
-s0
-
-N/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/Info.plist
-t1349355983
-s502
-
-N/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/en.lproj/InfoPlist.strings
-t1349355984
-s42
-
-N/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/DetailViewController2.o
-t1349355984
-s27076
-
-N/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/HPCmapTests.LinkFileList
-c00000000506D89CE0000000000000110
-t1349355982
-s272
-
-N/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/HPCmapTests.o
-t1349355984
-s3616
-
-N/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Script-218EBB211474E80700EDC3D6.sh
-c00000000506D89CE0000000000000062
-t1349355982
-s98
-
-N/var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-ayuobvyqihxycvaffqgscqkcrrzf/HPCmap-Prefix.pch.pth
-t2
-s0
-
-N/var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-bdjiccnbjvrzrocdjrvmxgittlhz/HPCmap-Prefix.pch.pth
-t1349355983
-s4827108
-
-N/var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-csapcouhtaxvdehfrjukrbegrgif/HPCmap-Prefix.pch.pth
-t2
-s0
-
-NHPCmapTests/HPCmapTests-Info.plist
-c0000000050642D13000000000000029C
-t1348742419
-s668
-
-CBuild AST from /Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.m
-r0
-
-CBuild AST from /Robomagic/Development/GitHub/HPC-Map/HPCmapTests/HPCmapTests.m
-r0
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencieseb39316cc11db641^15fd316cc11db641^---0#1#0#--18"Check dependencies36"C7B71A02-9BB5-4B4F-8613-13DC8F9981FF-
-
-CCompileC build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/DetailViewController2.o /Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s371048814.211928
-e371048814.980402
-r1
-xCompileC
-xbuild/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/DetailViewController2.o
-x/Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.m5e64366ec11db641^8ffbfa6ec11db641^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.m0000000000000000^3447"CompileC build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/DetailViewController2.o HPCmap/DetailViewController2.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Robomagic/Development/GitHub/HPC-Map    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -ccc-arcmt-migrate /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/T/HPCmapTests-arc.migrate -mios-simulator-version-min=4.0 -I/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/HPCmapTests.hmap -I/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/DerivedSources/i386 -I/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/DerivedSources -F/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks -F/Applications/Xcode.app/Contents/Developer/Library/Frameworks -include /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-csapcouhtaxvdehfrjukrbegrgif/HPCmap-Prefix.pch -MMD -MT dependencies -MF /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/DetailViewController2.d --serialize-diagnostics /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/DetailViewController2.dia -c /Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.m -o /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/DetailViewController2.o36"BAA89A7F-0632-414C-A86D-9548D15B824E-
-
-CCompileC build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/HPCmapTests.o /Robomagic/Development/GitHub/HPC-Map/HPCmapTests/HPCmapTests.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s371048813.367113
-e371048814.210449
-r1
-xCompileC
-xbuild/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/HPCmapTests.o
-x/Robomagic/Development/GitHub/HPC-Map/HPCmapTests/HPCmapTests.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Compile /Robomagic/Development/GitHub/HPC-Map/HPCmapTests/HPCmapTests.m9f1f5e6dc11db641^f8e0356ec11db641^---0#0#0#-19%DVTDocumentLocation2@79"file://localhost/Robomagic/Development/GitHub/HPC-Map/HPCmapTests/HPCmapTests.m0000000000000000^3397"CompileC build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/HPCmapTests.o HPCmapTests/HPCmapTests.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Robomagic/Development/GitHub/HPC-Map    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -ccc-arcmt-migrate /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/T/HPCmapTests-arc.migrate -mios-simulator-version-min=4.0 -I/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/HPCmapTests.hmap -I/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/DerivedSources/i386 -I/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/DerivedSources -F/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks -F/Applications/Xcode.app/Contents/Developer/Library/Frameworks -include /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-csapcouhtaxvdehfrjukrbegrgif/HPCmap-Prefix.pch -MMD -MT dependencies -MF /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/HPCmapTests.d --serialize-diagnostics /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/HPCmapTests.dia -c /Robomagic/Development/GitHub/HPC-Map/HPCmapTests/HPCmapTests.m -o /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/HPCmapTests.o36"2C4B0432-A6DA-4ED8-B461-5207FCEF1291-
-
-CCompileXIB /Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.xib
-s371048784.508453
-e371048791.623754
-r1
-xCompileXIB
-x/Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.xib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compiling /Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.xib103c8250c11db641^f0e09f57c11db641^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.xib0000000000000000^910"CompileXIB HPCmap/DetailViewController2.xib    cd /Robomagic/Development/GitHub/HPC-Map    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/DetailViewController2.nib /Robomagic/Development/GitHub/HPC-Map/HPCmap/DetailViewController2.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk36"D57B35F2-9816-4ADE-862E-D96F5F2CC178-
-
-CCopyStringsFile /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/en.lproj/InfoPlist.strings HPCmapTests/en.lproj/InfoPlist.strings
-s371048784.507227
-e371048784.511673
-r1
-xCopyStringsFile
-x/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/en.lproj/InfoPlist.strings
-xHPCmapTests/en.lproj/InfoPlist.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy HPCmapTests/en.lproj/InfoPlist.strings691c8250c11db641^6c078350c11db641^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Robomagic/Development/GitHub/HPC-Map/HPCmapTests/en.lproj/InfoPlist.strings0000000000000000^595"CopyStringsFile build/Debug-iphonesimulator/HPCmapTests.octest/en.lproj/InfoPlist.strings HPCmapTests/en.lproj/InfoPlist.strings    cd /Robomagic/Development/GitHub/HPC-Map    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/en.lproj -- HPCmapTests/en.lproj/InfoPlist.strings36"C5477823-1A3B-4BA9-99A7-D2E079223FA6-
-
-CGenerateDSYMFile /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest.dSYM /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/HPCmapTests
-r0
-
-CLd /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/HPCmapTests normal i386
-s371048814.987402
-e371048815.002079
-r1
-xLd
-x/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/HPCmapTests
-xnormal
-xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Link /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/HPCmapTests47e3fc6ec11db641^6e89006fc11db641^---0#0#0#--1571"Ld build/Debug-iphonesimulator/HPCmapTests.octest/HPCmapTests normal i386    cd /Robomagic/Development/GitHub/HPC-Map    setenv IPHONEOS_DEPLOYMENT_TARGET 4.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -L/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator -F/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks -F/Applications/Xcode.app/Contents/Developer/Library/Frameworks -filelist /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/HPCmapTests.LinkFileList -bundle_loader /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmap.app/HPCmap -Xlinker -objc_abi_version -Xlinker 2 -ccc-arcmt-migrate /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/T/HPCmapTests-arc.migrate -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=4.0 -framework SenTestingKit -framework UIKit -framework Foundation -o /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/HPCmapTests36"F070BF07-605E-4B04-A466-7DC4F80911AC-
-
-CPhaseScriptExecution "Run Script" /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Script-218EBB211474E80700EDC3D6.sh
-s371048815.020152
-e371048815.047153
-r1
-xPhaseScriptExecution
-xRun Script
-x/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Script-218EBB211474E80700EDC3D6.sh
-o/Applications/Xcode.app/Contents/Developer/Tools/RunUnitTests:68: note: RunUnitTests exited without running tests because TEST_AFTER_BUILD was set to NO.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Run custom shell script 'Run Script'1405066fc11db641^e6200c6fc11db641^-154"/Applications/Xcode.app/Contents/Developer/Tools/RunUnitTests:68: note: RunUnitTests exited without running tests because TEST_AFTER_BUILD was set to NO.1(21%IDEActivityLogMessage2@81"RunUnitTests exited without running tests because TEST_AFTER_BUILD was set to NO.-371048815#0#154#-0#-23%DVTTextDocumentLocation3@77"file://localhost/Applications/Xcode.app/Contents/Developer/Tools/RunUnitTests0000000000000000^67#18446744073709551615#67#18446744073709551615#18446744073709551615#0#30"Shell Script Invocation Notice--0#0#0#--20610"PhaseScriptExecution "Run Script" build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Script-218EBB211474E80700EDC3D6.sh    cd /Robomagic/Development/GitHub/HPC-Map    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER atekant    setenv ALWAYS_SEARCH_USER_PATHS YES    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_UNIVERSAL_IPHONE_OS i386    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Robomagic/Development/GitHub/HPC-Map/build    setenv BUILD_ROOT /Robomagic/Development/GitHub/HPC-Map/build    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator    setenv BUNDLE_LOADER /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmap.app/HPCmap    setenv CACHE_ROOT /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ARC_MIGRATE_DIR /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/T/HPCmapTests-arc.migrate    setenv CLASS_FILE_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator    setenv CONFIGURATION_TEMP_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator    setenv CONTENTS_FOLDER_PATH HPCmapTests.octest    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/DerivedSources    setenv DERIVED_FILE_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Applications/Xcode.app/Contents/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH HPCmapTests.octest/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/HPCmap.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME HPCmapTests.octest.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH HPCmapTests.octest/Executables    setenv EXECUTABLE_FOLDER_PATH HPCmapTests.octest    setenv EXECUTABLE_NAME HPCmapTests    setenv EXECUTABLE_PATH HPCmapTests.octest/HPCmapTests    setenv FILE_LIST /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH HPCmapTests.octest/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator\" /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks /Applications/Xcode.app/Contents/Developer/Library/Frameworks"    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME HPCmapTests.octest    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD gnu99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_GENERATE_DEBUGGING_SYMBOLS NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OBJC_LEGACY_DISPATCH YES    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER HPCmap/HPCmap-Prefix.pch    setenv GCC_PREPROCESSOR_DEFINITIONS "DEBUG=1 "    setenv GCC_SYMBOLS_PRIVATE_EXTERN NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvm_clang_1_0    setenv GCC_WARN_ABOUT_MISSING_PROTOTYPES YES    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE NO    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/include\"  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE HPCmapTests/HPCmapTests-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH HPCmapTests.octest/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH HPCmapTests.octest/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/HPCmap.dst    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER atekant    setenv INSTALL_ROOT /tmp/HPCmap.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 4.0    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH HPCmapTests.octest/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/HPCmapTests-LinkMap-normal-i386.txt    setenv LD_NO_PIE NO    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal/i386/HPCmapTests.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH HPCmapTests.octest/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_bundle    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 12C54    setenv MAC_OS_X_VERSION_ACTUAL 1082    setenv MAC_OS_X_VERSION_MAJOR 1080    setenv MAC_OS_X_VERSION_MINOR 0802    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJC_ABI_VERSION 2    setenv OBJECT_FILE_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects    setenv OBJECT_FILE_DIR_normal /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Objects-normal    setenv OBJROOT /Robomagic/Development/GitHub/HPC-Map/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv PACKAGE_TYPE com.apple.package-type.wrapper    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH HPCmapTests.octest/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/PkgInfo    setenv PKGINFO_PATH HPCmapTests.octest/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform    setenv PLATFORM_NAME iphonesimulator    setenv PLATFORM_PREFERRED_ARCH i386    setenv PLATFORM_PRODUCT_BUILD_VERSION 10A403    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 60000    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH HPCmapTests.octest/PlugIns    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH HPCmapTests.octest/PrivateHeaders    setenv PRODUCT_NAME HPCmapTests    setenv PRODUCT_SETTINGS_PATH /Robomagic/Development/GitHub/HPC-Map/HPCmapTests/HPCmapTests-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.bundle    setenv PROFILING_CODE NO    setenv PROJECT HPCmap    setenv PROJECT_DERIVED_FILE_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/DerivedSources    setenv PROJECT_DIR /Robomagic/Development/GitHub/HPC-Map    setenv PROJECT_FILE_PATH /Robomagic/Development/GitHub/HPC-Map/HPCmap.xcodeproj    setenv PROJECT_NAME HPCmap    setenv PROJECT_TEMP_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build    setenv PUBLIC_HEADERS_FOLDER_PATH HPCmapTests.octest/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH HPCmapTests.octest/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk    setenv SDK_NAME iphonesimulator6.0    setenv SDK_PRODUCT_BUILD_VERSION 10A403    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH HPCmapTests.octest/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH HPCmapTests.octest/SharedSupport    setenv SKIP_INSTALL YES    setenv SOURCE_ROOT /Robomagic/Development/GitHub/HPC-Map    setenv SRCROOT /Robomagic/Development/GitHub/HPC-Map    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE non-global    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"    setenv SYMROOT /Robomagic/Development/GitHub/HPC-Map/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1    setenv TARGETNAME HPCmapTests    setenv TARGET_BUILD_DIR /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator    setenv TARGET_NAME HPCmapTests    setenv TARGET_TEMP_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build    setenv TEMP_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build    setenv TEMP_FILES_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build    setenv TEMP_FILE_DIR /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build    setenv TEMP_ROOT /Robomagic/Development/GitHub/HPC-Map/build    setenv TEST_AFTER_BUILD NO    setenv TEST_HOST /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmap.app/HPCmap    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH HPCmapTests.octest    setenv UNSTRIPPED_PRODUCT NO    setenv USER atekant    setenv USER_APPS_DIR /Users/atekant/Applications    setenv USER_LIBRARY_DIR /Users/atekant/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS i386    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH HPCmapTests.octest/version.plist    setenv VERSION_INFO_BUILDER atekant    setenv VERSION_INFO_FILE HPCmapTests_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:HPCmapTests  PROJECT:HPCmap-\""    setenv WRAPPER_EXTENSION octest    setenv WRAPPER_NAME HPCmapTests.octest    setenv WRAPPER_SUFFIX .octest    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4G182    setenv XCODE_VERSION_ACTUAL 0450    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0450    setenv YACC yacc    /bin/sh -c /Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/Script-218EBB211474E80700EDC3D6.sh36"40635283-2C6B-4D85-9142-19595BC0CE3E-
-
-CProcessInfoPlistFile /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/Info.plist HPCmapTests/HPCmapTests-Info.plist
-s371048783.025812
-e371048783.089559
-r1
-xProcessInfoPlistFile
-x/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/Info.plist
-xHPCmapTests/HPCmapTests-Info.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Process HPCmapTests/HPCmapTests-Info.plistc98e094fc11db641^35f1164fc11db641^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Robomagic/Development/GitHub/HPC-Map/HPCmapTests/HPCmapTests-Info.plist0000000000000000^579"ProcessInfoPlistFile build/Debug-iphonesimulator/HPCmapTests.octest/Info.plist HPCmapTests/HPCmapTests-Info.plist    cd /Robomagic/Development/GitHub/HPC-Map    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility HPCmapTests/HPCmapTests-Info.plist -expandbuildsettings -format binary -platform iphonesimulator -o /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest/Info.plist36"A6C52BDF-99D6-4944-B9AA-460EA5A3C4F7-
-
-CProcessPCH /Robomagic/Development/Xcode/DerivedData/HPCmap-elulpdxvstummxajwycwdkhsbmbn/Index/PrecompiledHeaders/HPCmap-Prefix-eklwcttngggkpigsxlkxznqcxhbw_ast/HPCmap-Prefix.pch.pth HPCmap/HPCmap-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH /Robomagic/Development/Xcode/DerivedData/HPCmap-elulpdxvstummxajwycwdkhsbmbn/Index/PrecompiledHeaders/HPCmap-Prefix-gscdkpztfrpqrtbwqavatjmlznhd_ast/HPCmap-Prefix.pch.pth HPCmap/HPCmap-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH /Robomagic/Development/Xcode/DerivedData/HPCmap-elulpdxvstummxajwycwdkhsbmbn/Index/PrecompiledHeaders/HPCmap-Prefix-hckllxqsshzimldzpwgzhspmfubf_ast/HPCmap-Prefix.pch.pth HPCmap/HPCmap-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-ayuobvyqihxycvaffqgscqkcrrzf/HPCmap-Prefix.pch.pth HPCmap/HPCmap-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CProcessPCH /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-bdjiccnbjvrzrocdjrvmxgittlhz/HPCmap-Prefix.pch.pth HPCmap/HPCmap-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s371048783.101720
-e371048784.046580
-r1
-xProcessPCH
-x/var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-bdjiccnbjvrzrocdjrvmxgittlhz/HPCmap-Prefix.pch.pth
-xHPCmap/HPCmap-Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Precompile HPCmap/HPCmap-Prefix.pchc26c1a4fc11db641^ffec0b50c11db641^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Robomagic/Development/GitHub/HPC-Map/HPCmap/HPCmap-Prefix.pch0000000000000000^3311"ProcessPCH /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-bdjiccnbjvrzrocdjrvmxgittlhz/HPCmap-Prefix.pch.pth HPCmap/HPCmap-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Robomagic/Development/GitHub/HPC-Map    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -ccc-arcmt-check -mios-simulator-version-min=4.0 -I/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/HPCmapTests.hmap -I/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/DerivedSources/i386 -I/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/DerivedSources -F/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks -F/Applications/Xcode.app/Contents/Developer/Library/Frameworks --serialize-diagnostics /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-bdjiccnbjvrzrocdjrvmxgittlhz/HPCmap-Prefix.pch.dia -c /Robomagic/Development/GitHub/HPC-Map/HPCmap/HPCmap-Prefix.pch -o /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-bdjiccnbjvrzrocdjrvmxgittlhz/HPCmap-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-bdjiccnbjvrzrocdjrvmxgittlhz/HPCmap-Prefix.pch.d36"88C20C7F-3232-4E99-BEC1-5217A89D106D-
-
-CProcessPCH /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-csapcouhtaxvdehfrjukrbegrgif/HPCmap-Prefix.pch.pth HPCmap/HPCmap-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s371048812.208554
-e371048813.360082
-r1
-xProcessPCH
-x/var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-csapcouhtaxvdehfrjukrbegrgif/HPCmap-Prefix.pch.pth
-xHPCmap/HPCmap-Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Precompile HPCmap/HPCmap-Prefix.pch4889356cc11db641^e42c5c6dc11db641^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Robomagic/Development/GitHub/HPC-Map/HPCmap/HPCmap-Prefix.pch0000000000000000^3386"ProcessPCH /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-csapcouhtaxvdehfrjukrbegrgif/HPCmap-Prefix.pch.pth HPCmap/HPCmap-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Robomagic/Development/GitHub/HPC-Map    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -ccc-arcmt-migrate /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/T/HPCmapTests-arc.migrate -mios-simulator-version-min=4.0 -I/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/HPCmapTests.hmap -I/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/DerivedSources/i386 -I/Robomagic/Development/GitHub/HPC-Map/build/HPCmap.build/Debug-iphonesimulator/HPCmapTests.build/DerivedSources -F/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/Developer/Library/Frameworks -F/Applications/Xcode.app/Contents/Developer/Library/Frameworks --serialize-diagnostics /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-csapcouhtaxvdehfrjukrbegrgif/HPCmap-Prefix.pch.dia -c /Robomagic/Development/GitHub/HPC-Map/HPCmap/HPCmap-Prefix.pch -o /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-csapcouhtaxvdehfrjukrbegrgif/HPCmap-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/wx/hslvl02n6pq5nmbfhz4kdb3r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HPCmap-Prefix-csapcouhtaxvdehfrjukrbegrgif/HPCmap-Prefix.pch.d36"D28F4E1C-5867-4349-B711-81FF4DE6B64F-
-
-CTouch /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest
-s371048815.055440
-e371048815.063828
-r1
-xTouch
-x/Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Touch /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest34470e6fc11db641^6d57106fc11db641^---0#0#0#--400"Touch build/Debug-iphonesimulator/HPCmapTests.octest    cd /Robomagic/Development/GitHub/HPC-Map    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Robomagic/Development/GitHub/HPC-Map/build/Debug-iphonesimulator/HPCmapTests.octest36"652B497C-98FA-4C46-97B6-BFE1DFF0CDB2-
-

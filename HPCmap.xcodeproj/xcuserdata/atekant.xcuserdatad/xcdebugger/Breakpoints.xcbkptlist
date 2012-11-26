@@ -203,11 +203,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HPCmap/QuizzViewController.m"
-         timestampString = "373880843.620865"
+         timestampString = "375322638.741259"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "364"
-         endingLineNumber = "364"
+         startingLineNumber = "355"
+         endingLineNumber = "355"
          landmarkName = "-startover:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -294,11 +294,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HPCmap/QuizzViewController.m"
-         timestampString = "373880843.620865"
+         timestampString = "375322638.741259"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "508"
-         endingLineNumber = "508"
+         startingLineNumber = "499"
+         endingLineNumber = "499"
          landmarkName = "-showGameCenterLeaderboards:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -320,19 +320,6 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HPCmap/QuizzViewController.m"
-         timestampString = "373881172.168401"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "323"
-         endingLineNumber = "323"
-         landmarkName = "-fullScore"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "HPCmap/QuizzViewController.m"
          timestampString = "373815799.682059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
@@ -346,12 +333,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HPCmap/QuizzViewController.m"
-         timestampString = "373880843.620865"
+         timestampString = "375322638.741259"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "408"
-         endingLineNumber = "408"
-         landmarkName = "-answerButton:"
+         startingLineNumber = "399"
+         endingLineNumber = "399"
+         landmarkName = "-containsAnswer:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -359,12 +346,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HPCmap/QuizzViewController.m"
-         timestampString = "373880843.620865"
+         timestampString = "375322638.741259"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "328"
-         endingLineNumber = "328"
-         landmarkName = "-updateTime"
+         startingLineNumber = "320"
+         endingLineNumber = "320"
+         landmarkName = "-fullScore"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -463,12 +450,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HPCmap/QuizzViewController.m"
-         timestampString = "373880843.620865"
+         timestampString = "375322638.741259"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "489"
-         endingLineNumber = "489"
-         landmarkName = "-quizLevelSelectViewControllerDidFinish:"
+         startingLineNumber = "480"
+         endingLineNumber = "480"
+         landmarkName = "-answerButton:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -638,6 +625,45 @@
          startingLineNumber = "27"
          endingLineNumber = "27"
          landmarkName = "-application:didFinishLaunchingWithOptions:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "HPCmap/HPCMapViewController.m"
+         timestampString = "375324653.574195"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "506"
+         endingLineNumber = "506"
+         landmarkName = "-segmentAction:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "HPCmap/HPCMapViewController.m"
+         timestampString = "375324262.831505"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "855"
+         endingLineNumber = "855"
+         landmarkName = "-segmentAction:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "HPCmap/HPCMapViewController.m"
+         timestampString = "375324266.3376"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1205"
+         endingLineNumber = "1205"
+         landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

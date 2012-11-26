@@ -508,7 +508,7 @@ if (NOV11 == TRUE) {
         [fileManger removeItemAtPath:finalPath error:nil];
         
         if ( ![fileManger fileExistsAtPath:finalPath] ) {
-            NSString *pathToSettingsInBundle = [[NSBundle mainBundle] 
+            NSString *pathToSettingsInBundle = [[NSBundle mainBundle]
                                                 pathForResource:@"Property List3" ofType:@"plist"];
             NSError *error = nil;
             

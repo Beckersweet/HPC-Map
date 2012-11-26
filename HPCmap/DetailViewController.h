@@ -13,7 +13,7 @@
 
 //@class Favorites;
 
-@interface DetailViewController : UIViewController <ADBannerViewDelegate> {
+@interface DetailViewController : UIViewController <ADBannerViewDelegate, UIWebViewDelegate> {
  
  //   Favorites *myfavorites;
     UIWebView *detailWebView;

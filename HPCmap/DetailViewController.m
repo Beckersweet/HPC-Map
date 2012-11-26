@@ -120,17 +120,18 @@
 	}
    
 
-    
-  //  detailWebView.delegate=self;
+    detailWebView.delegate= self;
+	detailWebView.opaque= NO;
+	
     //set ourselves as the frame load delegate so we know when the window loads
   // [detailWebView setFrameLoadDelegate:self];
     
    // detailWebView= [[UIWebView alloc] init];
     
    // detailWebView.delegate = nil;
-    detailWebView.scrollView.scrollEnabled = NO;
-    detailWebView.scalesPageToFit = YES;   
-    detailWebView.contentMode = UIViewContentModeScaleAspectFit ;
+//    detailWebView.scrollView.scrollEnabled = NO;
+//    detailWebView.scalesPageToFit = YES;
+//    detailWebView.contentMode = UIViewContentModeScaleAspectFit ;
     //load the page
     [detailWebView loadRequest:[NSURLRequest requestWithURL:self.detailURL]];
      self.navigationItem.title = self.title ;
@@ -166,6 +167,19 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - webView delegates
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+	CGSize contentSize= webView.scrollView.contentSize;
+	CGSize viewSize= self.view.bounds.size;
+	
+	float rw= viewSize.width / contentSize.width;
+	
+	webView.scrollView.minimumZoomScale= rw;
+	webView.scrollView.maximumZoomScale= rw;
+	webView.scrollView.zoomScale= rw;
 }
 
 @end
