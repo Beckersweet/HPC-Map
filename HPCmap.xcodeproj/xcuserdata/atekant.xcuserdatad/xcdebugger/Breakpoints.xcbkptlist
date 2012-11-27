@@ -632,7 +632,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HPCmap/HPCMapViewController.m"
-         timestampString = "375324653.574195"
+         timestampString = "375698398.027538"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "506"
@@ -645,7 +645,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HPCmap/HPCMapViewController.m"
-         timestampString = "375324262.831505"
+         timestampString = "375698398.027538"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "855"
@@ -658,12 +658,64 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HPCmap/HPCMapViewController.m"
-         timestampString = "375324266.3376"
+         timestampString = "375698398.027538"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1205"
          endingLineNumber = "1205"
          landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "HPCmap/FBNewsViewController.m"
+         timestampString = "375684842.204314"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "47"
+         endingLineNumber = "47"
+         landmarkName = "-loadFBPage"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "HPCmap/DetailViewController.m"
+         timestampString = "375685364.655326"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "136"
+         endingLineNumber = "136"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "HPCmap/HPCMapViewController.m"
+         timestampString = "375698398.027538"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "104"
+         endingLineNumber = "104"
+         landmarkName = "-showDetails:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "HPCmap/DetailViewController.m"
+         timestampString = "375698339.134866"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "154"
+         endingLineNumber = "154"
+         landmarkName = "-viewDidUnload"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -12,6 +12,7 @@ dependencies: \
   /Robomagic/Development/GitHub/HPC-Map/HPCmap/QuizzViewController.h \
   /Robomagic/Development/GitHub/HPC-Map/HPCmap/Question.h \
   /Robomagic/Development/GitHub/HPC-Map/HPCmap/QuizClass.h \
+  /Robomagic/Development/GitHub/HPC-Map/HPCmap/Achievement.h \
   /Robomagic/Development/GitHub/HPC-Map/HPCmap/FBHandler.h \
   /Robomagic/Development/GitHub/HPC-Map/HPCmap/QuizLevelSelectViewController.h \
   /Robomagic/Development/GitHub/HPC-Map/HPCmap/FBNewsViewController.h
