@@ -98,8 +98,8 @@
 
 -(void) showDetails:(id)sender{
     
-    DetailViewController *dvc = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-    dvc.detailURL=[[[NSURL alloc] initWithString:self.normalAnnotation.url] autorelease] ;
+    DetailViewController *dvc= [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    dvc.detailURL= [[[NSURL alloc] initWithString:self.normalAnnotation.url] autorelease] ;
   
     [self.navigationController pushViewController:dvc animated:YES];
    // dvc.detailURL = nil;

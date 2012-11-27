@@ -73,7 +73,7 @@
     [detailURL release];
     [bottomBar release];
     [item release];
-    [bannerView release];
+	//    [bannerView release];	// We release this at the place of alloc
     [super dealloc];
 }
 

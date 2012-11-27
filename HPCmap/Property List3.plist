@@ -6,42 +6,42 @@
 	<dict>
 		<key>URL</key>
 		<array>
-			<string>http://i.top500.org/system/176819</string>
-			<string>http://i.top500.org/system/177170</string>
-			<string>http://i.top500.org/system/177259</string>
-			<string>http://i.top500.org/system/176952</string>
-			<string>http://i.top500.org/system/176928</string>
-			<string>http://i.top500.org/system/176027</string>
-			<string>http://i.top500.org/system/177157</string>
-			<string>http://i.top500.org/system/177473</string>
-			<string>http://i.top500.org/system/176321</string>
-			<string>http://i.top500.org/system/177421</string>
-			<string>http://i.top500.org/system/177231</string>
-			<string>http://i.top500.org/system/177637</string>
-			<string>http://i.top500.org/system/176322</string>
-			<string>http://i.top500.org/system/176924</string>
-			<string>http://i.top500.org/system/176183</string>
-			<string>http://i.top500.org/system/177725</string>
-			<string>http://i.top500.org/system/177818</string>
-			<string>http://i.top500.org/system/177563</string>
-			<string>http://i.top500.org/system/177563</string>
-			<string>http://i.top500.org/system/177561</string>
-			<string>http://i.top500.org/system/177232</string>
-			<string>http://i.top500.org/system/177449</string>
-			<string>http://i.top500.org/system/177447</string>
-			<string>http://i.top500.org/system/177448</string>
-			<string>http://i.top500.org/system/177469</string>
-			<string>http://i.top500.org/system/176929</string>
-			<string>http://i.top500.org/system/177932</string>
-			<string>http://i.top500.org/system/177931</string>
-			<string>http://i.top500.org/system/177827</string>
-			<string>http://i.top500.org/system/177976</string>
-			<string>http://i.top500.org/system/177728</string>
-			<string>http://i.top500.org/system/177828</string>
-			<string>http://i.top500.org/system/177977</string>
-			<string>http://i.top500.org/system/177719</string>
-			<string>http://i.top500.org/system/177789</string>
-			<string>http://i.top500.org/system/176955</string>
+			<string>http://www.top500.org/system/176819</string>
+			<string>http://www.top500.org/system/177170</string>
+			<string>http://www.top500.org/system/177259</string>
+			<string>http://www.top500.org/system/176952</string>
+			<string>http://www.top500.org/system/176928</string>
+			<string>http://www.top500.org/system/176027</string>
+			<string>http://www.top500.org/system/177157</string>
+			<string>http://www.top500.org/system/177473</string>
+			<string>http://www.top500.org/system/176321</string>
+			<string>http://www.top500.org/system/177421</string>
+			<string>http://www.top500.org/system/177231</string>
+			<string>http://www.top500.org/system/177637</string>
+			<string>http://www.top500.org/system/176322</string>
+			<string>http://www.top500.org/system/176924</string>
+			<string>http://www.top500.org/system/176183</string>
+			<string>http://www.top500.org/system/177725</string>
+			<string>http://www.top500.org/system/177818</string>
+			<string>http://www.top500.org/system/177563</string>
+			<string>http://www.top500.org/system/177563</string>
+			<string>http://www.top500.org/system/177561</string>
+			<string>http://www.top500.org/system/177232</string>
+			<string>http://www.top500.org/system/177449</string>
+			<string>http://www.top500.org/system/177447</string>
+			<string>http://www.top500.org/system/177448</string>
+			<string>http://www.top500.org/system/177469</string>
+			<string>http://www.top500.org/system/176929</string>
+			<string>http://www.top500.org/system/177932</string>
+			<string>http://www.top500.org/system/177931</string>
+			<string>http://www.top500.org/system/177827</string>
+			<string>http://www.top500.org/system/177976</string>
+			<string>http://www.top500.org/system/177728</string>
+			<string>http://www.top500.org/system/177828</string>
+			<string>http://www.top500.org/system/177977</string>
+			<string>http://www.top500.org/system/177719</string>
+			<string>http://www.top500.org/system/177789</string>
+			<string>http://www.top500.org/system/176955</string>
 		</array>
 		<key>Name</key>
 		<array>
@@ -204,18 +204,18 @@
 	<dict>
 		<key>URL</key>
 		<array>
-			<string>http://i.top500.org/system/177556</string>
-			<string>http://i.top500.org/system/177718</string>
-			<string>http://i.top500.org/system/177720</string>
-			<string>http://i.top500.org/system/177722</string>
-			<string>http://i.top500.org/system/177723</string>
-			<string>http://i.top500.org/system/177726</string>
-			<string>http://i.top500.org/system/177729</string>
-			<string>http://i.top500.org/system/177731</string>
-			<string>http://i.top500.org/system/177791</string>
-			<string>http://i.top500.org/system/177732</string>
-			<string>http://i.top500.org/system/177757</string>
-			<string>http://i.top500.org/system/177758</string>
+			<string>http://www.top500.org/system/177556</string>
+			<string>http://www.top500.org/system/177718</string>
+			<string>http://www.top500.org/system/177720</string>
+			<string>http://www.top500.org/system/177722</string>
+			<string>http://www.top500.org/system/177723</string>
+			<string>http://www.top500.org/system/177726</string>
+			<string>http://www.top500.org/system/177729</string>
+			<string>http://www.top500.org/system/177731</string>
+			<string>http://www.top500.org/system/177791</string>
+			<string>http://www.top500.org/system/177732</string>
+			<string>http://www.top500.org/system/177757</string>
+			<string>http://www.top500.org/system/177758</string>
 		</array>
 		<key>Name</key>
 		<array>
@@ -282,15 +282,15 @@
 	<dict>
 		<key>URL</key>
 		<array>
-			<string>http://i.top500.org/system/177558</string>
-			<string>http://i.top500.org/system/177443</string>
-			<string>http://i.top500.org/system/177557</string>
-			<string>http://i.top500.org/system/177724</string>
-			<string>http://i.top500.org/system/177416</string>
-			<string>http://i.top500.org/system/177465</string>
-			<string>http://i.top500.org/system/176899</string>
-			<string>http://i.top500.org/system/177463</string>
-			<string>http://i.top500.org/system/177001</string>
+			<string>http://www.top500.org/system/177558</string>
+			<string>http://www.top500.org/system/177443</string>
+			<string>http://www.top500.org/system/177557</string>
+			<string>http://www.top500.org/system/177724</string>
+			<string>http://www.top500.org/system/177416</string>
+			<string>http://www.top500.org/system/177465</string>
+			<string>http://www.top500.org/system/176899</string>
+			<string>http://www.top500.org/system/177463</string>
+			<string>http://www.top500.org/system/177001</string>
 		</array>
 		<key>Organization</key>
 		<array>
@@ -345,36 +345,36 @@
 	<dict>
 		<key>URL</key>
 		<array>
-			<string>http://i.top500.org/system/177737</string>
-			<string>http://i.top500.org/system/177734</string>
-			<string>http://i.top500.org/system/177733</string>
-			<string>http://i.top500.org/system/177735</string>
-			<string>http://i.top500.org/system/177736</string>
-			<string>http://i.top500.org/system/177728</string>
-			<string>http://i.top500.org/system/177816</string>
-			<string>http://i.top500.org/system/177799</string>
-			<string>http://i.top500.org/system/177464</string>
-			<string>http://i.top500.org/system/177746</string>
-			<string>http://i.top500.org/system/177749</string>
-			<string>http://i.top500.org/system/177742</string>
-			<string>http://i.top500.org/system/177745</string>
-			<string>http://i.top500.org/system/177743</string>
-			<string>http://i.top500.org/system/176908</string>
-			<string>http://i.top500.org/system/177997</string>
-			<string>http://i.top500.org/system/177996</string>
-			<string>http://i.top500.org/system/177975</string>
-			<string>http://i.top500.org/system/177472</string>
-			<string>http://i.top500.org/system/177886</string>
-			<string>http://i.top500.org/system/177840</string>
-			<string>http://i.top500.org/system/177841</string>
-			<string>http://i.top500.org/system/177829</string>
-			<string>http://i.top500.org/system/177831</string>
-			<string>http://i.top500.org/system/177979</string>
-			<string>http://i.top500.org/system/177987</string>
-			<string>http://i.top500.org/system/177934</string>
-			<string>http://i.top500.org/system/177983</string>
-			<string>http://i.top500.org/system/177932</string>
-			<string>http://i.top500.org/system/177888</string>
+			<string>http://www.top500.org/system/177737</string>
+			<string>http://www.top500.org/system/177734</string>
+			<string>http://www.top500.org/system/177733</string>
+			<string>http://www.top500.org/system/177735</string>
+			<string>http://www.top500.org/system/177736</string>
+			<string>http://www.top500.org/system/177728</string>
+			<string>http://www.top500.org/system/177816</string>
+			<string>http://www.top500.org/system/177799</string>
+			<string>http://www.top500.org/system/177464</string>
+			<string>http://www.top500.org/system/177746</string>
+			<string>http://www.top500.org/system/177749</string>
+			<string>http://www.top500.org/system/177742</string>
+			<string>http://www.top500.org/system/177745</string>
+			<string>http://www.top500.org/system/177743</string>
+			<string>http://www.top500.org/system/176908</string>
+			<string>http://www.top500.org/system/177997</string>
+			<string>http://www.top500.org/system/177996</string>
+			<string>http://www.top500.org/system/177975</string>
+			<string>http://www.top500.org/system/177472</string>
+			<string>http://www.top500.org/system/177886</string>
+			<string>http://www.top500.org/system/177840</string>
+			<string>http://www.top500.org/system/177841</string>
+			<string>http://www.top500.org/system/177829</string>
+			<string>http://www.top500.org/system/177831</string>
+			<string>http://www.top500.org/system/177979</string>
+			<string>http://www.top500.org/system/177987</string>
+			<string>http://www.top500.org/system/177934</string>
+			<string>http://www.top500.org/system/177983</string>
+			<string>http://www.top500.org/system/177932</string>
+			<string>http://www.top500.org/system/177888</string>
 		</array>
 		<key>Organization</key>
 		<array>
@@ -513,21 +513,21 @@
 	<dict>
 		<key>URL</key>
 		<array>
-			<string>http://i.top500.org/system/176957</string>
-			<string>http://i.top500.org/system/176956</string>
-			<string>http://i.top500.org/system/176725</string>
-			<string>http://i.top500.org/system/176953</string>
-			<string>http://i.top500.org/system/176488</string>
-			<string>http://i.top500.org/system/176727</string>
-			<string>http://i.top500.org/system/177155</string>
-			<string>http://i.top500.org/system/177415</string>
-			<string>http://i.top500.org/system/177476</string>
-			<string>http://i.top500.org/system/176897</string>
-			<string>http://i.top500.org/system/177456</string>
-			<string>http://i.top500.org/system/177156</string>
-			<string>http://i.top500.org/system/176962</string>
-			<string>http://i.top500.org/system/177475</string>
-			<string>http://i.top500.org/system/177814</string>
+			<string>http://www.top500.org/system/176957</string>
+			<string>http://www.top500.org/system/176956</string>
+			<string>http://www.top500.org/system/176725</string>
+			<string>http://www.top500.org/system/176953</string>
+			<string>http://www.top500.org/system/176488</string>
+			<string>http://www.top500.org/system/176727</string>
+			<string>http://www.top500.org/system/177155</string>
+			<string>http://www.top500.org/system/177415</string>
+			<string>http://www.top500.org/system/177476</string>
+			<string>http://www.top500.org/system/176897</string>
+			<string>http://www.top500.org/system/177456</string>
+			<string>http://www.top500.org/system/177156</string>
+			<string>http://www.top500.org/system/176962</string>
+			<string>http://www.top500.org/system/177475</string>
+			<string>http://www.top500.org/system/177814</string>
 		</array>
 		<key>Name</key>
 		<array>
@@ -606,23 +606,23 @@
 	<dict>
 		<key>URL</key>
 		<array>
-			<string>http://i.top500.org/system/177460</string>
-			<string>http://i.top500.org/system/177459</string>
-			<string>http://i.top500.org/system/177455</string>
-			<string>http://i.top500.org/system/176903</string>
-			<string>http://i.top500.org/system/177478</string>
-			<string>http://i.top500.org/system/177154</string>
-			<string>http://i.top500.org/system/177409</string>
-			<string>http://i.top500.org/system/177457</string>
-			<string>http://i.top500.org/system/177148</string>
-			<string>http://i.top500.org/system/177792</string>
-			<string>http://i.top500.org/system/177453</string>
-			<string>http://i.top500.org/system/177454</string>
-			<string>http://i.top500.org/system/177817</string>
-			<string>http://i.top500.org/system/176324</string>
-			<string>http://i.top500.org/system/176942</string>
-			<string>http://i.top500.org/system/177621</string>
-			<string>http://i.top500.org/system/177741</string>
+			<string>http://www.top500.org/system/177460</string>
+			<string>http://www.top500.org/system/177459</string>
+			<string>http://www.top500.org/system/177455</string>
+			<string>http://www.top500.org/system/176903</string>
+			<string>http://www.top500.org/system/177478</string>
+			<string>http://www.top500.org/system/177154</string>
+			<string>http://www.top500.org/system/177409</string>
+			<string>http://www.top500.org/system/177457</string>
+			<string>http://www.top500.org/system/177148</string>
+			<string>http://www.top500.org/system/177792</string>
+			<string>http://www.top500.org/system/177453</string>
+			<string>http://www.top500.org/system/177454</string>
+			<string>http://www.top500.org/system/177817</string>
+			<string>http://www.top500.org/system/176324</string>
+			<string>http://www.top500.org/system/176942</string>
+			<string>http://www.top500.org/system/177621</string>
+			<string>http://www.top500.org/system/177741</string>
 		</array>
 		<key>Organization</key>
 		<array>

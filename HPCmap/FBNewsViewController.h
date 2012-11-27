@@ -10,7 +10,8 @@
 #import "InAppPurManager.h"
 #import "CommonDefines.h"
 
-@interface FBNewsViewController : UIViewController {
+@interface FBNewsViewController : UIViewController <UIWebViewDelegate>
+{
     
     
 }

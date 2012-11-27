@@ -22,7 +22,8 @@
 // Uncomment the following line to not bother with purchases. Works only in DEBUG mode
 //#define EVERYTHINGFREE
 
-#define HPCFacebookURL						@"http://www.facebook.com/pages/HPC-Map-iPhone-App/321586984527863"
+#define HPCFacebookURL						@"http://m.facebook.com/pages/HPC-Map-iPhone-App/321586984527863"
+#define HPCFacebookMobileURL				@"http://m.facebook.com/pages/HPC-Map-iPhone-App/321586984527863"
 #define kPurchasedLevelKey					@"PurchasedLevel"
 
 #define kPurchaseLevelPay1ProductId			@"com.beckersweet.hpcmap.inapp.quiz1"

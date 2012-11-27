@@ -207,7 +207,7 @@
 
 - (NSString *)currentLeaderboard
 {
-	NSString *boardSuffix;
+	NSString *boardSuffix= @"";
 	
 	switch (self.quizLevel)
 	{

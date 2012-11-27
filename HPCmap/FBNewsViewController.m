@@ -30,6 +30,7 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view from its nib.
+	self.webView.delegate= self;
 	[self loadFBPage];
 }
 
@@ -42,6 +43,9 @@
 - (void)loadFBPage
 {
 	NSString *urlAddress = HPCFacebookURL;
+	
+	if ([webView.request.URL.absoluteString isEqualToString:HPCFacebookURL])
+		return;		// Do not reload if we are already on the FB page
     
     //Create a URL object.
     NSURL *url = [NSURL URLWithString:urlAddress];
@@ -53,5 +57,11 @@
     [webView loadRequest:requestObj];
 
 }
+
+- (void)webViewDidFinishLoad:(UIWebView *)__webView
+{
+	DebugLog(@"FB page loaded: %@", __webView.request.URL);
+}
+
 
 @end
