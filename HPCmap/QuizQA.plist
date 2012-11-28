@@ -117,6 +117,9 @@
 		<key>Active</key>
 		<true/>
 	</dict>
+    
+   
+    
 	<dict>
 		<key>Question</key>
 		<string>Which company marketed &quot;the world&apos;s first GPU&quot; in 1999 ?</string>
@@ -132,7 +135,7 @@
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
@@ -140,15 +143,15 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-	<dict>
+    <dict>
 		<key>Question</key>
-		<string>The name of the new Intel chip built to leverage parallel computing is:</string>
+		<string>The name of the new Intel chip (MIC) built to leverage parallel computing is:</string>
 		<key>Answers</key>
 		<array>
 			<string>Intel CPU</string>
 			<string>Intel GPU</string>
-			<string>Intel GIT</string>
-			<string>Intel MIC</string>
+			<string>Xeon E5</string>
+			<string>Xeon Phi</string>
 		</array>
 		<key>Correct</key>
 		<string>D</string>
@@ -163,6 +166,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
+
 	<dict>
 		<key>Question</key>
 		<string>Which ones of the following supercomputers use GPUs ?</string>
@@ -188,7 +192,7 @@
 	</dict>
 	<dict>
 		<key>Question</key>
-		<string>What kind of chips does the second most powerful supercomputer in the world (K computer) contain ?</string>
+		<string>What kind of chips does the #3 most powerful supercomputer in the world (K computer) contain ?</string>
 		<key>Answers</key>
 		<array>
 			<string>CPUs+GPUs</string>
@@ -224,7 +228,7 @@
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
-		<integer>2</integer>
+		<integer>1</integer>
 		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
@@ -232,6 +236,32 @@
 		<key>Active</key>
 		<true/>
 	</dict>
+    
+    <dict>
+		<key>Question</key>
+		<string>The name of the NVIDIA exascale supercomputer that should be released by 2018 is ..</string>
+		<key>Answers</key>
+		<array>
+			<string>Achille</string>
+			<string>Echelle</string>
+			<string>Echelon</string>
+			<string>Achete</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>2</integer>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+
+    
 	<dict>
 		<key>Question</key>
 		<string>In Spain, the Barcelona supercomputing center recently developped a hybrid architecture: GPU + ..</string>
@@ -268,7 +298,7 @@
 		<key>Correct</key>
 		<string>AB</string>
 		<key>Class</key>
-		<integer>2</integer>
+		<integer>1</integer>
 		<key>Level</key>
 		<integer>1</integer>
 		<key>Points</key>
@@ -280,7 +310,7 @@
 	</dict>
 	<dict>
 		<key>Question</key>
-		<string>Which country recently developed its first own computer chip ?</string>
+		<string>Which country recently developed its first computer chip, named ShenWei ?</string>
 		<key>Answers</key>
 		<array>
 			<string>Japan</string>
@@ -293,7 +323,30 @@
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
+		<key>Pay</key>
 		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Which chinese supercomputer uses ShenWei processors ? </string>
+		<key>Answers</key>
+		<array>
+			<string>Tianhe-1A</string>
+			<string>Nebulae</string>
+			<string>Sunway Blue Light</string>
+			<string>Mole-8.5</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>2</integer>
+		<key>Level</key>
+		<integer>1</integer>
 		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
@@ -324,30 +377,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-	<dict>
-		<key>Question</key>
-		<string>In which journal appeared this quote : &quot;The processor is going through a bit of a schizophrenic mid-life crisis&quot; ?</string>
-		<key>Answers</key>
-		<array>
-			<string>EE times</string>
-			<string>NY times</string>
-			<string>LA times</string>
-			<string>Vancouver Sun</string>
-		</array>
-		<key>Correct</key>
-		<string>A</string>
-		<key>Class</key>
-		<integer>2</integer>
-		<key>Level</key>
-		<integer>1</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-	<dict>
+    <dict>
 		<key>Question</key>
 		<string>In what year the world&apos;s first hacker ruined a public demonstration of a wireless telegraph by sending Morse code insults via wire ?</string>
 		<key>Answers</key>
@@ -408,7 +438,7 @@
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
@@ -416,30 +446,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-	<dict>
-		<key>Question</key>
-		<string>By 2023, supercomputers are expected to be able to simulate a complete ..</string>
-		<key>Answers</key>
-		<array>
-			<string>rat brain</string>
-			<string>dog brain</string>
-			<string>human brain</string>
-			<string>ET brain</string>
-		</array>
-		<key>Correct</key>
-		<string>C</string>
-		<key>Class</key>
-		<integer>1</integer>
-		<key>Level</key>
-		<integer>1</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-	<dict>
+    <dict>
 		<key>Question</key>
 		<string>The power that a supercomputer needs is similar to the power needed by a ..</string>
 		<key>Answers</key>
@@ -510,20 +517,20 @@
 	</dict>
 	<dict>
 		<key>Question</key>
-		<string>Which is the #1 most greenest supercomputer in the world?</string>
+		<string>UK lab has recently developped a water-soluble circuit board that dissolves into hot water.</string>
 		<key>Answers</key>
 		<array>
-			<string>Tianhe-1A, China</string>
-			<string>K Computer, Japan</string>
-			<string>rzuseq, BG/Q, USA</string>
-			<string>Jaguar, USA</string>
+			<string>True</string>
+			<string>False</string>
+			<string></string>
+			<string></string>
 		</array>
 		<key>Correct</key>
-		<string>C</string>
+		<string>A</string>
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
-		<integer>2</integer>
+		<integer>1</integer>
 		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
@@ -531,10 +538,32 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    
-    <dict>
+	<dict>
 		<key>Question</key>
-		<string>supercomputers can be used to predict:</string>
+		<string>This study will help on producing recyclable ... devices.</string>
+		<key>Answers</key>
+		<array>
+			<string>Wood</string>
+			<string>Plastic</string>
+			<string>Electronic</string>
+			<string>Concrete</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>1</integer>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Supercomputers can be used to predict:</string>
 		<key>Answers</key>
 		<array>
 			<string>Weather changes</string>
@@ -545,7 +574,7 @@
 		<key>Correct</key>
 		<string>ABCD</string>
 		<key>Class</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Level</key>
 		<integer>0</integer>
 		<key>Points</key>
@@ -555,8 +584,29 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-
-    
+	<dict>
+		<key>Question</key>
+		<string>Supercomputers can also be used to simulate:</string>
+		<key>Answers</key>
+		<array>
+			<string>The human brain</string>
+			<string>The heart</string>
+			<string>Auroras</string>
+			<string>The Universe</string>
+		</array>
+		<key>Correct</key>
+		<string>ABCD</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
 	<dict>
 		<key>Question</key>
 		<string>Which is the #1 most powerful supercomputer in the world?</string>
@@ -580,15 +630,37 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    
-    <dict>
+	<dict>
+		<key>Question</key>
+		<string>Titan supercomputer is used to simulate:</string>
+		<key>Answers</key>
+		<array>
+			<string>The Human Skin</string>
+			<string>Biofuels</string>
+			<string>Seismic Hazards</string>
+			<string>The Climate</string>
+		</array>
+		<key>Correct</key>
+		<string>ABCD</string>
+		<key>Class</key>
+		<integer>1</integer>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
 		<key>Question</key>
 		<string>Which is the #2 most powerful supercomputer in the world?</string>
 		<key>Answers</key>
 		<array>
 			<string>Jaguar, USA</string>
 			<string>K Computer, Japan</string>
-			<string>Tsanhe-1A, China</string>
+			<string>Tianhe-1A, China</string>
 			<string>Sequoia, BG/Q, USA</string>
 		</array>
 		<key>Correct</key>
@@ -604,20 +676,18 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-
-    
 	<dict>
 		<key>Question</key>
-		<string>Where is located the #1 most powerful supercomputer in the world?</string>
+		<string>Sequoia supercomputer was used to simulate :</string>
 		<key>Answers</key>
 		<array>
-			<string>China</string>
-			<string>Japan</string>
-			<string>USA</string>
-			<string>France</string>
+			<string>Millions of neurones</string>
+			<string>The heart beat</string>
+			<string>Artic ice formation</string>
+			<string>The cosmic shield</string>
 		</array>
 		<key>Correct</key>
-		<string>C</string>
+		<string>AB</string>
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
@@ -629,10 +699,33 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    
     <dict>
 		<key>Question</key>
-		<string>Where is located the #2 most powerful supercomputer in the world?</string>
+		<string>By 2023, supercomputers are expected to be able to simulate a complete ..</string>
+		<key>Answers</key>
+		<array>
+			<string>rat brain</string>
+			<string>dog brain</string>
+			<string>human brain</string>
+			<string>ET brain</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>1</integer>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+
+	<dict>
+		<key>Question</key>
+		<string>Where are located the #1 and #2 most powerful Supercomputers in the world?</string>
 		<key>Answers</key>
 		<array>
 			<string>China</string>
@@ -653,55 +746,31 @@
 		<key>Active</key>
 		<true/>
 	</dict>
+    <dict>
+		<key>Question</key>
+		<string>Where is located the K Computer, #3 most powerful supercomputer in the world ? </string>
+		<key>Answers</key>
+		<array>
+			<string>Japan</string>
+			<string>USA</string>
+			<string>Germany</string>
+			<string>France</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>1</integer>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
 
-    
-	<dict>
-		<key>Question</key>
-		<string>Which is the #3 most powerful supercomputer in the world?</string>
-		<key>Answers</key>
-		<array>
-			<string>Tianhe-1A, China</string>
-			<string>K Computer, Japan</string>
-			<string>Mira, BG/Q, USA</string>
-			<string>Jaguar, USA</string>
-		</array>
-		<key>Correct</key>
-		<string>B</string>
-		<key>Class</key>
-		<integer>2</integer>
-		<key>Level</key>
-		<integer>1</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>Question</key>
-		<string>Which &quot;measures&quot; can be used to assess how green is a computing center ?</string>
-		<key>Answers</key>
-		<array>
-			<string>Perf. Per Watt</string>
-			<string>GPUE</string>
-			<string>Hardware cost</string>
-			<string>Energy cost</string>
-		</array>
-		<key>Correct</key>
-		<string>ABCD</string>
-		<key>Class</key>
-		<integer>2</integer>
-		<key>Level</key>
-		<integer>0</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-	<dict>
+   	<dict>
 		<key>Question</key>
 		<string>Which of the following energy sources could be used to power the battery of your cell phones ?</string>
 		<key>Answers</key>
@@ -714,9 +783,9 @@
 		<key>Correct</key>
 		<string>ABCD</string>
 		<key>Class</key>
-		<integer>2</integer>
+		<integer>1</integer>
 		<key>Level</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
@@ -770,53 +839,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-	<dict>
-		<key>Question</key>
-		<string>Supercomputing simulations can be used to predict the impact of a marine power generation installation on the environment.</string>
-		<key>Answers</key>
-		<array>
-			<string>YES</string>
-			<string>NO</string>
-			<string></string>
-			<string></string>
-		</array>
-		<key>Correct</key>
-		<string>A</string>
-		<key>Class</key>
-		<integer>2</integer>
-		<key>Level</key>
-		<integer>0</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>Question</key>
-		<string>In 2012, how many IBM data centers have been honored by  the European Commission for their energy efficiency ?</string>
-		<key>Answers</key>
-		<array>
-			<string>21</string>
-			<string>27</string>
-			<string>35</string>
-			<string>42</string>
-		</array>
-		<key>Correct</key>
-		<string>B</string>
-		<key>Class</key>
-		<integer>2</integer>
-		<key>Level</key>
-		<integer>2</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-	<dict>
+    <dict>
 		<key>Question</key>
 		<string>Individuals can pay for using computing resources from .. platforms in order to launch their own computer simulations.</string>
 		<key>Answers</key>
@@ -831,7 +854,31 @@
 		<key>Class</key>
 		<integer>1</integer>
 		<key>Level</key>
+		<integer>2</integer>
+		<key>Points</key>
 		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+
+	<dict>
+		<key>Question</key>
+		<string>NIF uses 192 laser beams to generate &quot;temperatures of more than ... million degrees and pressures more than ... billion times Earth&apos;s atmosphere&quot;.</string>
+		<key>Answers</key>
+		<array>
+			<string>10</string>
+			<string>20</string>
+			<string>50</string>
+			<string>100</string>
+		</array>
+		<key>Correct</key>
+		<string>D</string>
+		<key>Class</key>
+		<integer>2</integer>
+		<key>Level</key>
+		<integer>2</integer>
 		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
@@ -841,20 +888,43 @@
 	</dict>
 	<dict>
 		<key>Question</key>
-		<string>In 2012, which country might become the world&apos;s #1 cloud computing market ?</string>
+		<string>This research is used to better understand the physics of ... and how the ... &quot;works&quot;.</string>
 		<key>Answers</key>
 		<array>
-			<string>Japan</string>
-			<string>China</string>
-			<string>USA</string>
-			<string>France</string>
+			<string>Nuclear weapons</string>
+			<string>Universe</string>
+			<string>Ocean</string>
+			<string>Earth</string>
+		</array>
+		<key>Correct</key>
+		<string>AB</string>
+		<key>Class</key>
+		<integer>2</integer>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>Points</key>
+		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+    <dict>
+		<key>Question</key>
+		<string>SuperMuc, Europe&apos;s #2 and World&apos;s #6 supercomputer is cooled with pipelines of :&apos;</string>
+		<key>Answers</key>
+		<array>
+			<string>Cold Water</string>
+			<string>Hot Water</string>
+			<string>Cold Air</string>
+			<string>Hot Air</string>
 		</array>
 		<key>Correct</key>
 		<string>B</string>
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
@@ -864,16 +934,16 @@
 	</dict>
 	<dict>
 		<key>Question</key>
-		<string>By 2020, U.S. organizations could save $12.3 billion in energy cost by moving to the Cloud: this corresponds to .. million barrels of oil</string>
+		<string>This is (A or B) times more effcient than air cooling and can help to save (C or D) million euro per year</string>
 		<key>Answers</key>
 		<array>
-			<string>200</string>
-			<string>150</string>
-			<string>100</string>
-			<string>50</string>
+			<string>400</string>
+			<string>4000</string>
+			<string>0.5</string>
+			<string>1</string>
 		</array>
 		<key>Correct</key>
-		<string>A</string>
+		<string>BD</string>
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
@@ -885,55 +955,9 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-	<dict>
+    <dict>
 		<key>Question</key>
-		<string>Which of the following techniques are used to reduce energy costs and hardware failures ?</string>
-		<key>Answers</key>
-		<array>
-			<string>Umbrella cooling</string>
-			<string>Water cooling</string>
-			<string>Air cooling</string>
-			<string>Quantum cooling</string>
-		</array>
-		<key>Correct</key>
-		<string>BC</string>
-		<key>Class</key>
-		<integer>2</integer>
-		<key>Level</key>
-		<integer>0</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>Question</key>
-		<string>The K Computer, second most powerful supercomputer in the world uses ..</string>
-		<key>Answers</key>
-		<array>
-			<string>Water cooling</string>
-			<string>Air cooling</string>
-			<string>Water &amp; air cooling</string>
-			<string>Nitrogen cooling</string>
-		</array>
-		<key>Correct</key>
-		<string>C</string>
-		<key>Class</key>
-		<integer>2</integer>
-		<key>Level</key>
-		<integer>2</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>Question</key>
-		<string>Recent findings says that biogas-powered cells would allow to pump up to .. into a system of distributed computational resources.</string>
+		<string>Recent findings says that biogas-powered cells would allow to pump up to .. to power computational resources</string>
 		<key>Answers</key>
 		<array>
 			<string>5 MW</string>
@@ -954,91 +978,23 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-	<dict>
+   	
+    <dict>
 		<key>Question</key>
-		<string>What happened at the annual International Consumer Electronics Show (CES 2012) ?</string>
+		<string>The official list that ranks the world&apos;s most powerful supercomputers according to their data crunching capabilities is named:</string>
 		<key>Answers</key>
 		<array>
-			<string>50 Cent was there</string>
-			<string>Eminem was there</string>
-			<string>iPhone5 unveiled</string>
-			<string>Obama was there</string>
-		</array>
-		<key>Correct</key>
-		<string>A</string>
-		<key>Class</key>
-		<integer>1</integer>
-		<key>Level</key>
-		<integer>1</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>Question</key>
-		<string>Whos this quote is attributed to: &quot;Try not to become a man of success but a man of value.&quot;</string>
-		<key>Answers</key>
-		<array>
-			<string>Albert Einstein</string>
-			<string>Barack Obama</string>
-			<string>Nicolas Sarkozy</string>
-			<string>Angela Merkel</string>
-		</array>
-		<key>Correct</key>
-		<string>A</string>
-		<key>Class</key>
-		<integer>1</integer>
-		<key>Level</key>
-		<integer>2</integer>
-		<key>Points</key>
-		<integer>20</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>Question</key>
-		<string>By 2020, we are going to reach the era of supercomputing at the ..</string>
-		<key>Answers</key>
-		<array>
-			<string>Exascale</string>
-			<string>Petascale</string>
-			<string>Terascale</string>
-			<string>Bugscale</string>
-		</array>
-		<key>Correct</key>
-		<string>A</string>
-		<key>Class</key>
-		<integer>1</integer>
-		<key>Level</key>
-		<integer>2</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>Question</key>
-		<string>In Spain, the e-learning platform for virtual classrooms in the supercomputing center of Galicia has .. users.</string>
-		<key>Answers</key>
-		<array>
-			<string>10,000</string>
-			<string>20,000</string>
-			<string>30,000</string>
-			<string>50,000</string>
+			<string>GRAPH1000</string>
+			<string>GRAPH500</string>
+			<string>GRAPH100</string>
+			<string>GRAPH50</string>
 		</array>
 		<key>Correct</key>
 		<string>B</string>
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Points</key>
 		<integer>1</integer>
 		<key>Pay</key>
@@ -1048,7 +1004,7 @@
 	</dict>
 	<dict>
 		<key>Question</key>
-		<string>The official list that ranks the world&apos;s most powerful supercomputers according to their performance (flop) is named:</string>
+		<string>The official list that ranks the world&apos;s most powerful supercomputers according to their arithmetic performance (flops) is named:</string>
 		<key>Answers</key>
 		<array>
 			<string>T0P10</string>
@@ -1071,7 +1027,7 @@
 	</dict>
 	<dict>
 		<key>Question</key>
-		<string>The official list that ranks the world&apos;s most powerful supercomputers according to their energy consumption per flop is named:</string>
+		<string>The official list that ranks the world&apos;s most powerful supercomputers according to their energy-effiency (flops/watt) is named:</string>
 		<key>Answers</key>
 		<array>
 			<string>GREEN1000</string>
@@ -1117,16 +1073,16 @@
 	</dict>
 	<dict>
 		<key>Question</key>
-		<string>The name of the NVIDIA exascale supercomputer that should be released by 2018 is ..</string>
+		<string>The goal of Exascalar is to see if current computing systems are on the right track to produce 1 Exaflops by 2020 within ..</string>
 		<key>Answers</key>
 		<array>
-			<string>Achille</string>
-			<string>Echelle</string>
-			<string>Echelon</string>
-			<string>Achete</string>
+			<string>20MW</string>
+			<string>15MW</string>
+			<string>10MW</string>
+			<string>5MW</string>
 		</array>
 		<key>Correct</key>
-		<string>C</string>
+		<string>A</string>
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
@@ -1138,7 +1094,31 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-	<dict>
+    <dict>
+		<key>Question</key>
+		<string>By 2020, we are going to reach the era of supercomputing at the ..</string>
+		<key>Answers</key>
+		<array>
+			<string>Exascale</string>
+			<string>Petascale</string>
+			<string>Terascale</string>
+			<string>Bugscale</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>2</integer>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+
+		<dict>
 		<key>Question</key>
 		<string>Intel’s 2018 Exascale Goal is: delivering one Exaflops in a power envelope of ..</string>
 		<key>Answers</key>
@@ -1176,220 +1156,6 @@
 		<key>Class</key>
 		<integer>2</integer>
 		<key>Level</key>
-		<integer>0</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>Question</key>
-		<string>Which countries are leading the supercomputing race ?</string>
-		<key>Answers</key>
-		<array>
-			<string>China &amp; USA</string>
-			<string>Japan &amp; USA</string>
-			<string>China &amp; Japan</string>
-			<string>France &amp; Germany</string>
-		</array>
-		<key>Correct</key>
-		<string>B</string>
-		<key>Class</key>
-		<integer>2</integer>
-		<key>Level</key>
-		<integer>0</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>Question</key>
-		<string>Which country is leading the green supercomputing race ?</string>
-		<key>Answers</key>
-		<array>
-			<string>USA</string>
-			<string>China</string>
-			<string>Japan</string>
-			<string>France</string>
-		</array>
-		<key>Correct</key>
-		<string>A</string>
-		<key>Class</key>
-		<integer>2</integer>
-		<key>Level</key>
-		<integer>0</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>Question</key>
-		<string>Which company is leading the green supercomputing race ?</string>
-		<key>Answers</key>
-		<array>
-			<string>IBM</string>
-			<string>Cray</string>
-			<string>Intel</string>
-			<string>Bull</string>
-		</array>
-		<key>Correct</key>
-		<string>A</string>
-		<key>Class</key>
-		<integer>2</integer>
-		<key>Level</key>
-		<integer>0</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-    
-    <dict>
-		<key>Question</key>
-		<string>What can you do with a computer ? </string>
-		<key>Answers</key>
-		<array>
-			<string>calculate fast</string>
-			<string>talk to friends</string>
-			<string>play games</string>
-			<string>learn new things</string>
-		</array>
-		<key>Correct</key>
-		<string>ABCD</string>
-		<key>Class</key>
-		<integer>0</integer>
-		<key>Level</key>
-		<integer>0</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-
-    <dict>
-		<key>Question</key>
-		<string>What is a computer made of ?</string>
-		<key>Answers</key>
-		<array>
-			<string>Electronics</string>
-			<string>Wood</string>
-			<string>Pumpkin</string>
-			<string>Strawberries</string>
-		</array>
-		<key>Correct</key>
-		<string>A</string>
-		<key>Class</key>
-		<integer>0</integer>
-		<key>Level</key>
-		<integer>0</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-
-    <dict>
-		<key>Question</key>
-		<string>Who build computers ?</string>
-		<key>Answers</key>
-		<array>
-			<string>Engineers</string>
-			<string>Cooks</string>
-			<string>Magicians</string>
-			<string>Hairdressers</string>
-		</array>
-		<key>Correct</key>
-		<string>A</string>
-		<key>Class</key>
-		<integer>0</integer>
-		<key>Level</key>
-		<integer>0</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-    
-    <dict>
-		<key>Question</key>
-		<string>Where can I buy a computer ?</string>
-		<key>Answers</key>
-		<array>
-			<string>At Wall Mart</string>
-			<string>At the bakery</string>
-			<string>At the grocery</string>
-			<string>At the physician</string>
-		</array>
-		<key>Correct</key>
-		<string>A</string>
-		<key>Class</key>
-		<integer>0</integer>
-		<key>Level</key>
-		<integer>0</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-    
-    <dict>
-		<key>Question</key>
-		<string>Is a computer expensive ?</string>
-		<key>Answers</key>
-		<array>
-			<string>Yes</string>
-            <string>X</string>
-			<string>NO</string>
-            <string>X</string>
-            
-        </array>
-		<key>Correct</key>
-		<string>A</string>
-		<key>Class</key>
-		<integer>0</integer>
-		<key>Level</key>
-		<integer>0</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-
-    <dict>
-		<key>Question</key>
-		<string>Which of the following objects are computers ?</string>
-		<key>Answers</key>
-		<array>
-			<string>A Phone</string>
-			<string>An iPad</string>
-            <string>A laptop</string>
-			<string>A TV</string>
-        </array>
-		<key>Correct</key>
-		<string>ABC</string>
-		<key>Class</key>
-		<integer>0</integer>
-		<key>Level</key>
 		<integer>1</integer>
 		<key>Points</key>
 		<integer>1</integer>
@@ -1398,71 +1164,22 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    
-    <dict>
-		<key>Question</key>
-		<string>How big can be a computer like ?</string>
-		<key>Answers</key>
-		<array>
-			<string>like a lego</string>
-			<string>like a Phone</string>
-            <string>like an iPad</string>
-			<string>like many iPads</string>
-        </array>
-		<key>Correct</key>
-		<string>ABCD</string>
-		<key>Class</key>
-		<integer>0</integer>
-		<key>Level</key>
-		<integer>1</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-
-    <dict>
-		<key>Question</key>
-		<string>What does cloud computing provide ?</string>
-		<key>Answers</key>
-		<array>
-			<string>Flying computers </string>
-			<string>Many computers</string>
-            <string>Many user access</string>
-			<string>Connected computers</string>
-        </array>
-		<key>Correct</key>
-		<string>BCD</string>
-		<key>Class</key>
-		<integer>0</integer>
-		<key>Level</key>
-		<integer>1</integer>
-		<key>Points</key>
-		<integer>1</integer>
-		<key>Pay</key>
-		<integer>0</integer>
-		<key>Active</key>
-		<true/>
-	</dict>
-    
-    <dict>
+    	<dict>
 		<key>Question</key>
 		<string>A supercomputer is a computer: </string>
 		<key>Answers</key>
 		<array>
 			<string>As big as a house</string>
-			<string>Very expensive</string>
-            <string>With superpowers</string>
+			<string>Worth $100 million</string>
+			<string>With superpowers</string>
 			<string>For scientists</string>
-        </array>
+		</array>
 		<key>Correct</key>
 		<string>ABD</string>
 		<key>Class</key>
 		<integer>0</integer>
 		<key>Level</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>Points</key>
 		<integer>2</integer>
 		<key>Pay</key>
@@ -1470,19 +1187,64 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-
-       <dict>
+	<dict>
 		<key>Question</key>
-           <string>Mobile computing is doing computing with: </string>
+		<string>Mobile computing is doing computing with: </string>
 		<key>Answers</key>
 		<array>
 			<string>A Smartphone</string>
-			<string>An ipad</string>
-            <string>A very light device</string>
+			<string>An iPad</string>
+			<string>A very light device</string>
 			<string>A supercomputer</string>
-        </array>
+		</array>
 		<key>Correct</key>
 		<string>ABC</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Points</key>
+		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+    <dict>
+		<key>Question</key>
+		<string>Supercomputers speed is measured as the number of floating-points operations per second or ... </string>
+		<key>Answers</key>
+		<array>
+			<string>flops</string>
+			<string>flips</string>
+			<string>flaps</string>
+			<string>flups</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
+		<integer>20</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+    <dict>
+		<key>Question</key>
+		<string>Supercomputers energy-efficiency or how "green" is a supercomputer is measured as a number of ... </string>
+		<key>Answers</key>
+		<array>
+			<string>flops/watt</string>
+			<string>flips/watt</string>
+			<string>flaps/watt</string>
+			<string>flups/watt</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
 		<key>Class</key>
 		<integer>0</integer>
 		<key>Level</key>
@@ -1494,7 +1256,99 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    
+    <dict>
+		<key>Question</key>
+		<string>The Power Usage Effectiveness is a green metric to assess how green is a computing center. Its acronym is: </string>
+		<key>Answers</key>
+		<array>
+			<string>UPE</string>
+			<string>EUP</string>
+			<string>PEU</string>
+			<string>PUE</string>
+		</array>
+		<key>Correct</key>
+		<string>D</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>PUE = (Power injected in the computing center) / (Power used by the IT equipement). What is the ideal PUE value ?</string>
+		<key>Answers</key>
+		<array>
+			<string>0</string>
+			<string>0.5</string>
+			<string>1</string>
+			<string>1.5</string>
+		</array>
+		<key>Correct</key>
+		<string>C</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+    <dict>
+		<key>Question</key>
+		<string>PUE is a green metric that has been developed by ...</string>
+		<key>Answers</key>
+		<array>
+			<string>The Green Grid</string>
+			<string>The Giant Grid</string>
+			<string>The GREEN500</string>
+			<string>The Grid500</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+    <dict>
+		<key>Question</key>
+		<string>In 2012, how many IBM data centers have been honored by the European Commission for their energy efficiency ?</string>
+		<key>Answers</key>
+		<array>
+			<string>21</string>
+			<string>1 million</string>
+			<string>1 billion</string>
+			<string>1 trillion</string>
+		</array>
+		<key>Correct</key>
+		<string>A</string>
+		<key>Class</key>
+		<integer>0</integer>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>Points</key>
+		<integer>1</integer>
+		<key>Pay</key>
+		<integer>0</integer>
+		<key>Active</key>
+		<true/>
+	</dict>
+
     
 </array>
 </plist>
