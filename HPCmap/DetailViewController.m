@@ -14,7 +14,7 @@
 
 @implementation DetailViewController
 
-@synthesize bannerView, bannerIsVisible, detailURL,detailWebView,bottomBar,item,yourBOOL,myimage,myname;
+@synthesize detailURL,detailWebView,bottomBar,item,yourBOOL,myimage,myname,bannerIsVisible,bannerView ;
 
 -(IBAction)AddtoFavorites {
     
@@ -32,6 +32,7 @@
     [alertDialogue release];
     
 }
+
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
@@ -56,6 +57,7 @@
         self.bannerIsVisible = NO;
     }
 }
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -110,13 +112,14 @@
 		bannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
 
 		bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
-		self.bannerView.delegate= self;
-		if (bannerView !=nil) {
-			[self.view addSubview:bannerView];
-		}
-		[bannerView release];
+    		self.bannerView.delegate= self;
+    		if (bannerView !=nil) {
+    		[self.view addSubview:bannerView];
+   		}
+  		[bannerView release];
 		
 		self.bannerIsVisible = YES;
+      //  self.bannerIsVisible = NO ;
 	}
    
 

@@ -96,7 +96,7 @@
 	</dict>
 	<dict>
 		<key>Question</key>
-		<string>Serial vs parallel calculations: How much power per operation may a CPU consume compared to a GPU (latest technologies) ?</string>
+		<string>Serial vs parallel calculations: How much power per operation does a CPU consume compared to a GPU (latest technologies) ?</string>
 		<key>Answers</key>
 		<array>
 			<string>7 times more</string>
@@ -117,9 +117,6 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    
-   
-    
 	<dict>
 		<key>Question</key>
 		<string>Which company marketed &quot;the world&apos;s first GPU&quot; in 1999 ?</string>
@@ -143,7 +140,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>The name of the new Intel chip (MIC) built to leverage parallel computing is:</string>
 		<key>Answers</key>
@@ -166,7 +163,6 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-
 	<dict>
 		<key>Question</key>
 		<string>Which ones of the following supercomputers use GPUs ?</string>
@@ -236,8 +232,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>The name of the NVIDIA exascale supercomputer that should be released by 2018 is ..</string>
 		<key>Answers</key>
@@ -260,8 +255,6 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-
-    
 	<dict>
 		<key>Question</key>
 		<string>In Spain, the Barcelona supercomputing center recently developped a hybrid architecture: GPU + ..</string>
@@ -377,7 +370,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>In what year the world&apos;s first hacker ruined a public demonstration of a wireless telegraph by sending Morse code insults via wire ?</string>
 		<key>Answers</key>
@@ -446,7 +439,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>The power that a supercomputer needs is similar to the power needed by a ..</string>
 		<key>Answers</key>
@@ -494,7 +487,7 @@
 	</dict>
 	<dict>
 		<key>Question</key>
-		<string>How much power Titan, the new GPU-based supercomputer roughly uses ?</string>
+		<string>How much power does Titan, the new GPU-based supercomputer roughly use ?</string>
 		<key>Answers</key>
 		<array>
 			<string>7 MW</string>
@@ -699,7 +692,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>By 2023, supercomputers are expected to be able to simulate a complete ..</string>
 		<key>Answers</key>
@@ -722,7 +715,6 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-
 	<dict>
 		<key>Question</key>
 		<string>Where are located the #1 and #2 most powerful Supercomputers in the world?</string>
@@ -746,7 +738,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>Where is located the K Computer, #3 most powerful supercomputer in the world ? </string>
 		<key>Answers</key>
@@ -769,8 +761,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-
-   	<dict>
+	<dict>
 		<key>Question</key>
 		<string>Which of the following energy sources could be used to power the battery of your cell phones ?</string>
 		<key>Answers</key>
@@ -839,7 +830,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>Individuals can pay for using computing resources from .. platforms in order to launch their own computer simulations.</string>
 		<key>Answers</key>
@@ -862,7 +853,6 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-
 	<dict>
 		<key>Question</key>
 		<string>NIF uses 192 laser beams to generate &quot;temperatures of more than ... million degrees and pressures more than ... billion times Earth&apos;s atmosphere&quot;.</string>
@@ -909,7 +899,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>SuperMuc, Europe&apos;s #2 and World&apos;s #6 supercomputer is cooled with pipelines of :&apos;</string>
 		<key>Answers</key>
@@ -955,7 +945,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>Recent findings says that biogas-powered cells would allow to pump up to .. to power computational resources</string>
 		<key>Answers</key>
@@ -978,8 +968,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-   	
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>The official list that ranks the world&apos;s most powerful supercomputers according to their data crunching capabilities is named:</string>
 		<key>Answers</key>
@@ -1094,7 +1083,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>By 2020, we are going to reach the era of supercomputing at the ..</string>
 		<key>Answers</key>
@@ -1117,8 +1106,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-
-		<dict>
+	<dict>
 		<key>Question</key>
 		<string>Intel’s 2018 Exascale Goal is: delivering one Exaflops in a power envelope of ..</string>
 		<key>Answers</key>
@@ -1164,7 +1152,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    	<dict>
+	<dict>
 		<key>Question</key>
 		<string>A supercomputer is a computer: </string>
 		<key>Answers</key>
@@ -1210,7 +1198,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>Supercomputers speed is measured as the number of floating-points operations per second or ... </string>
 		<key>Answers</key>
@@ -1233,9 +1221,9 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    <dict>
+	<dict>
 		<key>Question</key>
-		<string>Supercomputers energy-efficiency or how "green" is a supercomputer is measured as a number of ... </string>
+		<string>Supercomputers energy-efficiency or how &quot;green&quot; is a supercomputer is measured as a number of ... </string>
 		<key>Answers</key>
 		<array>
 			<string>flops/watt</string>
@@ -1256,7 +1244,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>The Power Usage Effectiveness is a green metric to assess how green is a computing center. Its acronym is: </string>
 		<key>Answers</key>
@@ -1302,7 +1290,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>PUE is a green metric that has been developed by ...</string>
 		<key>Answers</key>
@@ -1325,7 +1313,7 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-    <dict>
+	<dict>
 		<key>Question</key>
 		<string>In 2012, how many IBM data centers have been honored by the European Commission for their energy efficiency ?</string>
 		<key>Answers</key>
@@ -1348,7 +1336,5 @@
 		<key>Active</key>
 		<true/>
 	</dict>
-
-    
 </array>
 </plist>

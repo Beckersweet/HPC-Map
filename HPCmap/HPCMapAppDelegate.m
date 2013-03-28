@@ -8,7 +8,8 @@
 
 #import "HPCMapAppDelegate.h"
 #import "HPCMapViewController.h"
-#import "RootViewController.h"
+//#import "RootViewController.h"
+#import "CalculateViewController.h"
 #import "RootViewController2.h"
 #import "QuizzViewController.h"
 #import "FBNewsViewController.h"
@@ -25,17 +26,18 @@
 //    DebugLog(@"launchOptions: %@",launchOptions);
 	
     HPCMapViewController *mymap = [[HPCMapViewController alloc]init];
-    RootViewController *myroot = [[RootViewController alloc] init];
+ // RootViewController *myroot = [[RootViewController alloc] init];
+    CalculateViewController *myroot = [[CalculateViewController alloc] init];
     RootViewController2 *myroot2 = [[RootViewController2 alloc] init]; 
     QuizzViewController *myquizz = [[QuizzViewController alloc] init];
     FBNewsViewController *fbnews = [[FBNewsViewController alloc] init];
       
-    UINavigationController *navig1 = [[UINavigationController alloc] initWithRootViewController:myroot];
+  //  UINavigationController *navig1 = [[UINavigationController alloc] initWithRootViewController:myroot];
     UINavigationController *navig2 = [[UINavigationController alloc] initWithRootViewController:myroot2];
     UINavigationController *navig3 = [[UINavigationController alloc] initWithRootViewController:mymap];
     
     
-    NSArray* controllers = [NSArray arrayWithObjects:navig3,navig2,fbnews,navig1,myquizz,nil];
+    NSArray* controllers = [NSArray arrayWithObjects:navig3,navig2,fbnews,myroot,myquizz,nil];
 	// **NOTE**: It is imperative that the order of controllers don't change, and if they do change the next define
 #define kFbnewsControllerIndex	2
 	// TODO: do it like a good programmer, not an idiot. Need to tag the controllers, which don't have a tag property, which needs subclassing, and we're out of time
@@ -50,7 +52,7 @@
     
    
     navig3.tabBarItem=tabBarItem;
-    navig1.tabBarItem=tabBarItem2;
+    myroot.tabBarItem=tabBarItem2;
     navig2.tabBarItem=tabBarItem3;
     myquizz.tabBarItem=tabBarItem4;
     fbnews.tabBarItem=tabBarItem5;
@@ -67,7 +69,7 @@
     //navig1.navigationItem.title=@"Green HPC";
     
     //navig2.navigationItem.title=@"Supercomputers";
-    navig1.navigationBar.barStyle=UIBarStyleBlackTranslucent;
+  //  navig1.navigationBar.barStyle=UIBarStyleBlackTranslucent;
     navig2.navigationBar.barStyle=UIBarStyleBlack;
     navig3.navigationBar.barStyle=UIBarStyleBlack;
       
@@ -82,7 +84,7 @@
     [mymap release];
     [myroot release];
     [myroot2 release];
-    [navig1 release];
+   // [navig1 release];
     [navig2 release];
     [navig3 release];
     [fbnews release];
