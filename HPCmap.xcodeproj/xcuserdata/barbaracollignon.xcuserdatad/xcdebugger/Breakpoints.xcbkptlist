@@ -42,7 +42,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "809"
          endingLineNumber = "809"
-         landmarkName = "-viewDidLoad"
+         landmarkName = "-segmentAction:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -56,7 +56,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "831"
          endingLineNumber = "831"
-         landmarkName = "-viewDidLoad"
+         landmarkName = "-segmentAction:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -70,7 +70,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "838"
          endingLineNumber = "838"
-         landmarkName = "-viewDidLoad"
+         landmarkName = "-segmentAction:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -84,7 +84,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "852"
          endingLineNumber = "852"
-         landmarkName = "-viewDidLoad"
+         landmarkName = "-segmentAction:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -98,7 +98,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "867"
          endingLineNumber = "867"
-         landmarkName = "-viewDidLoad"
+         landmarkName = "-segmentAction:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -112,7 +112,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "875"
          endingLineNumber = "875"
-         landmarkName = "-viewDidLoad"
+         landmarkName = "-segmentAction:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -126,7 +126,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "884"
          endingLineNumber = "884"
-         landmarkName = "-viewDidLoad"
+         landmarkName = "-segmentAction:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -140,7 +140,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "907"
          endingLineNumber = "907"
-         landmarkName = "-viewDidLoad"
+         landmarkName = "-segmentAction:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -154,7 +154,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "917"
          endingLineNumber = "917"
-         landmarkName = "-viewDidLoad"
+         landmarkName = "-segmentAction:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -168,7 +168,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "924"
          endingLineNumber = "924"
-         landmarkName = "-viewDidLoad"
+         landmarkName = "-segmentAction:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -182,7 +182,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "955"
          endingLineNumber = "955"
-         landmarkName = "-viewDidLoad"
+         landmarkName = "-segmentAction:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -442,7 +442,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "96"
          endingLineNumber = "96"
-         landmarkName = "-sendEmail:"
+         landmarkName = "-sendPicture:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -455,7 +455,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "109"
          endingLineNumber = "109"
-         landmarkName = "-sendEmail:"
+         landmarkName = "-actionSheet:clickedButtonAtIndex:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -468,7 +468,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "102"
          endingLineNumber = "102"
-         landmarkName = "-sendEmail:"
+         landmarkName = "-sendPicture:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint

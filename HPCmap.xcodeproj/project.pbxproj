@@ -76,6 +76,10 @@
 		218EBB2F1474E80700EDC3D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 218EBB2D1474E80700EDC3D6 /* InfoPlist.strings */; };
 		218EBB321474E80700EDC3D6 /* HPCmapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 218EBB311474E80700EDC3D6 /* HPCmapTests.m */; };
 		218F330B14C5261C00B453A2 /* IMG_0046.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 218F330A14C5261C00B453A2 /* IMG_0046.JPG */; };
+		219084931710E3BA00EB84F7 /* CalculateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219084911710E3B900EB84F7 /* CalculateViewController.m */; };
+		219084941710E3BA00EB84F7 /* CalculateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219084911710E3B900EB84F7 /* CalculateViewController.m */; };
+		219084951710E3BA00EB84F7 /* CalculateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219084921710E3B900EB84F7 /* CalculateViewController.xib */; };
+		219084961710E3BA00EB84F7 /* CalculateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219084921710E3B900EB84F7 /* CalculateViewController.xib */; };
 		21A238D914B5A9A80064D356 /* supergpue.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A238D714B5A9A80064D356 /* supergpue.m */; };
 		21A238DA14B5A9A80064D356 /* supergpue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21A238D814B5A9A80064D356 /* supergpue.xib */; };
 		21A238DF14B5ABD80064D356 /* superppw.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A238DD14B5ABD70064D356 /* superppw.m */; };
@@ -227,6 +231,9 @@
 		218EBB301474E80700EDC3D6 /* HPCmapTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPCmapTests.h; sourceTree = "<group>"; };
 		218EBB311474E80700EDC3D6 /* HPCmapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPCmapTests.m; sourceTree = "<group>"; };
 		218F330A14C5261C00B453A2 /* IMG_0046.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0046.JPG; sourceTree = "<group>"; };
+		219084901710E3B900EB84F7 /* CalculateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateViewController.h; sourceTree = "<group>"; };
+		219084911710E3B900EB84F7 /* CalculateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateViewController.m; sourceTree = "<group>"; };
+		219084921710E3B900EB84F7 /* CalculateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculateViewController.xib; sourceTree = "<group>"; };
 		21A238D614B5A9A80064D356 /* supergpue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = supergpue.h; sourceTree = "<group>"; };
 		21A238D714B5A9A80064D356 /* supergpue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = supergpue.m; sourceTree = "<group>"; };
 		21A238D814B5A9A80064D356 /* supergpue.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = supergpue.xib; sourceTree = "<group>"; };
@@ -372,6 +379,9 @@
 				2183BF0614B6AFD800ED4EAE /* IMG_0032.JPG */,
 				2183BF0714B6AFD900ED4EAE /* IMG_0037.JPG */,
 				2183BF0814B6AFD900ED4EAE /* IMG_0048.JPG */,
+				219084901710E3B900EB84F7 /* CalculateViewController.h */,
+				219084911710E3B900EB84F7 /* CalculateViewController.m */,
+				219084921710E3B900EB84F7 /* CalculateViewController.xib */,
 				218482D014B531BF00B0FD52 /* costreduction.h */,
 				21FB4CAB14B5AFAE008BE8FF /* supercostreduction.h */,
 				21FB4CAC14B5AFAE008BE8FF /* supercostreduction.m */,
@@ -595,7 +605,7 @@
 		218EBAF91474E80700EDC3D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 218EBAFC1474E80700EDC3D6 /* Build configuration list for PBXProject "HPCmap" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -672,6 +682,7 @@
 				A91E6756163FBED100FC45EA /* QuizQA.plist in Resources */,
 				A9424B51164787000010A57A /* QuizAchievements.plist in Resources */,
 				A9F5888D165F08C900491810 /* Property List3.plist in Resources */,
+				219084951710E3BA00EB84F7 /* CalculateViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +692,7 @@
 			files = (
 				218EBB2F1474E80700EDC3D6 /* InfoPlist.strings in Resources */,
 				21D4353015811426001CBE3B /* DetailViewController2.xib in Resources */,
+				219084961710E3BA00EB84F7 /* CalculateViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,6 +757,7 @@
 				A930C1511635CCA900912267 /* QuizLevelSelectViewController.m in Sources */,
 				A930C156163693CA00912267 /* QuizClass.m in Sources */,
 				A9424B541647E2CE0010A57A /* Achievement.m in Sources */,
+				219084931710E3BA00EB84F7 /* CalculateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,6 +769,7 @@
 				21D4352F15811426001CBE3B /* DetailViewController2.m in Sources */,
 				A96F3FDD1621910F00694E7A /* InAppPurManager.m in Sources */,
 				A96F3FDF1621910F00694E7A /* MyStoreObserver.m in Sources */,
+				219084941710E3BA00EB84F7 /* CalculateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,12 +808,17 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Barbara C Collignon";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -847,6 +866,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -860,6 +883,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "HPC Map";
@@ -873,12 +897,17 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Barbara C Collignon (H99SPGEACY)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
