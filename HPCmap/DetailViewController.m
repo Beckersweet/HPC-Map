@@ -34,6 +34,7 @@
 }
 
 
+
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
     if (!self.bannerIsVisible)
@@ -57,6 +58,7 @@
         self.bannerIsVisible = NO;
     }
 }
+
 
 
 
@@ -137,7 +139,7 @@
 //    detailWebView.contentMode = UIViewContentModeScaleAspectFit ;
     //load the page
     [detailWebView loadRequest:[NSURLRequest requestWithURL:self.detailURL]];
-     self.navigationItem.title = self.title ;
+    self.navigationItem.title = self.title ;
   //  self.item.title=@"Add To Favorites";
 
   //  UIBarButtonItem *favbutton = [[UIBarButtonItem alloc] initWithTitle:@"Favorite" style:UIBarButtonItemStylePlain target:self action:@selector(AddtoFavorites)];

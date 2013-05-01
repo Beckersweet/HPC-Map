@@ -46,4 +46,9 @@
 - post photos to fb
 - post questions to fb
 
+** Version 2.1 changes
++ ADD:
+-"DIY Computing" View
+-DetailCalculateView
+
 
